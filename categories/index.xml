@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on WeiWeiWesley</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Nov 2019 15:09:00 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>/categories/test/</link>
+      <pubDate>Tue, 26 Nov 2019 15:09:00 +0800</pubDate>
+      
+      <guid>/categories/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>/categories/devops/</link>
+      <pubDate>Mon, 04 Nov 2019 15:44:14 +0800</pubDate>
+      
+      <guid>/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ELK</title>
+      <link>/categories/elk/</link>
+      <pubDate>Wed, 25 Sep 2019 14:12:14 +0800</pubDate>
+      
+      <guid>/categories/elk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>/categories/k8s/</link>
+      <pubDate>Fri, 20 Sep 2019 18:04:14 +0800</pubDate>
+      
+      <guid>/categories/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang test</title>
+      <link>/categories/golang-test/</link>
+      <pubDate>Sun, 30 Jun 2019 22:48:14 +0800</pubDate>
+      
+      <guid>/categories/golang-test/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
