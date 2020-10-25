@@ -36,7 +36,7 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/posts/" />
-<meta property="og:updated_time" content="2019-11-26T15:09:00+08:00" />
+<meta property="og:updated_time" content="2020-09-13T12:59:41+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 <meta name="twitter:card" content="summary"/>
@@ -52,7 +52,7 @@
 
   
   
-  <header class="cover bg-top" style="background-image: url('images/gohugo-default-sample-hero-image.jpg');">
+  <header class="cover bg-top" style="background-image: url('cover/cafe.jpg');">
     <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
@@ -135,87 +135,100 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2017-01-07-elk/" class="link black dim">
+        30Days ELK - Day23 Kibana Plugin X-Pack Install
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天要介紹一個超好用的 kibana plugin，X-Pack。你一定要安裝的好用插件讓我們先裝在說。</p>
+<p>就讓我們照著<a href="https://www.elastic.co/downloads/x-pack">官網</a>的六步驟來安裝吧(只是我們是裝在 docker 上)</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-01-06-elk/" class="link black dim">
+        30Days ELK - Day22 Multi logstash machines used for monitoring.
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天介紹的是一個利用虛擬機使用 logstash 的技巧，當我們有一台較高效能實體機器且有多個不同的資料來源時，我們可能會把 logstash.conf 用 file 檔名或 tcp port 來進行區別如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">input</span> {
+        <span style="color:#a6e22e">tcp</span> {
+                <span style="color:#a6e22e">port</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#ae81ff">5000</span>
+                <span style="color:#a6e22e">type</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#e6db74">&#34;access&#34;</span>
+        }
+
+        <span style="color:#a6e22e">tcp</span> {
+                <span style="color:#a6e22e">port</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#ae81ff">5001</span>
+                <span style="color:#a6e22e">type</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#e6db74">&#34;error&#34;</span>
+        }
+}
+</code></pre></div>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-01-05-elk/" class="link black dim">
+        30Days ELK - Day21 Elasticsearch Cluster
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>我們進行到今天已經可以將 E.L.K 運行並實現資料分析、資料儲存、資料探索與視覺化，現在我們需要做的是提升它的可靠性與面對效能瓶頸時拓展自身的能力。這時候 elasticsearch cluster 就派上用場拉，至少要讓你的資料能夠有個備份，假設 docker container 毀損甚至機器毀損時能不受引響。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-01-04-elk/" class="link black dim">
+        30Days ELK - Day20 Dockerfile &amp; docker-compose
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>有了 docker 基本的概念後我們回頭看一下 docker 的設定檔 Dockerfile 與 docker-compose.yml，瞭解一下 logstash, elasticsearch, kibana 的虛擬機是怎麼被設定與啟用的。有了這些知識後能幫助我們解決一些 E.L.K 使用上或配置上的問題。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-01-03-elk/" class="link black dim">
+        30Days ELK - Day19 Docker
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>你以為看錯標題了嗎？沒有哦～就是 docker 沒錯，為了延續後面我要講一些插件與優化配置的方式，這邊必須簡單提一下 docker 讓後面在能夠比較簡單的銜接上，真的是簡單講一下因為接觸 docker 時間不夠長，讓我們快速走過吧。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2017-01-02-elk/" class="link black dim">
         30Days ELK - Day18 Dashboard
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       <p>先前我們在 Visualize 繪製了許多圖表，這些圖表可能個別代表不同資訊內容或比較，當然我們有可能需要整合這些資訊到同一個頁面裡，這時侯 Dashboard 就登場拉～多個願望一次滿足。當然前提是你要在 Visualize 繪製儲存所需的圖表然後到 Dashboard 就可以直接加入囉。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2017-01-01-elk/" class="link black dim">
-        30Days ELK - Day17 Bar chart. Tag Cloud. Tile map
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>我們今天來把 kiban visualize 的部分收個尾，首先介紹的是最常用到的 bar chart，設置的方式與 line chart, area chart 相同都是現設定好 x軸、y軸，再加入想要聚合的屬性。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2016-12-31-elk/" class="link black dim">
-        30Days ELK - Day16 Visualize data with pie chart. Count by metric
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>另個常見的視覺化方式“圓餅圖 pie chart”，圓餅圖可以很有效地對資料進行展示。特別是在想要表示某個大扇型區在整體中所占比例，這一方法十分有效。設置流程與其他圖表大同小異，讓我們快速的一步驟一步驟完成他吧。若用範例資料進行練習，資料切割配置可參考Day15於此不重複說明囉。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2016-12-30-elk/" class="link black dim">
-        30Days ELK - Day15 DataTable
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>好了我來還債了，我們繼續來看看 kibana visualize 還有什麼可以提供的。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2016-12-29-elk/" class="link black dim">
-        30Days ELK - Day14 Visualize data with area chart. Markdown your document.
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>Area chart 基本繪製與 line chart 無異</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2016-12-28-elk/" class="link black dim">
-        30Days ELK - Day13 Visualize data with line chart &amp; bubble chart
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天要來畫畫圖兒，如果想完全照著做的話請使用下方 logstash.conf 檔配置，資料來源一樣使用<a href="http://www.monitorware.com/en/logsamples/apache.php">apache sample logs</a>。</p>
     </div>
   </div>
 </div>
@@ -244,21 +257,24 @@
   <li class="page-item">
     <a class="page-link" href="/posts/page/5/">5</a>
   </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/6/">6</a>
+    <a class="page-link" href="/posts/page/7/">7</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/5/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/6/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/7/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
 </article>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+    <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
     &copy;  WeiWeiWesley 2020 

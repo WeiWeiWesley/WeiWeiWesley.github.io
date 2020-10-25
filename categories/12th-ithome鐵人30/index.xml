@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>12th ithome鐵人30 on WeiWeiWesley</title>
+    <link>/categories/12th-ithome%E9%90%B5%E4%BA%BA30/</link>
+    <description>Recent content in 12th ithome鐵人30 on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Sep 2020 12:59:41 +0800</lastBuildDate><atom:link href="/categories/12th-ithome%E9%90%B5%E4%BA%BA30/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day5 Basic Go (Install &amp; GOPATH)</title>
+      <link>/posts/2020-ithome-day5/</link>
+      <pubDate>Sun, 13 Sep 2020 12:59:41 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day5/</guid>
+      <description>&lt;h2 id=&#34;來個快速安裝吧&#34;&gt;來個快速安裝吧&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day4 Why Go</title>
+      <link>/posts/2020-ithome-day4/</link>
+      <pubDate>Sat, 12 Sep 2020 15:47:24 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day4/</guid>
+      <description>&lt;p&gt;先前幾天介紹 data consistency 的部分，是希望我們可以謹記資料對系統的重要性，從今天開始我們要進入用 golang 搭建 server 的實作部分，在我們可以實作前，不免俗的要介紹一下為什麼要用 golang 這個語言來進行。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day3 CAP 定理</title>
+      <link>/posts/2020-ithome-day3/</link>
+      <pubDate>Fri, 11 Sep 2020 13:42:52 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day3/</guid>
+      <description>&lt;p&gt;Consistency(一致性), Availability (可用性), Partition Tolerance(分區容忍性) 組成 CAP 定理，在前一文中提到依據不同的狀況下我們必須面臨取捨的問題，藉由了解三者的定義與任取其二所產生出來的效果了解該如何取捨。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day2 Data consistency</title>
+      <link>/posts/2020-ithome-day2/</link>
+      <pubDate>Thu, 10 Sep 2020 09:37:18 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day2/</guid>
+      <description>&lt;p&gt;會選擇在 distributed(分散式)之前先討論 consistency(一致性)，是由於如果我們的分散式系統所提供的服務無法保有一定程度的正確性的話，不論可以回應多大量或多快速的請求都是沒有意義的，而且可能會是一場巨大的災難。一般來說我們會討論到 data consistency，是基於複數存取實體因為時間差或實體間同步異常中斷，而產生的資料或狀態不一致，而單一 server 內因為多併發而產生的資料不一致屬於 data race 範疇，我們在後面一點的文章另外討論。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day1 系列文結構介紹</title>
+      <link>/posts/2020-ithome-day1/</link>
+      <pubDate>Wed, 09 Sep 2020 08:48:12 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day1/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;HiHi~!時隔多年又回來參賽拉，本次希望已經涉入軟體系統開發的工程師可以從此系列文中得到一些想法，也希望還沒應用到分散式架構或對一致性不太了解的朋友，可以體會看看遇到什麼問題的時候會需要這樣的架構編排&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

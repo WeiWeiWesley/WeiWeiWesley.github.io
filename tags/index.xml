@@ -5,6 +5,52 @@
     <link>/tags/</link>
     <description>Recent content in Tags on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Sep 2020 12:59:41 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang</title>
+      <link>/tags/golang/</link>
+      <pubDate>Sun, 13 Sep 2020 12:59:41 +0800</pubDate>
+      
+      <guid>/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CAP</title>
+      <link>/tags/cap/</link>
+      <pubDate>Fri, 11 Sep 2020 13:42:52 +0800</pubDate>
+      
+      <guid>/tags/cap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>consistency</title>
+      <link>/tags/consistency/</link>
+      <pubDate>Fri, 11 Sep 2020 13:42:52 +0800</pubDate>
+      
+      <guid>/tags/consistency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>distributed system</title>
+      <link>/tags/distributed-system/</link>
+      <pubDate>Wed, 09 Sep 2020 08:48:12 +0800</pubDate>
+      
+      <guid>/tags/distributed-system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>/tags/kubernetes/</link>
+      <pubDate>Wed, 09 Sep 2020 08:48:12 +0800</pubDate>
+      
+      <guid>/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

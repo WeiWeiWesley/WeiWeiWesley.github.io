@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CAP on WeiWeiWesley</title>
+    <link>/tags/cap/</link>
+    <description>Recent content in CAP on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Sep 2020 13:42:52 +0800</lastBuildDate><atom:link href="/tags/cap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day3 CAP 定理</title>
+      <link>/posts/2020-ithome-day3/</link>
+      <pubDate>Fri, 11 Sep 2020 13:42:52 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day3/</guid>
+      <description>&lt;p&gt;Consistency(一致性), Availability (可用性), Partition Tolerance(分區容忍性) 組成 CAP 定理，在前一文中提到依據不同的狀況下我們必須面臨取捨的問題，藉由了解三者的定義與任取其二所產生出來的效果了解該如何取捨。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day2 Data consistency</title>
+      <link>/posts/2020-ithome-day2/</link>
+      <pubDate>Thu, 10 Sep 2020 09:37:18 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day2/</guid>
+      <description>&lt;p&gt;會選擇在 distributed(分散式)之前先討論 consistency(一致性)，是由於如果我們的分散式系統所提供的服務無法保有一定程度的正確性的話，不論可以回應多大量或多快速的請求都是沒有意義的，而且可能會是一場巨大的災難。一般來說我們會討論到 data consistency，是基於複數存取實體因為時間差或實體間同步異常中斷，而產生的資料或狀態不一致，而單一 server 內因為多併發而產生的資料不一致屬於 data race 範疇，我們在後面一點的文章另外討論。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kubernetes on WeiWeiWesley</title>
+    <link>/tags/kubernetes/</link>
+    <description>Recent content in kubernetes on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Sep 2020 08:48:12 +0800</lastBuildDate><atom:link href="/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day1 系列文結構介紹</title>
+      <link>/posts/2020-ithome-day1/</link>
+      <pubDate>Wed, 09 Sep 2020 08:48:12 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day1/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;HiHi~!時隔多年又回來參賽拉，本次希望已經涉入軟體系統開發的工程師可以從此系列文中得到一些想法，也希望還沒應用到分散式架構或對一致性不太了解的朋友，可以體會看看遇到什麼問題的時候會需要這樣的架構編排&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -36,7 +36,7 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/posts/" />
-<meta property="og:updated_time" content="2019-11-26T15:09:00+08:00" />
+<meta property="og:updated_time" content="2020-09-13T12:59:41+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 <meta name="twitter:card" content="summary"/>
@@ -52,7 +52,7 @@
 
   
   
-  <header class="cover bg-top" style="background-image: url('images/gohugo-default-sample-hero-image.jpg');">
+  <header class="cover bg-top" style="background-image: url('cover/cafe.jpg');">
     <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
@@ -135,6 +135,85 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2018-01-13-elk/" class="link black dim">
+        30Days ELK - Day29 Optimization
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>在使用 Elastic Stack 的過程中可藉由調整 logstash 資料過濾的方式、elasticsearch 資料儲存的方式來優化整體效能。個人在使用的過程中有遇到效能上的問題，一開始是資源使用不完全，cup的使用率一直無法接近滿載的情況而導致資料處理緩慢。後來想到一個簡單的方式在不改動環境設定值的情況下增加 logstash 的工作量 —— 直接增加 logstash container，這是唯有我們在 docker container 下才有辦法做到的解法，雖然多虛擬機會犧牲部分資源，但能夠用這種方式使得資源被完全使用對當下的我來說是最重要的，如果你跟我一樣只是想多使用一點資源的話這或許是一個簡單不錯的方式。</p>
+<p><em>But if you want to do it by the right way. 你需要參考<a href="https://www.elastic.co/guide/en/logstash/current/logstash-settings-file.html">官方文件</a></em></p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-01-12-elk/" class="link black dim">
+        30Days ELK - Day28 Kibana Extended Metric Plugin
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>終於快要結束了，其實寫到這裡已經超過我於本預計想分享的部分了，所以很多東西真的是現學現賣，這次也是分享一個小插件的安裝與使用方式，還希望大家不嫌棄囉。</p>
+<h2 id="kibana-extended-metric-plugin">Kibana Extended Metric Plugin</h2>
+<p>這個插件十分簡易，這邊直接提供測試資料與設定檔供大家，下載試玩。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-01-11-elk/" class="link black dim">
+        30Days ELK - Day27 地震熱區資料視覺化測試範例
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>這篇其實使用的技巧與上篇差異不大，主要是提供一個資料，讓大家可以快速做出 Dashboard 並調整成符合自己的需求。當然你也可以參照 logstash.conf 調整一下資料過濾的方式，之前一直沒有提到的 grok 小技巧是其實你可以利用 (?:ValueA | ValueB) 的方式給予 field 預設值。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-01-10-elk/" class="link black dim">
+        30Days ELK - Day26 Apache log 測試範例懶人包
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>提醒沒看過前面的朋友想直接拿首先基本安裝還是要有，可參考 [Day2 - 來個快速安裝吧](- 來個快速安裝吧) 獲得基本環境部署，開啟 <a href="http://127.0.0.1:5601/app/kibana">Kibana local</a> 確定服務能正確啟動。</p>
+<p>來囉快速咻咻咻完成它</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-01-09-elk/" class="link black dim">
+        30Days ELK - Day25 Kibana X-Pack Graph
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>再開始講 Graph 之前我要跟大家提醒一下加裝 X-Pack 後你可能會遇到無法使用 tcp 當 input 的情況，然後一直跑去檢查 logstash container 的設定卻又苦無結果，其實這不是 logstash 壞掉哦!是 elasticsearch 上的 x-pack 因增加了權限管理而把 logstash 送過來的請求擋掉了，我們僅需簡單地在送至 elasticsearch 時帶上帳號密碼即可。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2017-01-08-elk/" class="link black dim">
         30Days ELK - Day24 Kinban Plugin X-Pack Monitoring
       </a>
@@ -143,94 +222,6 @@
       <p>不好意思昨天出了意料之外的錯誤 (註：其實這篇應該昨天就要打出來的)，其實我也是一邊查資料一邊安裝 x-pack 這個 kibana plugin <img src="/ithome/emoticon16.gif" alt="emoticon16.gif"></p>
 <p>所以先前雖然裝好了 x-pack 也成功登入我們的 kibana web 介面，但最重要的就是這個 &ldquo;but&rdquo;，他完全沒有達到我本來想跟大家分享的功能，觀察 elasticsearch cluster nodes。其實僅是我在安裝的時候竟然！竟然！只在 elasticsearch 一個節點上未安裝 x-pack</p>
 <p>這下真是尷尬今天會再重新分享一下更簡單的安裝方式，以及 X-Pack 提供的主要功能。想用昨天那種直接進入容器的方式安裝也可以，只是要記得所有的 elasticsearch nodes 都要裝哦～要是你覺得這樣太麻煩了這邊提供一個比較優雅的方式，也是一樣直接在啟動容器上改變設置：</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2017-01-07-elk/" class="link black dim">
-        30Days ELK - Day23 Kibana Plugin X-Pack Install
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天要介紹一個超好用的 kibana plugin，X-Pack。你一定要安裝的好用插件讓我們先裝在說。</p>
-<p>就讓我們照著<a href="https://www.elastic.co/downloads/x-pack">官網</a>的六步驟來安裝吧(只是我們是裝在 docker 上)</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2017-01-06-elk/" class="link black dim">
-        30Days ELK - Day22 Multi logstash machines used for monitoring.
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天介紹的是一個利用虛擬機使用 logstash 的技巧，當我們有一台較高效能實體機器且有多個不同的資料來源時，我們可能會把 logstash.conf 用 file 檔名或 tcp port 來進行區別如：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">input</span> {
-        <span style="color:#a6e22e">tcp</span> {
-                <span style="color:#a6e22e">port</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#ae81ff">5000</span>
-                <span style="color:#a6e22e">type</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#e6db74">&#34;access&#34;</span>
-        }
-
-        <span style="color:#a6e22e">tcp</span> {
-                <span style="color:#a6e22e">port</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#ae81ff">5001</span>
-                <span style="color:#a6e22e">type</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#e6db74">&#34;error&#34;</span>
-        }
-}
-</code></pre></div>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2017-01-05-elk/" class="link black dim">
-        30Days ELK - Day21 Elasticsearch Cluster
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>我們進行到今天已經可以將 E.L.K 運行並實現資料分析、資料儲存、資料探索與視覺化，現在我們需要做的是提升它的可靠性與面對效能瓶頸時拓展自身的能力。這時候 elasticsearch cluster 就派上用場拉，至少要讓你的資料能夠有個備份，假設 docker container 毀損甚至機器毀損時能不受引響。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2017-01-04-elk/" class="link black dim">
-        30Days ELK - Day20 Dockerfile &amp; docker-compose
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>有了 docker 基本的概念後我們回頭看一下 docker 的設定檔 Dockerfile 與 docker-compose.yml，瞭解一下 logstash, elasticsearch, kibana 的虛擬機是怎麼被設定與啟用的。有了這些知識後能幫助我們解決一些 E.L.K 使用上或配置上的問題。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2017-01-03-elk/" class="link black dim">
-        30Days ELK - Day19 Docker
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>你以為看錯標題了嗎？沒有哦～就是 docker 沒錯，為了延續後面我要講一些插件與優化配置的方式，這邊必須簡單提一下 docker 讓後面在能夠比較簡單的銜接上，真的是簡單講一下因為接觸 docker 時間不夠長，讓我們快速走過吧。</p>
     </div>
   </div>
 </div>
@@ -260,20 +251,20 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/6/">6</a>
+    <a class="page-link" href="/posts/page/7/">7</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/6/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/7/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
 </article>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+    <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
     &copy;  WeiWeiWesley 2020 
