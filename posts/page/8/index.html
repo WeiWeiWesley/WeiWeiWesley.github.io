@@ -135,12 +135,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day11/" class="link black dim">
-        Day11 Mutex vs Channel
+      <a href="/posts/2016-12-20-elk/" class="link black dim">
+        30Days ELK - Day5  便利的 logstash plugin (filter)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>昨天看過 race condiction 的情況後，我們了解了 mutex.Lock 與 channel，可以幫助我們同步 memory 狀態，避免發生奇怪的資料異常狀態。今天我們要延續昨天的技巧，並且用 benchmark 比較兩個在速度上的優劣。</p>
+      <p>Filter plugins 可以說是整個 logstash 最核心的部分，多數你想要過濾的資料內容都可以仰賴其進行。而 filter plugins 的選擇與配置多數相關於一開始輸入的資料類型，舉例來說你的資料可能含有 geographical location 那你的 filter plugins 就可以加上 geoip ，來幫助你切割出經緯度、地區、國家、時區等資訊。以下簡單介紹一下幾個實用的 filter plugins 使用方式。</p>
     </div>
   </div>
 </div>
@@ -150,16 +150,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day10/" class="link black dim">
-        Day10 Race Condition
+      <a href="/posts/2016-12-19-elk/" class="link black dim">
+        30Days ELK - Day4  便利的 logstash plugin (input)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在昨天我們已經看過了 golang 併發的方式，今天我們要來學習如何控制我們的 goroutines。首先我們先來看一下 race condition(或稱data race) 的定義與範例，接著我們在使用 channel 與 mutex lock 來處理這樣的問題。</p>
-<h2 id="race-condition">Race Condition</h2>
-<blockquote>
-<p>A race condition or race hazard is the behavior of an electronics, software, or other system where the output is dependent on the sequence or timing of other uncontrollable events</p>
-</blockquote>
+      <p>我們在昨天的內容分享了基本的 logstash 使用方式，今天要介紹的則是 logstash 的 input plugins 。其實 logstash 的運作除了基於其 input, filter, ouput 的架構外，在這三層架構中使用的 plugins 才是讓整個 logstash 具有資料切割與過濾能力的核心關鍵，input plugins 提供了我們獲取各式不同資料來源的方式，以下分別介紹幾個常用的 input plugin。</p>
     </div>
   </div>
 </div>
@@ -169,19 +165,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day9/" class="link black dim">
-        Day9 Goroutine &amp; Concurrency
+      <a href="/posts/2016-12-18-elk/" class="link black dim">
+        30Days ELK - Day3  logstash 輸入配置
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天不延用 BasicGo 的標題，並非 Concurrency 很困難，而是他在 golnag 中可以被輕易實踐，反而容易造成初學者的一些困擾與誤解，建議首次使用的朋友們慎重看待他。</p>
-<h2 id="concurrency">Concurrency</h2>
-<blockquote>
-<p>In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome</p>
-</blockquote>
-<p>以下圖為例，將兩個任務個別拆分成較小的子任務，並且同時丟到 thread 中執行，由於是同時丟入 thread 中，所以順序上無法保證哪一個任務先被處理完成。</p>
-<p><a href="https://www.monades.dev/concurrency-is-different-than-parallelism">圖片來源</a>
-<img src="https://user-images.githubusercontent.com/4419992/35572695-ee6275c8-05b3-11e8-8460-2c1ac7081574.jpg" alt="Concurrency"></p>
+      <p>首先 logstash 是 E.L.K 最先觸碰到你想要管理 log 部分，你可以把他想成一個介接層也是首次接觸到 log 或資料的地方，在這裡你可以選擇你的輸入來源像是直接讀 log 檔，抑或是當你想直接接受多台機器的 log 時你可以使用 tcp 作為接口。其次當多個來源的資料想分別處理成不同資訊時，在 logstash 提供的 input 可以協助我們預先做出簡單的類別判斷，以利後續 filter 分別使用不同的規則進行切割，最後於 output 選擇要輸出的方式與位置。</p>
     </div>
   </div>
 </div>
@@ -191,19 +180,15 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day8/" class="link black dim">
-        Day8 Basic Go (Initialize, Scope)
+      <a href="/posts/2016-12-17-elk/" class="link black dim">
+        30Days ELK - Day2 來個快速安裝吧
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天我們要回來重新檢視一下 golang 的各種 Scope(作用域)，在開始 scope 的說明前還必須提到 golang 程式在 runtime 初始化的順序，確保我們對運行時每一個階段的掌握。</p>
-<h2 id="initialization-order">Initialization Order</h2>
-<p>當我們開始執行 golang 的程序時，首先會將 import packages 內部的常數變數與 init() 完成後，才開始當前 main package 下的常數變數與 init()，最後執行 main()。此外需注意的是每個 package 內的 init() 都只會被執行一次，如同其保留的命名為“初始化”時使用。</p>
+      <h2 id="安裝部屬-">安裝部屬 :</h2>
 <ol>
-<li>import package</li>
-<li>const &amp; var</li>
-<li>init()</li>
-<li>main()</li>
+<li>安裝 docker
+<a href="https://joshhu.gitbooks.io/docker_theory_install/content/DockerBible/ubuntuvm.html">https://joshhu.gitbooks.io/docker_theory_install/content/DockerBible/ubuntuvm.html</a></li>
 </ol>
     </div>
   </div>
@@ -214,45 +199,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day7/" class="link black dim">
-        Day7 Basic Go (Run, Syntax, Struct)
+      <a href="/posts/2016-12-16-elk/" class="link black dim">
+        30Days ELK - Day1 Why E.L.K
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在對環境有基本的了解後，我們終於要開始說基本語法拉～如果你是已經使用過 golang 的朋友，今天可以放心跳過這篇惹。今天我們會全速通過 golang所有基本該知道的語法，因為考量到後續篇幅的關係一些常見的型態介紹會被我省略。</p>
-<h2 id="執行">執行</h2>
-<p>讓我們以最簡單的範例檔開始吧！</p>
-<p>main.go</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-
-<span style="color:#75715e">//主程式名稱固定為 main()
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>)
-}
-</code></pre></div>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day6/" class="link black dim">
-        Day6 Basic Go (GO MODULES)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="go-modules">Go Modules</h2>
-<p>為了解決 <a href="mailto:go@1.11">go@1.11</a> 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。</p>
-<ul>
-<li>on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找</li>
-<li>off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找</li>
-<li>auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules</li>
-</ul>
+      <p>初次接觸 E.L.K 希望藉由記錄下學習過程，幫助自己與初次接觸 E.L.K的新手了解其安裝的過程、使用的方法與可能會遇到的困難。首先我們先了解一下 E.L.K 是什麼?</p>
     </div>
   </div>
 </div>
@@ -263,10 +215,10 @@
   <li class="page-item">
     <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
   </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  <li class="page-item">
+    <a href="/posts/page/7/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
   </li>
-  <li class="page-item active">
+  <li class="page-item">
     <a class="page-link" href="/posts/">1</a>
   </li>
   <li class="page-item">
@@ -279,10 +231,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
+    <a class="page-link" href="/posts/page/7/">7</a>
+  </li>
+  <li class="page-item active">
     <a class="page-link" href="/posts/page/8/">8</a>
   </li>
-  <li class="page-item">
-    <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
     <a href="/posts/page/8/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>

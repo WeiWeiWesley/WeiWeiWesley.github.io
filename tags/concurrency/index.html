@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>WeiWeiWesley</title>
+    <title>concurrency | WeiWeiWesley</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
     <meta name="generator" content="Hugo 0.76.5" />
@@ -27,20 +27,20 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="WeiWeiWesley" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="WeiWeiWesley" />
+      <link href="/tags/concurrency/index.xml" rel="alternate" type="application/rss+xml" title="WeiWeiWesley" />
+      <link href="/tags/concurrency/index.xml" rel="feed" type="application/rss+xml" title="WeiWeiWesley" />
       
     
     
-    <meta property="og:title" content="Posts" />
+    <meta property="og:title" content="concurrency" />
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/posts/" />
+<meta property="og:url" content="/tags/concurrency/" />
 <meta property="og:updated_time" content="2020-09-19T15:50:58+08:00" />
-<meta itemprop="name" content="Posts">
+<meta itemprop="name" content="concurrency">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:title" content="concurrency"/>
 <meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
 
 	
@@ -117,7 +117,7 @@
 
       <div class="tc-l pv4 pv6-l ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          Posts
+          concurrency
         </h1>
         
       </div>
@@ -127,11 +127,16 @@
 
     <main class="pb7" role="main">
       
-  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “concurrency”</p>
+    </div>
+  </article>
+  <div class="mw8 center">    
     <section class="flex-ns flex-wrap justify-around mt5">
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
@@ -144,9 +149,11 @@
     </div>
   </div>
 </div>
-</div>
+
+        </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
@@ -163,9 +170,11 @@
     </div>
   </div>
 </div>
-</div>
+
+        </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
@@ -185,111 +194,11 @@
     </div>
   </div>
 </div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day8/" class="link black dim">
-        Day8 Basic Go (Initialize, Scope)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天我們要回來重新檢視一下 golang 的各種 Scope(作用域)，在開始 scope 的說明前還必須提到 golang 程式在 runtime 初始化的順序，確保我們對運行時每一個階段的掌握。</p>
-<h2 id="initialization-order">Initialization Order</h2>
-<p>當我們開始執行 golang 的程序時，首先會將 import packages 內部的常數變數與 init() 完成後，才開始當前 main package 下的常數變數與 init()，最後執行 main()。此外需注意的是每個 package 內的 init() 都只會被執行一次，如同其保留的命名為“初始化”時使用。</p>
-<ol>
-<li>import package</li>
-<li>const &amp; var</li>
-<li>init()</li>
-<li>main()</li>
-</ol>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day7/" class="link black dim">
-        Day7 Basic Go (Run, Syntax, Struct)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在對環境有基本的了解後，我們終於要開始說基本語法拉～如果你是已經使用過 golang 的朋友，今天可以放心跳過這篇惹。今天我們會全速通過 golang所有基本該知道的語法，因為考量到後續篇幅的關係一些常見的型態介紹會被我省略。</p>
-<h2 id="執行">執行</h2>
-<p>讓我們以最簡單的範例檔開始吧！</p>
-<p>main.go</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-
-<span style="color:#75715e">//主程式名稱固定為 main()
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>)
-}
-</code></pre></div>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day6/" class="link black dim">
-        Day6 Basic Go (GO MODULES)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="go-modules">Go Modules</h2>
-<p>為了解決 <a href="mailto:go@1.11">go@1.11</a> 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。</p>
-<ul>
-<li>on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找</li>
-<li>off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找</li>
-<li>auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules</li>
-</ul>
-    </div>
-  </div>
-</div>
-</div>
+        </div>
       
     </section>
-<ul class="pagination">
-  <li class="page-item">
-    <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-  </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-  </li>
-  <li class="page-item active">
-    <a class="page-link" href="/posts/">1</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/posts/page/2/">2</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/posts/page/3/">3</a>
-  </li>
-  <li class="page-item disabled">
-    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/posts/page/8/">8</a>
-  </li>
-  <li class="page-item">
-    <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/posts/page/8/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-  </li>
-</ul>
-
-</article>
+  </div>
 
     </main>
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>concurrency on WeiWeiWesley</title>
+    <link>/tags/concurrency/</link>
+    <description>Recent content in concurrency on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Sep 2020 15:50:58 +0800</lastBuildDate><atom:link href="/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day11 Mutex vs Channel</title>
+      <link>/posts/2020-ithome-day11/</link>
+      <pubDate>Sat, 19 Sep 2020 15:50:58 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day11/</guid>
+      <description>&lt;p&gt;昨天看過 race condiction 的情況後，我們了解了 mutex.Lock 與 channel，可以幫助我們同步 memory 狀態，避免發生奇怪的資料異常狀態。今天我們要延續昨天的技巧，並且用 benchmark 比較兩個在速度上的優劣。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day10 Race Condition</title>
+      <link>/posts/2020-ithome-day10/</link>
+      <pubDate>Fri, 18 Sep 2020 13:39:05 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day10/</guid>
+      <description>&lt;p&gt;在昨天我們已經看過了 golang 併發的方式，今天我們要來學習如何控制我們的 goroutines。首先我們先來看一下 race condition(或稱data race) 的定義與範例，接著我們在使用 channel 與 mutex lock 來處理這樣的問題。&lt;/p&gt;
+&lt;h2 id=&#34;race-condition&#34;&gt;Race Condition&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A race condition or race hazard is the behavior of an electronics, software, or other system where the output is dependent on the sequence or timing of other uncontrollable events&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day9 Goroutine &amp; Concurrency</title>
+      <link>/posts/2020-ithome-day9/</link>
+      <pubDate>Thu, 17 Sep 2020 15:30:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day9/</guid>
+      <description>&lt;p&gt;今天不延用 BasicGo 的標題，並非 Concurrency 很困難，而是他在 golnag 中可以被輕易實踐，反而容易造成初學者的一些困擾與誤解，建議首次使用的朋友們慎重看待他。&lt;/p&gt;
+&lt;h2 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以下圖為例，將兩個任務個別拆分成較小的子任務，並且同時丟到 thread 中執行，由於是同時丟入 thread 中，所以順序上無法保證哪一個任務先被處理完成。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.monades.dev/concurrency-is-different-than-parallelism&#34;&gt;圖片來源&lt;/a&gt;
+&lt;img src=&#34;https://user-images.githubusercontent.com/4419992/35572695-ee6275c8-05b3-11e8-8460-2c1ac7081574.jpg&#34; alt=&#34;Concurrency&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

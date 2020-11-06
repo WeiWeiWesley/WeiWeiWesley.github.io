@@ -36,7 +36,7 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2020-09-13T12:59:41+08:00" />
+<meta property="og:updated_time" content="2020-09-19T15:50:58+08:00" />
 <meta itemprop="name" content="WeiWeiWesley">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 <meta name="twitter:card" content="summary"/>
@@ -161,14 +161,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day5/" class="color-inherit dim link">
-            Day5 Basic Go (Install &amp; GOPATH)
+          <a href="/posts/2020-ithome-day11/" class="color-inherit dim link">
+            Day11 Mutex vs Channel
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <h2 id="來個快速安裝吧">來個快速安裝吧</h2>
+          <p>昨天看過 race condiction 的情況後，我們了解了 mutex.Lock 與 channel，可以幫助我們同步 memory 狀態，避免發生奇怪的資料異常狀態。今天我們要延續昨天的技巧，並且用 benchmark 比較兩個在速度上的優劣。</p>
         </div>
-          <a href="/posts/2020-ithome-day5/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/posts/2020-ithome-day11/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -185,14 +185,18 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day4/" class="color-inherit dim link">
-            Day4 Why Go
+          <a href="/posts/2020-ithome-day10/" class="color-inherit dim link">
+            Day10 Race Condition
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>先前幾天介紹 data consistency 的部分，是希望我們可以謹記資料對系統的重要性，從今天開始我們要進入用 golang 搭建 server 的實作部分，在我們可以實作前，不免俗的要介紹一下為什麼要用 golang 這個語言來進行。</p>
+          <p>在昨天我們已經看過了 golang 併發的方式，今天我們要來學習如何控制我們的 goroutines。首先我們先來看一下 race condition(或稱data race) 的定義與範例，接著我們在使用 channel 與 mutex lock 來處理這樣的問題。</p>
+<h2 id="race-condition">Race Condition</h2>
+<blockquote>
+<p>A race condition or race hazard is the behavior of an electronics, software, or other system where the output is dependent on the sequence or timing of other uncontrollable events</p>
+</blockquote>
         </div>
-          <a href="/posts/2020-ithome-day4/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/posts/2020-ithome-day10/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -209,63 +213,21 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day3/" class="color-inherit dim link">
-            Day3 CAP 定理
+          <a href="/posts/2020-ithome-day9/" class="color-inherit dim link">
+            Day9 Goroutine &amp; Concurrency
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>Consistency(一致性), Availability (可用性), Partition Tolerance(分區容忍性) 組成 CAP 定理，在前一文中提到依據不同的狀況下我們必須面臨取捨的問題，藉由了解三者的定義與任取其二所產生出來的效果了解該如何取捨。</p>
+          <p>今天不延用 BasicGo 的標題，並非 Concurrency 很困難，而是他在 golnag 中可以被輕易實踐，反而容易造成初學者的一些困擾與誤解，建議首次使用的朋友們慎重看待他。</p>
+<h2 id="concurrency">Concurrency</h2>
+<blockquote>
+<p>In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome</p>
+</blockquote>
+<p>以下圖為例，將兩個任務個別拆分成較小的子任務，並且同時丟到 thread 中執行，由於是同時丟入 thread 中，所以順序上無法保證哪一個任務先被處理完成。</p>
+<p><a href="https://www.monades.dev/concurrency-is-different-than-parallelism">圖片來源</a>
+<img src="https://user-images.githubusercontent.com/4419992/35572695-ee6275c8-05b3-11e8-8460-2c1ac7081574.jpg" alt="Concurrency"></p>
         </div>
-          <a href="/posts/2020-ithome-day3/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day2/" class="color-inherit dim link">
-            Day2 Data consistency
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>會選擇在 distributed(分散式)之前先討論 consistency(一致性)，是由於如果我們的分散式系統所提供的服務無法保有一定程度的正確性的話，不論可以回應多大量或多快速的請求都是沒有意義的，而且可能會是一場巨大的災難。一般來說我們會討論到 data consistency，是基於複數存取實體因為時間差或實體間同步異常中斷，而產生的資料或狀態不一致，而單一 server 內因為多併發而產生的資料不一致屬於 data race 範疇，我們在後面一點的文章另外討論。</p>
-        </div>
-          <a href="/posts/2020-ithome-day2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day1/" class="color-inherit dim link">
-            Day1 系列文結構介紹
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <h2 id="前言">前言</h2>
-<p>HiHi~!時隔多年又回來參賽拉，本次希望已經涉入軟體系統開發的工程師可以從此系列文中得到一些想法，也希望還沒應用到分散式架構或對一致性不太了解的朋友，可以體會看看遇到什麼問題的時候會需要這樣的架構編排</p>
-        </div>
-          <a href="/posts/2020-ithome-day1/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/posts/2020-ithome-day9/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -282,26 +244,26 @@
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2019-11-26-test/" class="link black dim">
-              Private method 是否該進行單元測試？
+            <a href="/posts/2020-ithome-day8/" class="link black dim">
+              Day8 Basic Go (Initialize, Scope)
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2019-11-04-devops2019/" class="link black dim">
-              DevOps 2019
+            <a href="/posts/2020-ithome-day7/" class="link black dim">
+              Day7 Basic Go (Run, Syntax, Struct)
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2019-09-25-redis-elk/" class="link black dim">
-              Redis ELK
+            <a href="/posts/2020-ithome-day6/" class="link black dim">
+              Day6 Basic Go (GO MODULES)
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2019-09-20-kubernet-summit-2019/" class="link black dim">
-              Kubernet Summit 2019
+            <a href="/posts/2020-ithome-day5/" class="link black dim">
+              Day5 Basic Go (Install &amp; GOPATH)
             </a>
           </h2>
         

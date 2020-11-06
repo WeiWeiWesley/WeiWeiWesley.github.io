@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Day5 Basic Go (Install &amp; GOPATH) | WeiWeiWesley</title>
+    <title>Day6 Basic Go (GO MODULES) | WeiWeiWesley</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="來個快速安裝吧
+    <meta name="description" content="Go Modules
+為了解決 go@1.11 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。
 
-
-官網下載安裝檔執行
-
-
+on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找
+off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找
+auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules
 ">
     <meta name="generator" content="Hugo 0.76.5" />
     
@@ -33,41 +33,41 @@
 
     
     
-    <meta property="og:title" content="Day5 Basic Go (Install &amp; GOPATH)" />
-<meta property="og:description" content="來個快速安裝吧
+    <meta property="og:title" content="Day6 Basic Go (GO MODULES)" />
+<meta property="og:description" content="Go Modules
+為了解決 go@1.11 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。
 
-
-官網下載安裝檔執行
-
-
+on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找
+off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找
+auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2020-ithome-day5/" />
-<meta property="article:published_time" content="2020-09-13T12:59:41+08:00" />
-<meta property="article:modified_time" content="2020-09-13T12:59:41+08:00" />
-<meta itemprop="name" content="Day5 Basic Go (Install &amp; GOPATH)">
-<meta itemprop="description" content="來個快速安裝吧
+<meta property="og:url" content="/posts/2020-ithome-day6/" />
+<meta property="article:published_time" content="2020-09-14T09:37:35+08:00" />
+<meta property="article:modified_time" content="2020-09-14T09:37:35+08:00" />
+<meta itemprop="name" content="Day6 Basic Go (GO MODULES)">
+<meta itemprop="description" content="Go Modules
+為了解決 go@1.11 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。
 
-
-官網下載安裝檔執行
-
-
+on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找
+off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找
+auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules
 ">
-<meta itemprop="datePublished" content="2020-09-13T12:59:41+08:00" />
-<meta itemprop="dateModified" content="2020-09-13T12:59:41+08:00" />
-<meta itemprop="wordCount" content="75">
+<meta itemprop="datePublished" content="2020-09-14T09:37:35+08:00" />
+<meta itemprop="dateModified" content="2020-09-14T09:37:35+08:00" />
+<meta itemprop="wordCount" content="175">
 
 
 
 <meta itemprop="keywords" content="golang," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Day5 Basic Go (Install &amp; GOPATH)"/>
-<meta name="twitter:description" content="來個快速安裝吧
+<meta name="twitter:title" content="Day6 Basic Go (GO MODULES)"/>
+<meta name="twitter:description" content="Go Modules
+為了解決 go@1.11 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。
 
-
-官網下載安裝檔執行
-
-
+on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找
+off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找
+auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules
 "/>
 
 	
@@ -164,20 +164,20 @@
   <div id="sharing" class="mt3">
 
     
-    <a href="https://www.facebook.com/sharer.php?u=/posts/2020-ithome-day5/" class="facebook no-underline" aria-label="share on Facebook">
+    <a href="https://www.facebook.com/sharer.php?u=/posts/2020-ithome-day6/" class="facebook no-underline" aria-label="share on Facebook">
       <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
 
     </a>
 
     
     
-    <a href="https://twitter.com/share?url=/posts/2020-ithome-day5/&amp;text=Day5%20Basic%20Go%20%28Install%20&amp;%20GOPATH%29" class="twitter no-underline" aria-label="share on Twitter">
+    <a href="https://twitter.com/share?url=/posts/2020-ithome-day6/&amp;text=Day6%20Basic%20Go%20%28GO%20MODULES%29" class="twitter no-underline" aria-label="share on Twitter">
       <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
 
     </a>
 
     
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/posts/2020-ithome-day5/&amp;title=Day5%20Basic%20Go%20%28Install%20&amp;%20GOPATH%29" class="linkedin no-underline" aria-label="share on LinkedIn">
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/posts/2020-ithome-day6/&amp;title=Day6%20Basic%20Go%20%28GO%20MODULES%29" class="linkedin no-underline" aria-label="share on LinkedIn">
       <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
 </svg>
@@ -186,62 +186,73 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Day5 Basic Go (Install &amp; GOPATH)</h1>
+      <h1 class="f1 athelas mt3 mb1">Day6 Basic Go (GO MODULES)</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2020-09-13T12:59:41+08:00">September 13, 2020</time>
+      <time class="f6 mv4 dib tracked" datetime="2020-09-14T09:37:35+08:00">September 14, 2020</time>
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="來個快速安裝吧">來個快速安裝吧</h2>
-<ol>
-<li>
-<p>官網下載安裝檔執行</p>
-<p><a href="https://golang.org/doc/install"><img src="https://i.imgur.com/54I2HSl.png" alt="Download and install"></a></p>
-</li>
-</ol>
-<p><img src="https://i.imgur.com/9VnZLuI.png" alt="https://i.imgur.com/9VnZLuI.png">
-2. 加入你的 .bashrc or .zshrc</p>
-<pre><code>```go
-# GOPATH
-export GOROOT=&quot;/usr/local/go&quot;
-export GOPATH=&quot;${HOME}/go&quot;
-export PATH=&quot;${GOPATH}/bin:${PATH}&quot;
-```
-</code></pre>
-<ol start="3">
-<li>
-<p>Success</p>
-<p><img src="https://i.imgur.com/zh5rlVN.png" alt="https://i.imgur.com/zh5rlVN.png"></p>
-</li>
-</ol>
-<h2 id="gopath-如何運作">GOPATH 如何運作</h2>
-<p>在你迫不及待開始試用語法前，請先看完 golang 的 <em>GOPATH</em> 是怎麼運作的，至少有一天你在新增套件不如預期的時候可以想起有這樣一回事。</p>
-<blockquote>
-<p>GOPATH 就是你想要放置 golang 專案的地方</p>
-</blockquote>
-<h3 id="分為三層">分為三層</h3>
-<p><img src="https://i.imgur.com/NozlHig.png" alt="https://i.imgur.com/NozlHig.png"></p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="go-modules">Go Modules</h2>
+<p>為了解決 <a href="mailto:go@1.11">go@1.11</a> 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。</p>
 <ul>
-<li>
-<p>/src :
-這裡是我們專案放置的實際位置，在 <em>GO111MODULE=off</em> 的情況我們會把專案放置於這個位置（<em>GO111MODULE 跟套件相依管理有關，下面篇幅會解釋</em>）。此外如果是想從 github 直接拉取想使用的套件包使用 <code>go get $套件包位置</code> 即將可套件下載至 <em>$GOPATH/src/</em> 下</p>
-<p>example :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go get github.com/gin-gonic/gin
-</code></pre></div><p><img src="https://i.imgur.com/ZdcODba.png" alt="https://i.imgur.com/ZdcODba.png"></p>
-<ul>
-<li>
-<p>/pkg :
-這個資料夾位置是直接與 go module 也就是 go套件相依管理有關，<em>GO111MODULE</em> 即為控制啟用與否的環境變數。若我們開啟 <em>GO111MODULE=on</em>，並且跟剛剛一樣下了 <code>go get github.com/gin-gonic/gin</code> ，此時套件不會被下載在 <em>$GOPATH/src/</em> 下，而是在 <em>$GOPATH/pkg/</em> 裏。</p>
-</li>
-<li>
-<p>/bin :
-同其資料夾名稱 binary 縮寫，是可執行的二進制檔所存放的位置 。可以透過 <code>go install</code> 直接將專案編譯並加入命令清單使用，對用撰寫小工具執行一些簡單任務時非常好用。</p>
-</li>
+<li>on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找</li>
+<li>off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找</li>
+<li>auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules</li>
 </ul>
-</li>
-</ul><ul class="pa0">
+<h3 id="dependency-management">Dependency Management</h3>
+<p>Golang 專案架構的構築，在某種程度上可以視為 package 的堆疊，若是在多人共同開發的情況下（而且尚未導入CI/CD），團隊成員在本地環境進行編譯，就有可能產生相依套件版本不一致的情形，更糟的是我們可能還不知道哪一個相依版本才是我們想要的，此時 Go Modules 可以解決我們的困擾。</p>
+<ul>
+<li>
+<p>我們在 test 目錄下試試</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; export GO111MODULE<span style="color:#f92672">=</span>on
+
+&gt; go mod init
+</code></pre></div></li>
+<li>
+<p>產出的 go.mod</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">module</span> <span style="color:#a6e22e">test</span> <span style="color:#75715e">//module path
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">go</span> <span style="color:#ae81ff">1.15</span> <span style="color:#75715e">//go version
+</span></code></pre></div></li>
+<li>
+<p>套件引用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; go get github.com/bwmarrin/snowflake
+
+go: github.com/bwmarrin/snowflake upgrade <span style="color:#f92672">=</span>&gt; v0.3.0
+</code></pre></div></li>
+<li>
+<p>版本相依後 go.mod</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">module</span> <span style="color:#a6e22e">test</span>
+
+<span style="color:#66d9ef">go</span> <span style="color:#ae81ff">1.15</span>
+
+<span style="color:#a6e22e">require</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bwmarrin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">snowflake</span> <span style="color:#a6e22e">v0</span><span style="color:#ae81ff">.3.0</span> <span style="color:#75715e">// indirect
+</span></code></pre></div></li>
+</ul>
+<p>截至目前為止我們引用了 <a href="http://github.com/bwmarrin/snowflake">github.com/bwmarrin/snowflake</a> 這個套件，並且將這個相依的資訊透過 go.mod 記錄下來。我們進行了一次最簡單的相依控管，下一個使用這個專案的團隊成員，即便在 snowflake 這個套件已經更版至 v1.0.0 時，也不會任意的更動套件裡的相依版號。</p>
+<ul>
+<li>
+<p>更版</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; go get github.com/bwmarrin/snowflake@v0.2.0
+
+go: downloading github.com/bwmarrin/snowflake v0.2.0
+</code></pre></div></li>
+<li>
+<p>異動紀錄 go.sum</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bwmarrin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">snowflake</span> <span style="color:#a6e22e">v0</span><span style="color:#ae81ff">.2.0</span> <span style="color:#a6e22e">h1</span>:<span style="color:#a6e22e">ldmIc3BQbp6iBoMeAB5BC5lz0NLsYfoNXnFs</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fbk62I</span>=
+<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bwmarrin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">snowflake</span> <span style="color:#a6e22e">v0</span><span style="color:#ae81ff">.2.0</span><span style="color:#f92672">/</span><span style="color:#66d9ef">go</span>.<span style="color:#a6e22e">mod</span> <span style="color:#a6e22e">h1</span>:<span style="color:#a6e22e">NdZxfVWX</span><span style="color:#f92672">+</span><span style="color:#a6e22e">oR6y2K0o6qAYv6gIOP9rjG0</span><span style="color:#f92672">/</span><span style="color:#a6e22e">E9WsDpxqwE</span>=
+<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bwmarrin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">snowflake</span> <span style="color:#a6e22e">v0</span><span style="color:#ae81ff">.3.0</span> <span style="color:#a6e22e">h1</span>:<span style="color:#a6e22e">xm67bEhkKh6ij1790JB83OujPR5CzNe8QuQqAgISZN0</span>=
+<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bwmarrin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">snowflake</span> <span style="color:#a6e22e">v0</span><span style="color:#ae81ff">.3.0</span><span style="color:#f92672">/</span><span style="color:#66d9ef">go</span>.<span style="color:#a6e22e">mod</span> <span style="color:#a6e22e">h1</span>:<span style="color:#a6e22e">NdZxfVWX</span><span style="color:#f92672">+</span><span style="color:#a6e22e">oR6y2K0o6qAYv6gIOP9rjG0</span><span style="color:#f92672">/</span><span style="color:#a6e22e">E9WsDpxqwE</span>=
+</code></pre></div></li>
+</ul>
+<p>若要針對特定版號相依，可以透過 git tag 的方式抓取想要的版本 ，並且會被記錄於 go.sum 中留存。最後我們回顧一下上一篇提到的 /pkg 資料夾，在 GO111MODULE=on 的狀況下我們 go get 了不同版本的相同套件，可以在 GOPATH/pkg/mod/ 下找到他們。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; ll $GOPATH/pkg/mod/github.com/bwmarrin
+
+total <span style="color:#ae81ff">0</span>
+dr-x------  <span style="color:#ae81ff">7</span> wesley  staff   224B  <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">10</span> 21:44 snowflake@v0.2.0
+dr-x------  <span style="color:#ae81ff">7</span> wesley  staff   224B  <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">23</span> 11:49 snowflake@v0.3.0
+</code></pre></div><ul class="pa0">
   
    <li class="list">
      <a href="/tags/golang" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
@@ -286,6 +297,10 @@ export PATH=&quot;${GOPATH}/bin:${PATH}&quot;
     <p class="f5 b mb3">Related</p>
     <ul class="pa0 list">
 	   
+	     <li  class="mb2">
+          <a href="/posts/2020-ithome-day5/">Day5 Basic Go (Install &amp; GOPATH)</a>
+        </li>
+	    
 	     <li  class="mb2">
           <a href="/posts/2020-ithome-day4/">Day4 Why Go</a>
         </li>
