@@ -41,7 +41,7 @@
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="ELK," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="30Days ELK - Day3  logstash 輸入配置"/>
 <meta name="twitter:description" content="首先 logstash 是 E.L.K 最先觸碰到你想要管理 log 部分，你可以把他想成一個介接層也是首次接觸到 log 或資料的地方，在這裡你可以選擇你的輸入來源像是直接讀 log 檔，抑或是當你想直接接受多台機器的 log 時你可以使用 tcp 作為接口。其次當多個來源的資料想分別處理成不同資訊時，在 logstash 提供的 input 可以協助我們預先做出簡單的類別判斷，以利後續 filter 分別使用不同的規則進行切割，最後於 output 選擇要輸出的方式與位置。"/>
@@ -69,6 +69,18 @@
 
       
         <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
+              Categories
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
+              Tags
+            </a>
+          </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
@@ -194,6 +206,10 @@
 <p><img src="/ithome/day3-1.png" alt="day3-1.png"></p>
 <p>沒錯你剛剛已經完成了把想要的純文字檔案透過 logstash 儲存至 elasticsearch 並且以 kibana 呈現的流程，是不是非常的容易呢，基本上至此我們只需要持續調整 logstash 的設定檔便可以完成許多想要關注的事情囉。</p><ul class="pa0">
   
+   <li class="list">
+     <a href="/tags/elk" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ELK</a>
+   </li>
+  
 </ul>
 <div class="mt6 instapaper_ignoref">
       
@@ -229,6 +245,21 @@
 
 
 
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2016-12-17-elk/">30Days ELK - Day2 來個快速安裝吧</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-16-elk/">30Days ELK - Day1 Why E.L.K</a>
+        </li>
+	    
+    </ul>
+</div>
+
 </aside>
 
   </article>
@@ -237,7 +268,7 @@
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
-    &copy;  WeiWeiWesley 2020 
+    &copy;  WeiWeiWesley 2021 
   </a>
     <div>
 

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2020 ithome鐵人30 on WeiWeiWesley</title>
+    <link>/categories/2020-ithome%E9%90%B5%E4%BA%BA30/</link>
+    <description>Recent content in 2020 ithome鐵人30 on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Sep 2020 15:50:58 +0800</lastBuildDate><atom:link href="/categories/2020-ithome%E9%90%B5%E4%BA%BA30/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day11 Mutex vs Channel</title>
+      <link>/posts/2020-ithome-day11/</link>
+      <pubDate>Sat, 19 Sep 2020 15:50:58 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day11/</guid>
+      <description>&lt;p&gt;昨天看過 race condiction 的情況後，我們了解了 mutex.Lock 與 channel，可以幫助我們同步 memory 狀態，避免發生奇怪的資料異常狀態。今天我們要延續昨天的技巧，並且用 benchmark 比較兩個在速度上的優劣。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day10 Race Condition</title>
+      <link>/posts/2020-ithome-day10/</link>
+      <pubDate>Fri, 18 Sep 2020 13:39:05 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day10/</guid>
+      <description>&lt;p&gt;在昨天我們已經看過了 golang 併發的方式，今天我們要來學習如何控制我們的 goroutines。首先我們先來看一下 race condition(或稱data race) 的定義與範例，接著我們在使用 channel 與 mutex lock 來處理這樣的問題。&lt;/p&gt;
+&lt;h2 id=&#34;race-condition&#34;&gt;Race Condition&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A race condition or race hazard is the behavior of an electronics, software, or other system where the output is dependent on the sequence or timing of other uncontrollable events&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day9 Goroutine &amp; Concurrency</title>
+      <link>/posts/2020-ithome-day9/</link>
+      <pubDate>Thu, 17 Sep 2020 15:30:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day9/</guid>
+      <description>&lt;p&gt;今天不延用 BasicGo 的標題，並非 Concurrency 很困難，而是他在 golnag 中可以被輕易實踐，反而容易造成初學者的一些困擾與誤解，建議首次使用的朋友們慎重看待他。&lt;/p&gt;
+&lt;h2 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以下圖為例，將兩個任務個別拆分成較小的子任務，並且同時丟到 thread 中執行，由於是同時丟入 thread 中，所以順序上無法保證哪一個任務先被處理完成。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.monades.dev/concurrency-is-different-than-parallelism&#34;&gt;圖片來源&lt;/a&gt;
+&lt;img src=&#34;https://user-images.githubusercontent.com/4419992/35572695-ee6275c8-05b3-11e8-8460-2c1ac7081574.jpg&#34; alt=&#34;Concurrency&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day8 Basic Go (Initialize, Scope)</title>
+      <link>/posts/2020-ithome-day8/</link>
+      <pubDate>Wed, 16 Sep 2020 16:10:42 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day8/</guid>
+      <description>&lt;p&gt;今天我們要回來重新檢視一下 golang 的各種 Scope(作用域)，在開始 scope 的說明前還必須提到 golang 程式在 runtime 初始化的順序，確保我們對運行時每一個階段的掌握。&lt;/p&gt;
+&lt;h2 id=&#34;initialization-order&#34;&gt;Initialization Order&lt;/h2&gt;
+&lt;p&gt;當我們開始執行 golang 的程序時，首先會將 import packages 內部的常數變數與 init() 完成後，才開始當前 main package 下的常數變數與 init()，最後執行 main()。此外需注意的是每個 package 內的 init() 都只會被執行一次，如同其保留的命名為“初始化”時使用。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;import package&lt;/li&gt;
+&lt;li&gt;const &amp;amp; var&lt;/li&gt;
+&lt;li&gt;init()&lt;/li&gt;
+&lt;li&gt;main()&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day7 Basic Go (Run, Syntax, Struct)</title>
+      <link>/posts/2020-ithome-day7/</link>
+      <pubDate>Tue, 15 Sep 2020 13:34:38 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day7/</guid>
+      <description>&lt;p&gt;在對環境有基本的了解後，我們終於要開始說基本語法拉～如果你是已經使用過 golang 的朋友，今天可以放心跳過這篇惹。今天我們會全速通過 golang所有基本該知道的語法，因為考量到後續篇幅的關係一些常見的型態介紹會被我省略。&lt;/p&gt;
+&lt;h2 id=&#34;執行&#34;&gt;執行&lt;/h2&gt;
+&lt;p&gt;讓我們以最簡單的範例檔開始吧！&lt;/p&gt;
+&lt;p&gt;main.go&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;//主程式名稱固定為 main()
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello world&amp;#34;&lt;/span&gt;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day6 Basic Go (GO MODULES)</title>
+      <link>/posts/2020-ithome-day6/</link>
+      <pubDate>Mon, 14 Sep 2020 09:37:35 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day6/</guid>
+      <description>&lt;h2 id=&#34;go-modules&#34;&gt;Go Modules&lt;/h2&gt;
+&lt;p&gt;為了解決 &lt;a href=&#34;mailto:go@1.11&#34;&gt;go@1.11&lt;/a&gt; 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找&lt;/li&gt;
+&lt;li&gt;off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找&lt;/li&gt;
+&lt;li&gt;auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day5 Basic Go (Install &amp; GOPATH)</title>
+      <link>/posts/2020-ithome-day5/</link>
+      <pubDate>Sun, 13 Sep 2020 12:59:41 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day5/</guid>
+      <description>&lt;h2 id=&#34;來個快速安裝吧&#34;&gt;來個快速安裝吧&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;官網下載安裝檔執行&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://golang.org/doc/install&#34;&gt;&lt;img src=&#34;https://i.imgur.com/54I2HSl.png&#34; alt=&#34;Download and install&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day4 Why Go</title>
+      <link>/posts/2020-ithome-day4/</link>
+      <pubDate>Sat, 12 Sep 2020 15:47:24 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day4/</guid>
+      <description>&lt;p&gt;先前幾天介紹 data consistency 的部分，是希望我們可以謹記資料對系統的重要性，從今天開始我們要進入用 golang 搭建 server 的實作部分，在我們可以實作前，不免俗的要介紹一下為什麼要用 golang 這個語言來進行。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day3 CAP 定理</title>
+      <link>/posts/2020-ithome-day3/</link>
+      <pubDate>Fri, 11 Sep 2020 13:42:52 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day3/</guid>
+      <description>&lt;p&gt;Consistency(一致性), Availability (可用性), Partition Tolerance(分區容忍性) 組成 CAP 定理，在前一文中提到依據不同的狀況下我們必須面臨取捨的問題，藉由了解三者的定義與任取其二所產生出來的效果了解該如何取捨。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day2 Data consistency</title>
+      <link>/posts/2020-ithome-day2/</link>
+      <pubDate>Thu, 10 Sep 2020 09:37:18 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day2/</guid>
+      <description>&lt;p&gt;會選擇在 distributed(分散式)之前先討論 consistency(一致性)，是由於如果我們的分散式系統所提供的服務無法保有一定程度的正確性的話，不論可以回應多大量或多快速的請求都是沒有意義的，而且可能會是一場巨大的災難。一般來說我們會討論到 data consistency，是基於複數存取實體因為時間差或實體間同步異常中斷，而產生的資料或狀態不一致，而單一 server 內因為多併發而產生的資料不一致屬於 data race 範疇，我們在後面一點的文章另外討論。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day1 系列文結構介紹</title>
+      <link>/posts/2020-ithome-day1/</link>
+      <pubDate>Wed, 09 Sep 2020 08:48:12 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day1/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;HiHi~!時隔多年又回來參賽拉，本次希望已經涉入軟體系統開發的工程師可以從此系列文中得到一些想法，也希望還沒應用到分散式架構或對一致性不太了解的朋友，可以體會看看遇到什麼問題的時候會需要這樣的架構編排&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

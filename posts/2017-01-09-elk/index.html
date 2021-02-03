@@ -41,7 +41,7 @@
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="ELK," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="30Days ELK - Day25 Kibana X-Pack Graph"/>
 <meta name="twitter:description" content="再開始講 Graph 之前我要跟大家提醒一下加裝 X-Pack 後你可能會遇到無法使用 tcp 當 input 的情況，然後一直跑去檢查 logstash container 的設定卻又苦無結果，其實這不是 logstash 壞掉哦!是 elasticsearch 上的 x-pack 因增加了權限管理而把 logstash 送過來的請求擋掉了，我們僅需簡單地在送至 elasticsearch 時帶上帳號密碼即可。"/>
@@ -69,6 +69,18 @@
 
       
         <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
+              Categories
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
+              Tags
+            </a>
+          </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
@@ -207,6 +219,10 @@
 <!-- raw HTML omitted -->
 <p>觀察結果可以發現圖上部分線條較粗大，這表示兩個節點間互動的強度，在這邊來說便是資源取用的多寡，或特定大小檔案取用量。目前這個範例僅是協助我們了解 x-pack graph 的功能及其使用的方式，若是你想看到更有意義的網路圖的話，請另行使用真實資料模擬哦~</p><ul class="pa0">
   
+   <li class="list">
+     <a href="/tags/elk" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ELK</a>
+   </li>
+  
 </ul>
 <div class="mt6 instapaper_ignoref">
       
@@ -242,6 +258,73 @@
 
 
 
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2017-01-08-elk/">30Days ELK - Day24 Kinban Plugin X-Pack Monitoring</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-07-elk/">30Days ELK - Day23 Kibana Plugin X-Pack Install</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-06-elk/">30Days ELK - Day22 Multi logstash machines used for monitoring.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-05-elk/">30Days ELK - Day21 Elasticsearch Cluster</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-04-elk/">30Days ELK - Day20 Dockerfile &amp; docker-compose</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-03-elk/">30Days ELK - Day19 Docker</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-02-elk/">30Days ELK - Day18 Dashboard</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-01-elk/">30Days ELK - Day17 Bar chart. Tag Cloud. Tile map</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-31-elk/">30Days ELK - Day16 Visualize data with pie chart. Count by metric</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-30-elk/">30Days ELK - Day15 DataTable</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-29-elk/">30Days ELK - Day14 Visualize data with area chart. Markdown your document.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-28-elk/">30Days ELK - Day13 Visualize data with line chart &amp; bubble chart</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-27-elk/">30Days ELK - Day12 Reformate timestamp</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-26-elk/">30Days ELK - Day11 Discover data freely by any shape anytime</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-25-elk/">30Days ELK - Day10 Kibana</a>
+        </li>
+	    
+    </ul>
+</div>
+
 </aside>
 
   </article>
@@ -250,7 +333,7 @@
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
-    &copy;  WeiWeiWesley 2020 
+    &copy;  WeiWeiWesley 2021 
   </a>
     <div>
 

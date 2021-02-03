@@ -44,7 +44,7 @@ But if you want to do it by the right way. 你需要參考官方文件">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="ELK," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="30Days ELK - Day29 Optimization"/>
 <meta name="twitter:description" content="在使用 Elastic Stack 的過程中可藉由調整 logstash 資料過濾的方式、elasticsearch 資料儲存的方式來優化整體效能。個人在使用的過程中有遇到效能上的問題，一開始是資源使用不完全，cup的使用率一直無法接近滿載的情況而導致資料處理緩慢。後來想到一個簡單的方式在不改動環境設定值的情況下增加 logstash 的工作量 —— 直接增加 logstash container，這是唯有我們在 docker container 下才有辦法做到的解法，雖然多虛擬機會犧牲部分資源，但能夠用這種方式使得資源被完全使用對當下的我來說是最重要的，如果你跟我一樣只是想多使用一點資源的話這或許是一個簡單不錯的方式。
@@ -73,6 +73,18 @@ But if you want to do it by the right way. 你需要參考官方文件"/>
 
       
         <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
+              Categories
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
+              Tags
+            </a>
+          </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
@@ -186,11 +198,11 @@ But if you want to do it by the right way. 你需要參考官方文件"/>
 </ul>
 <!-- raw HTML omitted -->
 <h4 id="logstash-filter-效能檢驗流程">Logstash filter 效能檢驗流程</h4>
-<p>Step 1: 簡易測試資料<br>
-Step 2: metrics 插件，觀察 documents/minute rate<br>
-Step 3: 優化 filtes<br>
-Step 4: 優化 inputs<br>
-Step 5: 優化 outputs<br>
+<p>Step 1: 簡易測試資料
+Step 2: metrics 插件，觀察 documents/minute rate
+Step 3: 優化 filtes
+Step 4: 優化 inputs
+Step 5: 優化 outputs
 <!-- raw HTML omitted --></p>
 <blockquote>
 <p><a href="https://www.elastic.co/blog/logstash-configuration-tuning">可參考官方調校建議</a></p>
@@ -199,6 +211,10 @@ Step 5: 優化 outputs<br>
 <blockquote>
 <p><a href="https://www.elastic.co/guide/en/logstash/current/performance-troubleshooting.html">Performance Troubleshooting Guide</a></p>
 </blockquote><ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/elk" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ELK</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -235,6 +251,73 @@ Step 5: 優化 outputs<br>
 
 
 
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2017-01-12-elk/">30Days ELK - Day28 Kibana Extended Metric Plugin</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-11-elk/">30Days ELK - Day27 地震熱區資料視覺化測試範例</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-10-elk/">30Days ELK - Day26 Apache log 測試範例懶人包</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-09-elk/">30Days ELK - Day25 Kibana X-Pack Graph</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-08-elk/">30Days ELK - Day24 Kinban Plugin X-Pack Monitoring</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-07-elk/">30Days ELK - Day23 Kibana Plugin X-Pack Install</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-06-elk/">30Days ELK - Day22 Multi logstash machines used for monitoring.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-05-elk/">30Days ELK - Day21 Elasticsearch Cluster</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-04-elk/">30Days ELK - Day20 Dockerfile &amp; docker-compose</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-03-elk/">30Days ELK - Day19 Docker</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-02-elk/">30Days ELK - Day18 Dashboard</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-01-01-elk/">30Days ELK - Day17 Bar chart. Tag Cloud. Tile map</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-31-elk/">30Days ELK - Day16 Visualize data with pie chart. Count by metric</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-30-elk/">30Days ELK - Day15 DataTable</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-29-elk/">30Days ELK - Day14 Visualize data with area chart. Markdown your document.</a>
+        </li>
+	    
+    </ul>
+</div>
+
 </aside>
 
   </article>
@@ -243,7 +326,7 @@ Step 5: 優化 outputs<br>
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
-    &copy;  WeiWeiWesley 2020 
+    &copy;  WeiWeiWesley 2021 
   </a>
     <div>
 

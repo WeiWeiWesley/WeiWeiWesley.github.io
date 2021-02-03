@@ -41,7 +41,7 @@
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="ELK," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="30Days ELK - Day8 Elasticsearch CRUD"/>
 <meta name="twitter:description" content="之前提過 elasticsearh 是個擁有全 RESTful API 操作的分散式資料庫，於且向大家介紹一下其基本操作的方法。雖然不見得在使用 E.L.K 會用到，畢竟解析由 logstash 完成了，一般存取也可以由 kibana 完成，但如果想針對單筆紀錄作微調或測試你還是會用到以 curl CRUD 操作的。"/>
@@ -69,6 +69,18 @@
 
       
         <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
+              Categories
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
+              Tags
+            </a>
+          </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
@@ -292,6 +304,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -XDELETE http://127.0.0.1:9200/logstash-2016.12.*
 </code></pre></div><ul class="pa0">
   
+   <li class="list">
+     <a href="/tags/elk" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ELK</a>
+   </li>
+  
 </ul>
 <div class="mt6 instapaper_ignoref">
       
@@ -327,6 +343,41 @@
 
 
 
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2016-12-22-elk/">30Days ELK - Day7 Elasticsearch</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-21-elk/">30Days ELK - Day6 便利的 logstsh plugin (filter - 2)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-20-elk/">30Days ELK - Day5  便利的 logstash plugin (filter)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-19-elk/">30Days ELK - Day4  便利的 logstash plugin (input)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-18-elk/">30Days ELK - Day3  logstash 輸入配置</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-17-elk/">30Days ELK - Day2 來個快速安裝吧</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-12-16-elk/">30Days ELK - Day1 Why E.L.K</a>
+        </li>
+	    
+    </ul>
+</div>
+
 </aside>
 
   </article>
@@ -335,7 +386,7 @@
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
-    &copy;  WeiWeiWesley 2020 
+    &copy;  WeiWeiWesley 2021 
   </a>
     <div>
 
