@@ -6,11 +6,29 @@
     <description>Recent content in Tags on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2020 15:50:58 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Sep 2020 11:31:32 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>container</title>
+      <link>/tags/container/</link>
+      <pubDate>Mon, 21 Sep 2020 11:31:32 +0800</pubDate>
+      
+      <guid>/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Mon, 21 Sep 2020 11:31:32 +0800</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>concurrency</title>
       <link>/tags/concurrency/</link>
-      <pubDate>Sat, 19 Sep 2020 15:50:58 +0800</pubDate>
+      <pubDate>Sun, 20 Sep 2020 12:10:37 +0800</pubDate>
       
       <guid>/tags/concurrency/</guid>
       <description></description>
@@ -19,7 +37,7 @@
     <item>
       <title>golang</title>
       <link>/tags/golang/</link>
-      <pubDate>Sat, 19 Sep 2020 15:50:58 +0800</pubDate>
+      <pubDate>Sun, 20 Sep 2020 12:10:37 +0800</pubDate>
       
       <guid>/tags/golang/</guid>
       <description></description>

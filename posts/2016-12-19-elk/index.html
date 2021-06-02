@@ -7,7 +7,7 @@
     <title>30Days ELK - Day4  便利的 logstash plugin (input) | WeiWeiWesley</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="我們在昨天的內容分享了基本的 logstash 使用方式，今天要介紹的則是 logstash 的 input plugins 。其實 logstash 的運作除了基於其 input, filter, ouput 的架構外，在這三層架構中使用的 plugins 才是讓整個 logstash 具有資料切割與過濾能力的核心關鍵，input plugins 提供了我們獲取各式不同資料來源的方式，以下分別介紹幾個常用的 input plugin。">
-    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="generator" content="Hugo 0.83.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -30,19 +30,15 @@
     <meta property="og:title" content="30Days ELK - Day4  便利的 logstash plugin (input)" />
 <meta property="og:description" content="我們在昨天的內容分享了基本的 logstash 使用方式，今天要介紹的則是 logstash 的 input plugins 。其實 logstash 的運作除了基於其 input, filter, ouput 的架構外，在這三層架構中使用的 plugins 才是讓整個 logstash 具有資料切割與過濾能力的核心關鍵，input plugins 提供了我們獲取各式不同資料來源的方式，以下分別介紹幾個常用的 input plugin。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2016-12-19-elk/" />
-<meta property="article:published_time" content="2016-12-19T17:33:23+08:00" />
-<meta property="article:modified_time" content="2016-12-19T17:33:23+08:00" />
+<meta property="og:url" content="/posts/2016-12-19-elk/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-12-19T17:33:23&#43;08:00" />
+<meta property="article:modified_time" content="2016-12-19T17:33:23&#43;08:00" />
+
 <meta itemprop="name" content="30Days ELK - Day4  便利的 logstash plugin (input)">
-<meta itemprop="description" content="我們在昨天的內容分享了基本的 logstash 使用方式，今天要介紹的則是 logstash 的 input plugins 。其實 logstash 的運作除了基於其 input, filter, ouput 的架構外，在這三層架構中使用的 plugins 才是讓整個 logstash 具有資料切割與過濾能力的核心關鍵，input plugins 提供了我們獲取各式不同資料來源的方式，以下分別介紹幾個常用的 input plugin。">
-<meta itemprop="datePublished" content="2016-12-19T17:33:23+08:00" />
-<meta itemprop="dateModified" content="2016-12-19T17:33:23+08:00" />
+<meta itemprop="description" content="我們在昨天的內容分享了基本的 logstash 使用方式，今天要介紹的則是 logstash 的 input plugins 。其實 logstash 的運作除了基於其 input, filter, ouput 的架構外，在這三層架構中使用的 plugins 才是讓整個 logstash 具有資料切割與過濾能力的核心關鍵，input plugins 提供了我們獲取各式不同資料來源的方式，以下分別介紹幾個常用的 input plugin。"><meta itemprop="datePublished" content="2016-12-19T17:33:23&#43;08:00" />
+<meta itemprop="dateModified" content="2016-12-19T17:33:23&#43;08:00" />
 <meta itemprop="wordCount" content="140">
-
-
-
-<meta itemprop="keywords" content="ELK," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ELK," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="30Days ELK - Day4  便利的 logstash plugin (input)"/>
 <meta name="twitter:description" content="我們在昨天的內容分享了基本的 logstash 使用方式，今天要介紹的則是 logstash 的 input plugins 。其實 logstash 的運作除了基於其 input, filter, ouput 的架構外，在這三層架構中使用的 plugins 才是讓整個 logstash 具有資料切割與過濾能力的核心關鍵，input plugins 提供了我們獲取各式不同資料來源的方式，以下分別介紹幾個常用的 input plugin。"/>
 

@@ -4,17 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Redis ELK | WeiWeiWesley</title>
+    <title>Day13 Docker | WeiWeiWesley</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="結合 reids &amp; ELK 搜集分散式 log。適合想統一異質平台或已微服務化的系統使用。
-僅需將目標 log RPUSH 至指定的 redis key，便可輕鬆地藉由 logstash 取出至 elasticserach 最後由 kibana 呈現。
-需求
-
-docker-compose
-redis
-
-Repo
-https://github.com/WeiWeiWesley/ELK">
+    <meta name="description" content="為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。">
     <meta name="generator" content="Hugo 0.83.1" />
     
     
@@ -35,44 +27,20 @@ https://github.com/WeiWeiWesley/ELK">
 
     
     
-    <meta property="og:title" content="Redis ELK" />
-<meta property="og:description" content="結合 reids &amp; ELK 搜集分散式 log。適合想統一異質平台或已微服務化的系統使用。
-僅需將目標 log RPUSH 至指定的 redis key，便可輕鬆地藉由 logstash 取出至 elasticserach 最後由 kibana 呈現。
-需求
-
-docker-compose
-redis
-
-Repo
-https://github.com/WeiWeiWesley/ELK" />
+    <meta property="og:title" content="Day13 Docker" />
+<meta property="og:description" content="為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2019-09-25-redis-elk/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-09-25T14:12:14&#43;08:00" />
-<meta property="article:modified_time" content="2019-09-25T14:12:14&#43;08:00" />
+<meta property="og:url" content="/posts/2020-ithome-day13/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-21T11:31:32&#43;08:00" />
+<meta property="article:modified_time" content="2020-09-21T11:31:32&#43;08:00" />
 
-<meta itemprop="name" content="Redis ELK">
-<meta itemprop="description" content="結合 reids &amp; ELK 搜集分散式 log。適合想統一異質平台或已微服務化的系統使用。
-僅需將目標 log RPUSH 至指定的 redis key，便可輕鬆地藉由 logstash 取出至 elasticserach 最後由 kibana 呈現。
-需求
-
-docker-compose
-redis
-
-Repo
-https://github.com/WeiWeiWesley/ELK"><meta itemprop="datePublished" content="2019-09-25T14:12:14&#43;08:00" />
-<meta itemprop="dateModified" content="2019-09-25T14:12:14&#43;08:00" />
-<meta itemprop="wordCount" content="78">
-<meta itemprop="keywords" content="ELK," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Redis ELK"/>
-<meta name="twitter:description" content="結合 reids &amp; ELK 搜集分散式 log。適合想統一異質平台或已微服務化的系統使用。
-僅需將目標 log RPUSH 至指定的 redis key，便可輕鬆地藉由 logstash 取出至 elasticserach 最後由 kibana 呈現。
-需求
-
-docker-compose
-redis
-
-Repo
-https://github.com/WeiWeiWesley/ELK"/>
+<meta itemprop="name" content="Day13 Docker">
+<meta itemprop="description" content="為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。"><meta itemprop="datePublished" content="2020-09-21T11:31:32&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-21T11:31:32&#43;08:00" />
+<meta itemprop="wordCount" content="82">
+<meta itemprop="keywords" content="docker,container," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Day13 Docker"/>
+<meta name="twitter:description" content="為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。"/>
 
 	
   </head>
@@ -180,20 +148,20 @@ https://github.com/WeiWeiWesley/ELK"/>
   <div id="sharing" class="mt3">
 
     
-    <a href="https://www.facebook.com/sharer.php?u=/posts/2019-09-25-redis-elk/" class="facebook no-underline" aria-label="share on Facebook">
+    <a href="https://www.facebook.com/sharer.php?u=/posts/2020-ithome-day13/" class="facebook no-underline" aria-label="share on Facebook">
       <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
 
     </a>
 
     
     
-    <a href="https://twitter.com/share?url=/posts/2019-09-25-redis-elk/&amp;text=Redis%20ELK" class="twitter no-underline" aria-label="share on Twitter">
+    <a href="https://twitter.com/share?url=/posts/2020-ithome-day13/&amp;text=Day13%20Docker" class="twitter no-underline" aria-label="share on Twitter">
       <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
 
     </a>
 
     
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/posts/2019-09-25-redis-elk/&amp;title=Redis%20ELK" class="linkedin no-underline" aria-label="share on LinkedIn">
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/posts/2020-ithome-day13/&amp;title=Day13%20Docker" class="linkedin no-underline" aria-label="share on LinkedIn">
       <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
 </svg>
@@ -202,58 +170,54 @@ https://github.com/WeiWeiWesley/ELK"/>
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Redis ELK</h1>
+      <h1 class="f1 athelas mt3 mb1">Day13 Docker</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2019-09-25T14:12:14+08:00">September 25, 2019</time>
+      <time class="f6 mv4 dib tracked" datetime="2020-09-21T11:31:32+08:00">September 21, 2020</time>
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>結合 reids &amp; ELK 搜集分散式 log。適合想統一異質平台或已微服務化的系統使用。</p>
-<p>僅需將目標 log RPUSH 至指定的 redis key，便可輕鬆地藉由 logstash 取出至 elasticserach 最後由 kibana 呈現。</p>
-<h3 id="需求">需求</h3>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。</p>
+<h2 id="特性">特性</h2>
+<p>Docker 是一種已被廣泛使用的虛擬方式，跟一些舊有的虛擬方式相比他有以下優勢</p>
 <ul>
-<li>docker-compose</li>
-<li>redis</li>
+<li>快速部署，可實現秒級實作</li>
+<li>資源使用率高，表示因虛擬化而被犧牲的資源較少，可以在實體機器上運行更多的虛擬機提供服務</li>
+<li>易拓展性，原本只適用於 linux 環境，但近來也提供在 win &amp; mac 運行的方式</li>
+<li>易於管理，將不同功能與服務分離，每次只針對部分做更新且不需重啟實體機器</li>
 </ul>
-<h3 id="repo">Repo</h3>
-<p><a href="https://github.com/WeiWeiWesley/ELK">https://github.com/WeiWeiWesley/ELK</a></p>
-<h3 id="usage">Usage</h3>
-<!-- raw HTML omitted -->
-<pre><code>input {
-	redis {
-		data_type =&gt; &quot;list&quot;
-		host =&gt; &quot;$REDIS_HOST&quot;
-		port =&gt; &quot;6379&quot;
-		key =&gt; &quot;mylog&quot; //your reids key
-    	id =&gt; &quot;logstash&quot;
-  	}
-}
-
-filter {
-	json {
-        source =&gt; &quot;message&quot;
-	}
-}
-
-output {
-	stdout {codec =&gt; json}
-
-	elasticsearch {
-		hosts =&gt; [&quot;elasticsearch:9200&quot;]
-	}
-}
-</code></pre><h4 id="啟動">啟動</h4>
-<pre><code>docker-compose -f ./docker-compose.yml up
-</code></pre><h4 id="介面">介面</h4>
-<p>http://127.0.0.1:5601/app/kibana#/management</p>
-<p><img src="/kibana_management.png" alt="kibana_management.png"></p>
-<!-- raw HTML omitted -->
-<p><a href="https://www.elastic.co/guide/index.html">https://www.elastic.co/guide/index.html</a></p><ul class="pa0">
+<p><img src="https://i.imgur.com/SAVDwf4.png" alt="docker vs VM"></p>
+<p>這是由官方文件所提供的對比圖，看得出容器是基於 linuxOS 上，去分享使用資源，包涵 cpu &amp; memory。而 VM 則是透過重新劃分硬體資源，需額外經過虛擬化管理層，故 VM 會需要額外佔用更多的實體資源。可參考<a href="https://docs.docker.com/get-started/#containers-and-virtual-machines">官方原文</a>。</p>
+<h2 id="三大組成要素">三大組成要素</h2>
+<h3 id="image">Image</h3>
+<blockquote>
+<p>Docker 映像檔就是一個唯讀的模板。
+例如：一個映像檔可以包含一個完整的 ubuntu 作業系統環境，裡面僅安裝了 Apache 或使用者需要的其它應用程式。映像檔可以用來建立 Docker 容器。Docker 提供了一個很簡單的機制來建立映像檔或者更新現有的映像檔，使用者甚至可以直接從其他人那裡下載一個已經做好的映像檔來直接使用。</p>
+</blockquote>
+<p>這個特性對我們來說很方便，以開發或測試來說，不同專案需要不同資料庫或 cluster database 時，僅需要去 pull image 並使體化出多個 container 即可。</p>
+<h3 id="container">Container</h3>
+<blockquote>
+<p>Docker 利用容器來執行應用。容器是從映像檔建立的執行實例。它可以被啟動、開始、停止、刪除。每個容器都是相互隔離的、保證安全的平台。可以把容器看做是一個簡易版的 Linux 環境（包括root使用者權限、程式空間、使用者空間和網路空間等）和在其中執行的應用程式。</p>
+</blockquote>
+<p>容器乾淨的分離方式有助於我們在版本更新或錯誤發生時，能快速進行抽換容器減少服務更新或還原時間。</p>
+<h3 id="registry">Registry</h3>
+<blockquote>
+<p>倉庫分為公開倉庫（Public）和私有倉庫（Private）兩種形式。公開倉庫像是 Docker Hub，存放了數量龐大的映像檔供使用者下載使用者也可以在本地網路內建立一個私有倉庫。Docker 倉庫的概念跟 Git 類似，註冊伺服器可以理解為 GitHub 這樣的託管服務。當使用者建立了自己的映像檔之後就可以使用 push 命令將它上傳到公有或者私有倉庫，這樣下次在另外一台機器上使用這個映像檔時候，只需要從倉庫上 pull 下來就可以了。</p>
+</blockquote>
+<p>這也是他易於拓展的原因，不論是想在公開或私有的網路環境部署，都可以輕易地取得相同的映像檔部署在不同機器上。</p>
+<h3 id="install">Install</h3>
+<p><a href="https://docs.docker.com/get-docker/"><img src="https://i.imgur.com/meRKXyb.png" alt="Download"></a>
+安裝的部分請大家參考官方下載說明進行安裝，我們明天會針對 Dockerfile 的使用、基本命令與同時啟動多個 containers 時，所需要的 docker-compose 進行介紹。</p>
+<p><a href="https://hub.docker.com/"><img src="https://i.imgur.com/Q3Exb4Z.png" alt="DockerHub"></a>
+建議建立一下 DockerHub 的帳號，可以幫我們保管建立好的 images 於公倉，便於隨時隨地取用。</p><ul class="pa0">
   
    <li class="list">
-     <a href="/tags/elk" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ELK</a>
+     <a href="/tags/docker" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">docker</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/container" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">container</a>
    </li>
   
 </ul>
@@ -290,73 +254,6 @@ output {
 
 
 
-
-  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">Related</p>
-    <ul class="pa0 list">
-	   
-	     <li  class="mb2">
-          <a href="/posts/2019-01-14-elk/">30Days ELK - Day30 30 days Review</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2018-01-13-elk/">30Days ELK - Day29 Optimization</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-12-elk/">30Days ELK - Day28 Kibana Extended Metric Plugin</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-11-elk/">30Days ELK - Day27 地震熱區資料視覺化測試範例</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-10-elk/">30Days ELK - Day26 Apache log 測試範例懶人包</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-09-elk/">30Days ELK - Day25 Kibana X-Pack Graph</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-08-elk/">30Days ELK - Day24 Kinban Plugin X-Pack Monitoring</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-07-elk/">30Days ELK - Day23 Kibana Plugin X-Pack Install</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-06-elk/">30Days ELK - Day22 Multi logstash machines used for monitoring.</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-05-elk/">30Days ELK - Day21 Elasticsearch Cluster</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-04-elk/">30Days ELK - Day20 Dockerfile &amp; docker-compose</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-03-elk/">30Days ELK - Day19 Docker</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-02-elk/">30Days ELK - Day18 Dashboard</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2017-01-01-elk/">30Days ELK - Day17 Bar chart. Tag Cloud. Tile map</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/2016-12-31-elk/">30Days ELK - Day16 Visualize data with pie chart. Count by metric</a>
-        </li>
-	    
-    </ul>
-</div>
 
 </aside>
 

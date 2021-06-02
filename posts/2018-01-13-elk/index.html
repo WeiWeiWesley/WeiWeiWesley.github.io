@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="在使用 Elastic Stack 的過程中可藉由調整 logstash 資料過濾的方式、elasticsearch 資料儲存的方式來優化整體效能。個人在使用的過程中有遇到效能上的問題，一開始是資源使用不完全，cup的使用率一直無法接近滿載的情況而導致資料處理緩慢。後來想到一個簡單的方式在不改動環境設定值的情況下增加 logstash 的工作量 —— 直接增加 logstash container，這是唯有我們在 docker container 下才有辦法做到的解法，雖然多虛擬機會犧牲部分資源，但能夠用這種方式使得資源被完全使用對當下的我來說是最重要的，如果你跟我一樣只是想多使用一點資源的話這或許是一個簡單不錯的方式。
 But if you want to do it by the right way. 你需要參考官方文件">
-    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="generator" content="Hugo 0.83.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -32,20 +32,16 @@ But if you want to do it by the right way. 你需要參考官方文件">
 <meta property="og:description" content="在使用 Elastic Stack 的過程中可藉由調整 logstash 資料過濾的方式、elasticsearch 資料儲存的方式來優化整體效能。個人在使用的過程中有遇到效能上的問題，一開始是資源使用不完全，cup的使用率一直無法接近滿載的情況而導致資料處理緩慢。後來想到一個簡單的方式在不改動環境設定值的情況下增加 logstash 的工作量 —— 直接增加 logstash container，這是唯有我們在 docker container 下才有辦法做到的解法，雖然多虛擬機會犧牲部分資源，但能夠用這種方式使得資源被完全使用對當下的我來說是最重要的，如果你跟我一樣只是想多使用一點資源的話這或許是一個簡單不錯的方式。
 But if you want to do it by the right way. 你需要參考官方文件" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2018-01-13-elk/" />
-<meta property="article:published_time" content="2017-01-13T20:34:56+08:00" />
-<meta property="article:modified_time" content="2017-01-13T20:34:56+08:00" />
+<meta property="og:url" content="/posts/2018-01-13-elk/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-01-13T20:34:56&#43;08:00" />
+<meta property="article:modified_time" content="2017-01-13T20:34:56&#43;08:00" />
+
 <meta itemprop="name" content="30Days ELK - Day29 Optimization">
 <meta itemprop="description" content="在使用 Elastic Stack 的過程中可藉由調整 logstash 資料過濾的方式、elasticsearch 資料儲存的方式來優化整體效能。個人在使用的過程中有遇到效能上的問題，一開始是資源使用不完全，cup的使用率一直無法接近滿載的情況而導致資料處理緩慢。後來想到一個簡單的方式在不改動環境設定值的情況下增加 logstash 的工作量 —— 直接增加 logstash container，這是唯有我們在 docker container 下才有辦法做到的解法，雖然多虛擬機會犧牲部分資源，但能夠用這種方式使得資源被完全使用對當下的我來說是最重要的，如果你跟我一樣只是想多使用一點資源的話這或許是一個簡單不錯的方式。
-But if you want to do it by the right way. 你需要參考官方文件">
-<meta itemprop="datePublished" content="2017-01-13T20:34:56+08:00" />
-<meta itemprop="dateModified" content="2017-01-13T20:34:56+08:00" />
+But if you want to do it by the right way. 你需要參考官方文件"><meta itemprop="datePublished" content="2017-01-13T20:34:56&#43;08:00" />
+<meta itemprop="dateModified" content="2017-01-13T20:34:56&#43;08:00" />
 <meta itemprop="wordCount" content="63">
-
-
-
-<meta itemprop="keywords" content="ELK," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ELK," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="30Days ELK - Day29 Optimization"/>
 <meta name="twitter:description" content="在使用 Elastic Stack 的過程中可藉由調整 logstash 資料過濾的方式、elasticsearch 資料儲存的方式來優化整體效能。個人在使用的過程中有遇到效能上的問題，一開始是資源使用不完全，cup的使用率一直無法接近滿載的情況而導致資料處理緩慢。後來想到一個簡單的方式在不改動環境設定值的情況下增加 logstash 的工作量 —— 直接增加 logstash container，這是唯有我們在 docker container 下才有辦法做到的解法，雖然多虛擬機會犧牲部分資源，但能夠用這種方式使得資源被完全使用對當下的我來說是最重要的，如果你跟我一樣只是想多使用一點資源的話這或許是一個簡單不錯的方式。
 But if you want to do it by the right way. 你需要參考官方文件"/>

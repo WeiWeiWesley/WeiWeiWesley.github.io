@@ -6,7 +6,25 @@
     <description>Recent content on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2020 15:50:58 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Sep 2020 11:31:32 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day13 Docker</title>
+      <link>/posts/2020-ithome-day13/</link>
+      <pubDate>Mon, 21 Sep 2020 11:31:32 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day13/</guid>
+      <description>&lt;p&gt;為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day12 Atomic</title>
+      <link>/posts/2020-ithome-day12/</link>
+      <pubDate>Sun, 20 Sep 2020 12:10:37 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day12/</guid>
+      <description>&lt;p&gt;關於 &lt;a href=&#34;https://golang.org/pkg/sync/atomic/&#34;&gt;sync/atomic&lt;/a&gt; 是於 &lt;a href=&#34;mailto:go@v1.14&#34;&gt;go@v1.14&lt;/a&gt; 才推出的新東西，筆者也是最近才知道有這個包可以使用。Atomic 目標在一些單純的操作上，完成最小原子性操作，使用上甚至比 mutex 更為簡便。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day11 Mutex vs Channel</title>
       <link>/posts/2020-ithome-day11/</link>

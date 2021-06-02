@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on WeiWeiWesley</title>
+    <link>/tags/docker/</link>
+    <description>Recent content in docker on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Sep 2020 11:31:32 +0800</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day13 Docker</title>
+      <link>/posts/2020-ithome-day13/</link>
+      <pubDate>Mon, 21 Sep 2020 11:31:32 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day13/</guid>
+      <description>&lt;p&gt;為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

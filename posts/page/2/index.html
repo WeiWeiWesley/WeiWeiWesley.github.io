@@ -7,7 +7,7 @@
     <title>WeiWeiWesley</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
-    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="generator" content="Hugo 0.83.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -36,10 +36,9 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/posts/" />
-<meta property="og:updated_time" content="2020-09-19T15:50:58+08:00" />
+
 <meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
 
@@ -147,6 +146,54 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day7/" class="link black dim">
+        Day7 Basic Go (Run, Syntax, Struct)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>在對環境有基本的了解後，我們終於要開始說基本語法拉～如果你是已經使用過 golang 的朋友，今天可以放心跳過這篇惹。今天我們會全速通過 golang所有基本該知道的語法，因為考量到後續篇幅的關係一些常見的型態介紹會被我省略。</p>
+<h2 id="執行">執行</h2>
+<p>讓我們以最簡單的範例檔開始吧！</p>
+<p>main.go</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#75715e">//主程式名稱固定為 main()
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>)
+}
+</code></pre></div>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day6/" class="link black dim">
+        Day6 Basic Go (GO MODULES)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h2 id="go-modules">Go Modules</h2>
+<p>為了解決 <a href="mailto:go@1.11">go@1.11</a> 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。</p>
+<ul>
+<li>on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找</li>
+<li>off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找</li>
+<li>auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules</li>
+</ul>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2020-ithome-day5/" class="link black dim">
         Day5 Basic Go (Install &amp; GOPATH)
       </a>
@@ -209,37 +256,6 @@
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day1/" class="link black dim">
-        Day1 系列文結構介紹
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="前言">前言</h2>
-<p>HiHi~!時隔多年又回來參賽拉，本次希望已經涉入軟體系統開發的工程師可以從此系列文中得到一些想法，也希望還沒應用到分散式架構或對一致性不太了解的朋友，可以體會看看遇到什麼問題的時候會需要這樣的架構編排</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2019-11-26-test/" class="link black dim">
-        Private method 是否該進行單元測試？
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p><strong>先講結論，不需要。</strong></p>
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 <ul class="pagination">
   <li class="page-item">
@@ -261,13 +277,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/8/">8</a>
+    <a class="page-link" href="/posts/page/9/">9</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/8/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/9/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

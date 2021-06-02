@@ -7,7 +7,7 @@
     <title>WeiWeiWesley</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
-    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="generator" content="Hugo 0.83.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -36,10 +36,9 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2020-09-19T15:50:58+08:00" />
+
 <meta itemprop="name" content="WeiWeiWesley">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="WeiWeiWesley"/>
 <meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
 
@@ -173,6 +172,54 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/2020-ithome-day13/" class="color-inherit dim link">
+            Day13 Docker
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <p>為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。</p>
+        </div>
+          <a href="/posts/2020-ithome-day13/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/2020-ithome-day12/" class="color-inherit dim link">
+            Day12 Atomic
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <p>關於 <a href="https://golang.org/pkg/sync/atomic/">sync/atomic</a> 是於 <a href="mailto:go@v1.14">go@v1.14</a> 才推出的新東西，筆者也是最近才知道有這個包可以使用。Atomic 目標在一些單純的操作上，完成最小原子性操作，使用上甚至比 mutex 更為簡便。</p>
+        </div>
+          <a href="/posts/2020-ithome-day12/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/2020-ithome-day11/" class="color-inherit dim link">
             Day11 Mutex vs Channel
             </a>
@@ -189,71 +236,24 @@
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day10/" class="color-inherit dim link">
-            Day10 Race Condition
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>在昨天我們已經看過了 golang 併發的方式，今天我們要來學習如何控制我們的 goroutines。首先我們先來看一下 race condition(或稱data race) 的定義與範例，接著我們在使用 channel 與 mutex lock 來處理這樣的問題。</p>
-<h2 id="race-condition">Race Condition</h2>
-<blockquote>
-<p>A race condition or race hazard is the behavior of an electronics, software, or other system where the output is dependent on the sequence or timing of other uncontrollable events</p>
-</blockquote>
-        </div>
-          <a href="/posts/2020-ithome-day10/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day9/" class="color-inherit dim link">
-            Day9 Goroutine &amp; Concurrency
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>今天不延用 BasicGo 的標題，並非 Concurrency 很困難，而是他在 golnag 中可以被輕易實踐，反而容易造成初學者的一些困擾與誤解，建議首次使用的朋友們慎重看待他。</p>
-<h2 id="concurrency">Concurrency</h2>
-<blockquote>
-<p>In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome</p>
-</blockquote>
-<p>以下圖為例，將兩個任務個別拆分成較小的子任務，並且同時丟到 thread 中執行，由於是同時丟入 thread 中，所以順序上無法保證哪一個任務先被處理完成。</p>
-<p><a href="https://www.monades.dev/concurrency-is-different-than-parallelism">圖片來源</a>
-<img src="https://user-images.githubusercontent.com/4419992/35572695-ee6275c8-05b3-11e8-8460-2c1ac7081574.jpg" alt="Concurrency"></p>
-        </div>
-          <a href="/posts/2020-ithome-day9/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/2020-ithome-day10/" class="link black dim">
+              Day10 Race Condition
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/2020-ithome-day9/" class="link black dim">
+              Day9 Goroutine &amp; Concurrency
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/posts/2020-ithome-day8/" class="link black dim">
@@ -264,18 +264,6 @@
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/posts/2020-ithome-day7/" class="link black dim">
               Day7 Basic Go (Run, Syntax, Struct)
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2020-ithome-day6/" class="link black dim">
-              Day6 Basic Go (GO MODULES)
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2020-ithome-day5/" class="link black dim">
-              Day5 Basic Go (Install &amp; GOPATH)
             </a>
           </h2>
         

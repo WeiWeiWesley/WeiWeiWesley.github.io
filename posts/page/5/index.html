@@ -7,7 +7,7 @@
     <title>WeiWeiWesley</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
-    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="generator" content="Hugo 0.83.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -36,10 +36,9 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/posts/" />
-<meta property="og:updated_time" content="2020-09-19T15:50:58+08:00" />
+
 <meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
 
@@ -147,6 +146,38 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2017-01-09-elk/" class="link black dim">
+        30Days ELK - Day25 Kibana X-Pack Graph
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>再開始講 Graph 之前我要跟大家提醒一下加裝 X-Pack 後你可能會遇到無法使用 tcp 當 input 的情況，然後一直跑去檢查 logstash container 的設定卻又苦無結果，其實這不是 logstash 壞掉哦!是 elasticsearch 上的 x-pack 因增加了權限管理而把 logstash 送過來的請求擋掉了，我們僅需簡單地在送至 elasticsearch 時帶上帳號密碼即可。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-01-08-elk/" class="link black dim">
+        30Days ELK - Day24 Kinban Plugin X-Pack Monitoring
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>不好意思昨天出了意料之外的錯誤 (註：其實這篇應該昨天就要打出來的)，其實我也是一邊查資料一邊安裝 x-pack 這個 kibana plugin <img src="/ithome/emoticon16.gif" alt="emoticon16.gif"></p>
+<p>所以先前雖然裝好了 x-pack 也成功登入我們的 kibana web 介面，但最重要的就是這個 &ldquo;but&rdquo;，他完全沒有達到我本來想跟大家分享的功能，觀察 elasticsearch cluster nodes。其實僅是我在安裝的時候竟然！竟然！只在 elasticsearch 一個節點上未安裝 x-pack</p>
+<p>這下真是尷尬今天會再重新分享一下更簡單的安裝方式，以及 X-Pack 提供的主要功能。想用昨天那種直接進入容器的方式安裝也可以，只是要記得所有的 elasticsearch nodes 都要裝哦～要是你覺得這樣太麻煩了這邊提供一個比較優雅的方式，也是一樣直接在啟動容器上改變設置：</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2017-01-07-elk/" class="link black dim">
         30Days ELK - Day23 Kibana Plugin X-Pack Install
       </a>
@@ -216,36 +247,6 @@
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2017-01-03-elk/" class="link black dim">
-        30Days ELK - Day19 Docker
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>你以為看錯標題了嗎？沒有哦～就是 docker 沒錯，為了延續後面我要講一些插件與優化配置的方式，這邊必須簡單提一下 docker 讓後面在能夠比較簡單的銜接上，真的是簡單講一下因為接觸 docker 時間不夠長，讓我們快速走過吧。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2017-01-02-elk/" class="link black dim">
-        30Days ELK - Day18 Dashboard
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>先前我們在 Visualize 繪製了許多圖表，這些圖表可能個別代表不同資訊內容或比較，當然我們有可能需要整合這些資訊到同一個頁面裡，這時侯 Dashboard 就登場拉～多個願望一次滿足。當然前提是你要在 Visualize 繪製儲存所需的圖表然後到 Dashboard 就可以直接加入囉。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 <ul class="pagination">
   <li class="page-item">
@@ -276,13 +277,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/8/">8</a>
+    <a class="page-link" href="/posts/page/9/">9</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/6/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/8/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/9/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
