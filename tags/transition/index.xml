@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>transition on WeiWeiWesley</title>
+    <link>/tags/transition/</link>
+    <description>Recent content in transition on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Sep 2020 12:34:17 +0800</lastBuildDate><atom:link href="/tags/transition/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day17 Transactions (Redis)</title>
+      <link>/posts/2020-ithome-day17/</link>
+      <pubDate>Fri, 25 Sep 2020 12:34:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day17/</guid>
+      <description>&lt;p&gt;是的，我們今天要來討論一下 Redis 的 transaction。我們知道 Transaction 要嘛全執行要嘛全不執行，Redis 在 2.2 之後提供了 optimistic lock，讓我們得以進行 check-and-set 的可能，並且實作了幾個方法讓我們可以達成 transaction 的需求。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day16 Transactions (MySQL)</title>
+      <link>/posts/2020-ithome-day16/</link>
+      <pubDate>Thu, 24 Sep 2020 18:01:01 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day16/</guid>
+      <description>&lt;p&gt;為了保持我們的資料能&lt;strong&gt;正確的寫入&lt;/strong&gt;與&lt;strong&gt;正確的不寫入&lt;/strong&gt;，今天我們要來了解一下 transactions 是怎麼運作的，以及如果沒有實作 transactions 會發生怎樣的悲劇，最後提供 gorm 實作 transactions 的範例程式碼給大家參考。&lt;/p&gt;
+&lt;p&gt;Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止服務需更新多筆資料或多個 table 時，任一筆資料更新失敗而產生的更新不完整狀態出現。被包在 transactions 中的的操作只要有一筆失敗便可以透過 rollback 來將其它已操作的部分復原。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

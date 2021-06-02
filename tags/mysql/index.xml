@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on WeiWeiWesley</title>
+    <link>/tags/mysql/</link>
+    <description>Recent content in mysql on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Sep 2020 18:01:01 +0800</lastBuildDate><atom:link href="/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day16 Transactions (MySQL)</title>
+      <link>/posts/2020-ithome-day16/</link>
+      <pubDate>Thu, 24 Sep 2020 18:01:01 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day16/</guid>
+      <description>&lt;p&gt;為了保持我們的資料能&lt;strong&gt;正確的寫入&lt;/strong&gt;與&lt;strong&gt;正確的不寫入&lt;/strong&gt;，今天我們要來了解一下 transactions 是怎麼運作的，以及如果沒有實作 transactions 會發生怎樣的悲劇，最後提供 gorm 實作 transactions 的範例程式碼給大家參考。&lt;/p&gt;
+&lt;p&gt;Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止服務需更新多筆資料或多個 table 時，任一筆資料更新失敗而產生的更新不完整狀態出現。被包在 transactions 中的的操作只要有一筆失敗便可以透過 rollback 來將其它已操作的部分復原。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day15 Http Server &amp; Gorm</title>
+      <link>/posts/2020-ithome-day15/</link>
+      <pubDate>Wed, 23 Sep 2020 10:23:57 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day15/</guid>
+      <description>&lt;p&gt;依據進度我們要進入實做的部分了，昨天的 docker-compose，剛好幫我們建立了一組 slave-master MySQL database，今天將利用昨日的 DB 加上 Gin &amp;amp; Gorm packages，完成最簡易的 HTTP service。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

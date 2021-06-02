@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>micoservices on WeiWeiWesley</title>
+    <link>/tags/micoservices/</link>
+    <description>Recent content in micoservices on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Sep 2020 12:40:34 +0800</lastBuildDate><atom:link href="/tags/micoservices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day19 Distributed Micoservices</title>
+      <link>/posts/2020-ithome-day19/</link>
+      <pubDate>Sun, 27 Sep 2020 12:40:34 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day19/</guid>
+      <description>&lt;p&gt;我們前面花了一些時間了解 golang 的基本用法，以及資料一致性的重要性，並且在上一篇中討論到多 server 快取資料可能發生的狀況，其中在多 server 下如果能夠保持資料存取一致，並且依據流量更彈性的增減，便是 microservices 的最大特色。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

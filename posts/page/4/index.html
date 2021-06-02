@@ -146,13 +146,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2019-06-30-webocketya-ce-gong-ju/" class="link black dim">
-        Websocket 壓測工具
+      <a href="/posts/2020-ithome-day2/" class="link black dim">
+        Day2 Data consistency
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>這是一個以 go語言編寫的 websocket壓測工具，提供併發連線、結果驗證、時間計算等功能。筆者目前使用的環境多為 Linux &amp; MacOS，如果想在CLI簡單地對 websocket服務進行壓力測試的話，這邊提供一個簡單的工具給大家。</p>
-<p><a href="https://github.com/WeiWeiWesley/WsTestTool">Github Link</a></p>
+      <p>會選擇在 distributed(分散式)之前先討論 consistency(一致性)，是由於如果我們的分散式系統所提供的服務無法保有一定程度的正確性的話，不論可以回應多大量或多快速的請求都是沒有意義的，而且可能會是一場巨大的災難。一般來說我們會討論到 data consistency，是基於複數存取實體因為時間差或實體間同步異常中斷，而產生的資料或狀態不一致，而單一 server 內因為多併發而產生的資料不一致屬於 data race 範疇，我們在後面一點的文章另外討論。</p>
     </div>
   </div>
 </div>
@@ -162,13 +161,13 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2019-01-14-elk/" class="link black dim">
-        30Days ELK - Day30 30 days Review
+      <a href="/posts/2020-ithome-day1/" class="link black dim">
+        Day1 系列文結構介紹
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="終於終於">終於終於</h2>
-<p>終於終於走到這裡了，我先向一路看我拖搞到這的人說先抱歉與謝謝。寫這系列文章主要是剛好正在接觸 E.L.K 這套常見 log solution 時，朋友建議把學習的過程記錄下來，加深自己理解的內容也幫助別人可以有簡單的入門方式。當然我知道自己有很多地方的使用方式還不夠理想，還有很多需要改善的地方，還有很多可以發揮它強大效能的地方沒有補足，但我還是很開心的迎接這最後一天的到來 —— Done is better than perfect. 或許很多人對話此嗤之以鼻但我現在懂它的價值所在，如果真的要做到完美的話這系列文章是不會誕生的，他應該在Day23就結束了(笑)。</p>
+      <h2 id="前言">前言</h2>
+<p>HiHi~!時隔多年又回來參賽拉，本次希望已經涉入軟體系統開發的工程師可以從此系列文中得到一些想法，也希望還沒應用到分散式架構或對一致性不太了解的朋友，可以體會看看遇到什麼問題的時候會需要這樣的架構編排</p>
     </div>
   </div>
 </div>
@@ -178,13 +177,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2018-01-13-elk/" class="link black dim">
-        30Days ELK - Day29 Optimization
+      <a href="/posts/2019-11-26-test/" class="link black dim">
+        Private method 是否該進行單元測試？
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在使用 Elastic Stack 的過程中可藉由調整 logstash 資料過濾的方式、elasticsearch 資料儲存的方式來優化整體效能。個人在使用的過程中有遇到效能上的問題，一開始是資源使用不完全，cup的使用率一直無法接近滿載的情況而導致資料處理緩慢。後來想到一個簡單的方式在不改動環境設定值的情況下增加 logstash 的工作量 —— 直接增加 logstash container，這是唯有我們在 docker container 下才有辦法做到的解法，雖然多虛擬機會犧牲部分資源，但能夠用這種方式使得資源被完全使用對當下的我來說是最重要的，如果你跟我一樣只是想多使用一點資源的話這或許是一個簡單不錯的方式。</p>
-<p><em>But if you want to do it by the right way. 你需要參考<a href="https://www.elastic.co/guide/en/logstash/current/logstash-settings-file.html">官方文件</a></em></p>
+      <p><strong>先講結論，不需要。</strong></p>
     </div>
   </div>
 </div>
@@ -194,14 +192,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2017-01-12-elk/" class="link black dim">
-        30Days ELK - Day28 Kibana Extended Metric Plugin
+      <a href="/posts/2019-11-04-devops2019/" class="link black dim">
+        DevOps 2019
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>終於快要結束了，其實寫到這裡已經超過我於本預計想分享的部分了，所以很多東西真的是現學現賣，這次也是分享一個小插件的安裝與使用方式，還希望大家不嫌棄囉。</p>
-<h2 id="kibana-extended-metric-plugin">Kibana Extended Metric Plugin</h2>
-<p>這個插件十分簡易，這邊直接提供測試資料與設定檔供大家，下載試玩。</p>
+      <h2 id="day1-opens-space">Day1 Opens Space</h2>
+<p>首次參加 Opens Space 這樣形式的交流方式，藉由成員各自發起議題自由且自發的進行討論，能收穫多少取決於參與的程度，不僅是聆聽者也是意見與問題的提供者，透過議題發起、討論、提問、回答來持續的找出可能性與盲點。</p>
+<p>其中參加了 “Waterfall 中的 Agile Scrum”、“到底是 DevOps 包含 Agile 還是 Agile 包含 DevOps”、“如何讓主管了解 DevOps 真正的理論好處” 這三個主題。三個主題的共通點是都有討論到如何去實踐 DevOps，DevOps 並非規範不是單一流程更非單一系統，更接近一個文化一個共同的價值交付的過程，但價值與文化的統一談何容易，故此狹義的 DevOps 可以讓我們從 CI/CD 做起，藉由統一持續驗證系統開發結果，減少人工手動的繁複程序加速交付流程，增加團隊信心，也同時直接增加商業利益。</p>
     </div>
   </div>
 </div>
@@ -211,12 +209,20 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2017-01-11-elk/" class="link black dim">
-        30Days ELK - Day27 地震熱區資料視覺化測試範例
+      <a href="/posts/2019-09-25-redis-elk/" class="link black dim">
+        Redis ELK
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>這篇其實使用的技巧與上篇差異不大，主要是提供一個資料，讓大家可以快速做出 Dashboard 並調整成符合自己的需求。當然你也可以參照 logstash.conf 調整一下資料過濾的方式，之前一直沒有提到的 grok 小技巧是其實你可以利用 (?:ValueA | ValueB) 的方式給予 field 預設值。</p>
+      <p>結合 reids &amp; ELK 搜集分散式 log。適合想統一異質平台或已微服務化的系統使用。</p>
+<p>僅需將目標 log RPUSH 至指定的 redis key，便可輕鬆地藉由 logstash 取出至 elasticserach 最後由 kibana 呈現。</p>
+<h3 id="需求">需求</h3>
+<ul>
+<li>docker-compose</li>
+<li>redis</li>
+</ul>
+<h3 id="repo">Repo</h3>
+<p><a href="https://github.com/WeiWeiWesley/ELK">https://github.com/WeiWeiWesley/ELK</a></p>
     </div>
   </div>
 </div>
@@ -226,13 +232,22 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2017-01-10-elk/" class="link black dim">
-        30Days ELK - Day26 Apache log 測試範例懶人包
+      <a href="/posts/2019-09-20-kubernet-summit-2019/" class="link black dim">
+        Kubernet Summit 2019
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>提醒沒看過前面的朋友想直接拿首先基本安裝還是要有，可參考 [Day2 - 來個快速安裝吧](- 來個快速安裝吧) 獲得基本環境部署，開啟 <a href="http://127.0.0.1:5601/app/kibana">Kibana local</a> 確定服務能正確啟動。</p>
-<p>來囉快速咻咻咻完成它</p>
+      <h3 id="簡易重點">簡易重點</h3>
+<ol>
+<li>賣 K8s 的人不敢告訴你的事 - 葉秉哲（William）
+<ul>
+<li>導入前必須提出的問題：維運成本、拓展性、管理性</li>
+<li>供應商提供的數據是否符合現實需求</li>
+<li>現有架構是否已經完成解耦合微服務化，已適合搬遷</li>
+<li>配套CI/CD與分散式log收集監視是否完備</li>
+</ul>
+</li>
+</ol>
     </div>
   </div>
 </div>
@@ -265,13 +280,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/9/">9</a>
+    <a class="page-link" href="/posts/page/10/">10</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/5/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/9/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/10/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

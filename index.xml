@@ -6,7 +6,72 @@
     <description>Recent content on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Sep 2020 11:31:32 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2020 09:56:21 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day20 Kubernetes (Cluster Architecture)</title>
+      <link>/posts/2020-ithome-day20/</link>
+      <pubDate>Mon, 28 Sep 2020 09:56:21 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day20/</guid>
+      <description>&lt;p&gt;今天介紹一下以 golang 為主編程語言，建立當前最知名的容器管理服務 — Kubernetes。我們在上一篇已經簡單的敘述過，服務是如何演進成分散式服務，而微服務又是如何因應分散式服務而產生，今天的我們會介紹 Kubernetes 的運作架構，以及關於 Kubernetes 幾個關鍵名詞解釋，Here we go。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/BJOsuWS.png&#34; alt=&#34;k8s-golang&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day19 Distributed Micoservices</title>
+      <link>/posts/2020-ithome-day19/</link>
+      <pubDate>Sun, 27 Sep 2020 12:40:34 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day19/</guid>
+      <description>&lt;p&gt;我們前面花了一些時間了解 golang 的基本用法，以及資料一致性的重要性，並且在上一篇中討論到多 server 快取資料可能發生的狀況，其中在多 server 下如果能夠保持資料存取一致，並且依據流量更彈性的增減，便是 microservices 的最大特色。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day18 Cache (Local Cache vs Redis)</title>
+      <link>/posts/2020-ithome-day18/</link>
+      <pubDate>Sat, 26 Sep 2020 14:39:08 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day18/</guid>
+      <description>&lt;p&gt;會有快取的需求是來自於使用者，對相同資料目標進行大量讀取，為了降低 RMDBS 連線數量與 RMDBS 的實體資源，所產生出來的架構策略。今天我們要來實作 cache，並且分別使用本地記憶體與共用noSQL兩種方式，進行比較其效果與其優劣。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day17 Transactions (Redis)</title>
+      <link>/posts/2020-ithome-day17/</link>
+      <pubDate>Fri, 25 Sep 2020 12:34:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day17/</guid>
+      <description>&lt;p&gt;是的，我們今天要來討論一下 Redis 的 transaction。我們知道 Transaction 要嘛全執行要嘛全不執行，Redis 在 2.2 之後提供了 optimistic lock，讓我們得以進行 check-and-set 的可能，並且實作了幾個方法讓我們可以達成 transaction 的需求。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day16 Transactions (MySQL)</title>
+      <link>/posts/2020-ithome-day16/</link>
+      <pubDate>Thu, 24 Sep 2020 18:01:01 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day16/</guid>
+      <description>&lt;p&gt;為了保持我們的資料能&lt;strong&gt;正確的寫入&lt;/strong&gt;與&lt;strong&gt;正確的不寫入&lt;/strong&gt;，今天我們要來了解一下 transactions 是怎麼運作的，以及如果沒有實作 transactions 會發生怎樣的悲劇，最後提供 gorm 實作 transactions 的範例程式碼給大家參考。&lt;/p&gt;
+&lt;p&gt;Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止服務需更新多筆資料或多個 table 時，任一筆資料更新失敗而產生的更新不完整狀態出現。被包在 transactions 中的的操作只要有一筆失敗便可以透過 rollback 來將其它已操作的部分復原。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day15 Http Server &amp; Gorm</title>
+      <link>/posts/2020-ithome-day15/</link>
+      <pubDate>Wed, 23 Sep 2020 10:23:57 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day15/</guid>
+      <description>&lt;p&gt;依據進度我們要進入實做的部分了，昨天的 docker-compose，剛好幫我們建立了一組 slave-master MySQL database，今天將利用昨日的 DB 加上 Gin &amp;amp; Gorm packages，完成最簡易的 HTTP service。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day14 Dockerfile &amp; Docker-Compose</title>
+      <link>/posts/2020-ithome-day14/</link>
+      <pubDate>Tue, 22 Sep 2020 10:38:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day14/</guid>
+      <description>&lt;p&gt;本日文章內容目標能讓我們了解，Dockerfile 撰寫的格式與啟動的效果，並且使用 docker-compose 啟動多個 containers，並建立兩個 containers 溝通的橋樑。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day13 Docker</title>
       <link>/posts/2020-ithome-day13/</link>

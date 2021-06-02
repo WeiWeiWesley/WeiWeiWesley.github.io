@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>two-phase commit on WeiWeiWesley</title>
+    <link>/tags/two-phase-commit/</link>
+    <description>Recent content in two-phase commit on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Sep 2020 12:34:17 +0800</lastBuildDate><atom:link href="/tags/two-phase-commit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day17 Transactions (Redis)</title>
+      <link>/posts/2020-ithome-day17/</link>
+      <pubDate>Fri, 25 Sep 2020 12:34:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day17/</guid>
+      <description>&lt;p&gt;是的，我們今天要來討論一下 Redis 的 transaction。我們知道 Transaction 要嘛全執行要嘛全不執行，Redis 在 2.2 之後提供了 optimistic lock，讓我們得以進行 check-and-set 的可能，並且實作了幾個方法讓我們可以達成 transaction 的需求。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

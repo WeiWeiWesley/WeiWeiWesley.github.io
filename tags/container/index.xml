@@ -6,7 +6,17 @@
     <description>Recent content in container on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Sep 2020 11:31:32 +0800</lastBuildDate><atom:link href="/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2020 09:56:21 +0800</lastBuildDate><atom:link href="/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day20 Kubernetes (Cluster Architecture)</title>
+      <link>/posts/2020-ithome-day20/</link>
+      <pubDate>Mon, 28 Sep 2020 09:56:21 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day20/</guid>
+      <description>&lt;p&gt;今天介紹一下以 golang 為主編程語言，建立當前最知名的容器管理服務 — Kubernetes。我們在上一篇已經簡單的敘述過，服務是如何演進成分散式服務，而微服務又是如何因應分散式服務而產生，今天的我們會介紹 Kubernetes 的運作架構，以及關於 Kubernetes 幾個關鍵名詞解釋，Here we go。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/BJOsuWS.png&#34; alt=&#34;k8s-golang&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day13 Docker</title>
       <link>/posts/2020-ithome-day13/</link>

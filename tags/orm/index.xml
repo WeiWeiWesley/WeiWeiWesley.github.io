@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>orm on WeiWeiWesley</title>
+    <link>/tags/orm/</link>
+    <description>Recent content in orm on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Sep 2020 10:23:57 +0800</lastBuildDate><atom:link href="/tags/orm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day15 Http Server &amp; Gorm</title>
+      <link>/posts/2020-ithome-day15/</link>
+      <pubDate>Wed, 23 Sep 2020 10:23:57 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day15/</guid>
+      <description>&lt;p&gt;依據進度我們要進入實做的部分了，昨天的 docker-compose，剛好幫我們建立了一組 slave-master MySQL database，今天將利用昨日的 DB 加上 Gin &amp;amp; Gorm packages，完成最簡易的 HTTP service。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

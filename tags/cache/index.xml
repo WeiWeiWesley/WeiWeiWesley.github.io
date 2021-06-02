@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cache on WeiWeiWesley</title>
+    <link>/tags/cache/</link>
+    <description>Recent content in cache on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Sep 2020 14:39:08 +0800</lastBuildDate><atom:link href="/tags/cache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day18 Cache (Local Cache vs Redis)</title>
+      <link>/posts/2020-ithome-day18/</link>
+      <pubDate>Sat, 26 Sep 2020 14:39:08 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day18/</guid>
+      <description>&lt;p&gt;會有快取的需求是來自於使用者，對相同資料目標進行大量讀取，為了降低 RMDBS 連線數量與 RMDBS 的實體資源，所產生出來的架構策略。今天我們要來實作 cache，並且分別使用本地記憶體與共用noSQL兩種方式，進行比較其效果與其優劣。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

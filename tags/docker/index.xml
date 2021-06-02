@@ -6,7 +6,16 @@
     <description>Recent content in docker on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Sep 2020 11:31:32 +0800</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Sep 2020 10:38:17 +0800</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day14 Dockerfile &amp; Docker-Compose</title>
+      <link>/posts/2020-ithome-day14/</link>
+      <pubDate>Tue, 22 Sep 2020 10:38:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day14/</guid>
+      <description>&lt;p&gt;本日文章內容目標能讓我們了解，Dockerfile 撰寫的格式與啟動的效果，並且使用 docker-compose 啟動多個 containers，並建立兩個 containers 溝通的橋樑。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day13 Docker</title>
       <link>/posts/2020-ithome-day13/</link>
