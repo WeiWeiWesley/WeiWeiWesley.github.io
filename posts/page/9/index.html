@@ -146,12 +146,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-23-elk/" class="link black dim">
-        30Days ELK - Day8 Elasticsearch CRUD
+      <a href="/posts/2017-01-02-elk/" class="link black dim">
+        30Days ELK - Day18 Dashboard
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>之前提過 elasticsearh 是個擁有全 RESTful API 操作的分散式資料庫，於且向大家介紹一下其基本操作的方法。雖然不見得在使用 E.L.K 會用到，畢竟解析由 logstash 完成了，一般存取也可以由 kibana 完成，但如果想針對單筆紀錄作微調或測試你還是會用到以 curl CRUD 操作的。</p>
+      <p>先前我們在 Visualize 繪製了許多圖表，這些圖表可能個別代表不同資訊內容或比較，當然我們有可能需要整合這些資訊到同一個頁面裡，這時侯 Dashboard 就登場拉～多個願望一次滿足。當然前提是你要在 Visualize 繪製儲存所需的圖表然後到 Dashboard 就可以直接加入囉。</p>
     </div>
   </div>
 </div>
@@ -161,12 +161,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-22-elk/" class="link black dim">
-        30Days ELK - Day7 Elasticsearch
+      <a href="/posts/2017-01-01-elk/" class="link black dim">
+        30Days ELK - Day17 Bar chart. Tag Cloud. Tile map
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>Elasticsearch 是我們之後再 kibana 之所以可以快速的呼叫與搜尋的關鍵，我們來簡單暸解一下 elasticsearch 的特性與他在 E.L.K 中扮演的角色。</p>
+      <p>我們今天來把 kiban visualize 的部分收個尾，首先介紹的是最常用到的 bar chart，設置的方式與 line chart, area chart 相同都是現設定好 x軸、y軸，再加入想要聚合的屬性。</p>
     </div>
   </div>
 </div>
@@ -176,12 +176,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-21-elk/" class="link black dim">
-        30Days ELK - Day6 便利的 logstsh plugin (filter - 2)
+      <a href="/posts/2016-12-31-elk/" class="link black dim">
+        30Days ELK - Day16 Visualize data with pie chart. Count by metric
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天繼續來看一下有什麼實用的 filter plugins 可以協助我們把資訊從原始資料切割出來。</p>
+      <p>另個常見的視覺化方式“圓餅圖 pie chart”，圓餅圖可以很有效地對資料進行展示。特別是在想要表示某個大扇型區在整體中所占比例，這一方法十分有效。設置流程與其他圖表大同小異，讓我們快速的一步驟一步驟完成他吧。若用範例資料進行練習，資料切割配置可參考Day15於此不重複說明囉。</p>
     </div>
   </div>
 </div>
@@ -191,12 +191,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-20-elk/" class="link black dim">
-        30Days ELK - Day5  便利的 logstash plugin (filter)
+      <a href="/posts/2016-12-30-elk/" class="link black dim">
+        30Days ELK - Day15 DataTable
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>Filter plugins 可以說是整個 logstash 最核心的部分，多數你想要過濾的資料內容都可以仰賴其進行。而 filter plugins 的選擇與配置多數相關於一開始輸入的資料類型，舉例來說你的資料可能含有 geographical location 那你的 filter plugins 就可以加上 geoip ，來幫助你切割出經緯度、地區、國家、時區等資訊。以下簡單介紹一下幾個實用的 filter plugins 使用方式。</p>
+      <p>好了我來還債了，我們繼續來看看 kibana visualize 還有什麼可以提供的。</p>
     </div>
   </div>
 </div>
@@ -206,12 +206,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-19-elk/" class="link black dim">
-        30Days ELK - Day4  便利的 logstash plugin (input)
+      <a href="/posts/2016-12-29-elk/" class="link black dim">
+        30Days ELK - Day14 Visualize data with area chart. Markdown your document.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>我們在昨天的內容分享了基本的 logstash 使用方式，今天要介紹的則是 logstash 的 input plugins 。其實 logstash 的運作除了基於其 input, filter, ouput 的架構外，在這三層架構中使用的 plugins 才是讓整個 logstash 具有資料切割與過濾能力的核心關鍵，input plugins 提供了我們獲取各式不同資料來源的方式，以下分別介紹幾個常用的 input plugin。</p>
+      <p>Area chart 基本繪製與 line chart 無異</p>
     </div>
   </div>
 </div>
@@ -221,12 +221,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-18-elk/" class="link black dim">
-        30Days ELK - Day3  logstash 輸入配置
+      <a href="/posts/2016-12-28-elk/" class="link black dim">
+        30Days ELK - Day13 Visualize data with line chart &amp; bubble chart
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>首先 logstash 是 E.L.K 最先觸碰到你想要管理 log 部分，你可以把他想成一個介接層也是首次接觸到 log 或資料的地方，在這裡你可以選擇你的輸入來源像是直接讀 log 檔，抑或是當你想直接接受多台機器的 log 時你可以使用 tcp 作為接口。其次當多個來源的資料想分別處理成不同資訊時，在 logstash 提供的 input 可以協助我們預先做出簡單的類別判斷，以利後續 filter 分別使用不同的規則進行切割，最後於 output 選擇要輸出的方式與位置。</p>
+      <p>今天要來畫畫圖兒，如果想完全照著做的話請使用下方 logstash.conf 檔配置，資料來源一樣使用<a href="http://www.monitorware.com/en/logsamples/apache.php">apache sample logs</a>。</p>
     </div>
   </div>
 </div>
@@ -262,10 +262,13 @@
     <a class="page-link" href="/posts/page/10/">10</a>
   </li>
   <li class="page-item">
+    <a class="page-link" href="/posts/page/11/">11</a>
+  </li>
+  <li class="page-item">
     <a href="/posts/page/10/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/10/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/11/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

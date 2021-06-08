@@ -151,6 +151,60 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day30/" class="link black dim">
+        Day30 系列文總結與回顧
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>這次很快的來到了鐵人賽最後一天呢～今天讓我們簡單的回顧一下，系列文的結構與其中可能值得運用的地方。<a href="https://ithelp.ithome.com.tw/users/20103420/ironman/3134">Go Distributed &amp; Go Consistently</a> 這系列文以 golang 為基底，目標在建立可靠的分散式服務或系統，如果是直接跳到本篇總結的朋友，不訪參考一下結構分析，再決定本系列文是否有適合你的地方。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day29/" class="link black dim">
+        Day29 Drone (Install &amp; Usage)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>本系列文已經接近尾深，今天分享一個跟前面比較不一樣的主題，Drone CI/CD。分享這個工具的主因，是因為體會過 CI/CD 的美好就回不去了，剛好 Drone 是一套以 golang 編程的 CI/CD 工具，本篇讓我們使用 Github repo 當作目標，實現簡易的 CI testting。
+<a href="https://drone.io/"><img src="https://i.imgur.com/nv3AUgI.png" alt="drone"></a></p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day27/" class="link black dim">
+        Day27 NSQ (Client Usage &amp; RDY)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>昨天簡單介紹過 NSQ架構與組成要件，今天我們來看一下實際使用的方式，與使用時需要注意的地方。範例會延續昨天架在 kubernetes 的 NSQ，請還沒有安裝朋友，自行利用<a href="https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/nsqExample">範例設定</a>部署。</p>
+<p>如果照著範例啟動的話，我們可以得到 3個使用相同 channel 的 consumer pods，與一個負責推送訊息至 topic 的 producer。注意到這次範例實作 Producer-Consumer Mode，故 3個 consumer 收到的 messages 總數，應等於 channel messages 總數。</p>
+<p><img src="https://i.imgur.com/9OUPKD4.png" alt="nsqadmin"></p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2020-ithome-day18/" class="link black dim">
         Day18 Cache (Local Cache vs Redis)
       </a>

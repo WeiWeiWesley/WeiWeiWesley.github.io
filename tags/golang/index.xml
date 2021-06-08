@@ -6,7 +6,37 @@
     <description>Recent content in golang on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Sep 2020 14:39:08 +0800</lastBuildDate><atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Oct 2020 09:47:51 +0800</lastBuildDate><atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day30 系列文總結與回顧</title>
+      <link>/posts/2020-ithome-day30/</link>
+      <pubDate>Thu, 08 Oct 2020 09:47:51 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day30/</guid>
+      <description>&lt;p&gt;這次很快的來到了鐵人賽最後一天呢～今天讓我們簡單的回顧一下，系列文的結構與其中可能值得運用的地方。&lt;a href=&#34;https://ithelp.ithome.com.tw/users/20103420/ironman/3134&#34;&gt;Go Distributed &amp;amp; Go Consistently&lt;/a&gt; 這系列文以 golang 為基底，目標在建立可靠的分散式服務或系統，如果是直接跳到本篇總結的朋友，不訪參考一下結構分析，再決定本系列文是否有適合你的地方。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day29 Drone (Install &amp; Usage)</title>
+      <link>/posts/2020-ithome-day29/</link>
+      <pubDate>Wed, 07 Oct 2020 09:11:26 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day29/</guid>
+      <description>&lt;p&gt;本系列文已經接近尾深，今天分享一個跟前面比較不一樣的主題，Drone CI/CD。分享這個工具的主因，是因為體會過 CI/CD 的美好就回不去了，剛好 Drone 是一套以 golang 編程的 CI/CD 工具，本篇讓我們使用 Github repo 當作目標，實現簡易的 CI testting。
+&lt;a href=&#34;https://drone.io/&#34;&gt;&lt;img src=&#34;https://i.imgur.com/nv3AUgI.png&#34; alt=&#34;drone&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day27 NSQ (Client Usage &amp; RDY)</title>
+      <link>/posts/2020-ithome-day27/</link>
+      <pubDate>Mon, 05 Oct 2020 14:45:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day27/</guid>
+      <description>&lt;p&gt;昨天簡單介紹過 NSQ架構與組成要件，今天我們來看一下實際使用的方式，與使用時需要注意的地方。範例會延續昨天架在 kubernetes 的 NSQ，請還沒有安裝朋友，自行利用&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/nsqExample&#34;&gt;範例設定&lt;/a&gt;部署。&lt;/p&gt;
+&lt;p&gt;如果照著範例啟動的話，我們可以得到 3個使用相同 channel 的 consumer pods，與一個負責推送訊息至 topic 的 producer。注意到這次範例實作 Producer-Consumer Mode，故 3個 consumer 收到的 messages 總數，應等於 channel messages 總數。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/9OUPKD4.png&#34; alt=&#34;nsqadmin&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day18 Cache (Local Cache vs Redis)</title>
       <link>/posts/2020-ithome-day18/</link>

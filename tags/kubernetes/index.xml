@@ -6,7 +6,102 @@
     <description>Recent content in kubernetes on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 09:56:21 +0800</lastBuildDate><atom:link href="/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Oct 2020 09:47:51 +0800</lastBuildDate><atom:link href="/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day30 系列文總結與回顧</title>
+      <link>/posts/2020-ithome-day30/</link>
+      <pubDate>Thu, 08 Oct 2020 09:47:51 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day30/</guid>
+      <description>&lt;p&gt;這次很快的來到了鐵人賽最後一天呢～今天讓我們簡單的回顧一下，系列文的結構與其中可能值得運用的地方。&lt;a href=&#34;https://ithelp.ithome.com.tw/users/20103420/ironman/3134&#34;&gt;Go Distributed &amp;amp; Go Consistently&lt;/a&gt; 這系列文以 golang 為基底，目標在建立可靠的分散式服務或系統，如果是直接跳到本篇總結的朋友，不訪參考一下結構分析，再決定本系列文是否有適合你的地方。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day28 NSQ (Tips)</title>
+      <link>/posts/2020-ithome-day28/</link>
+      <pubDate>Mon, 05 Oct 2020 14:45:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day28/</guid>
+      <description>&lt;p&gt;針對一些可能遇到的問題或需求，跟大家分享一下須注意的地方或處裡的方式。&lt;/p&gt;
+&lt;h2 id=&#34;config-options&#34;&gt;Config Options&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MaxAttempts : NSQ consumer 嘗試處理訊息次數，並非無限的，預設 5次，可透過 max_attempts 進行變更&lt;/li&gt;
+&lt;li&gt;BackoffStrategy : 每次重新嘗試處理訊息時，會對 &lt;code&gt;backoff +1&lt;/code&gt; ，表示下一次重新處理的時間將延後，預設延遲為指數性成長(ex 2, 4, 16 &amp;hellip;)&lt;/li&gt;
+&lt;li&gt;MsgTimeout : 可設置訊息若堆積過久，沒有被送到 client 端時，自動失效&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day26 NSQ (Features &amp; Install)</title>
+      <link>/posts/2020-ithome-day26/</link>
+      <pubDate>Sun, 04 Oct 2020 15:12:12 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day26/</guid>
+      <description>&lt;p&gt;在進行分散式運算時如果是想發送至不同實體， 我們可直接發出請求並等待回傳結果，但這樣在等待回傳時的運算能力是被閒置的，故此聰明的我們可能會用 &lt;code&gt;goroutine&lt;/code&gt; 將請求發送去，再利用 &lt;code&gt;select channel&lt;/code&gt; 等待回傳結果。但大量使用 &lt;code&gt;channel&lt;/code&gt; 的設計又較為複雜，維護較為困難，且依然有著請求對象沒有收到請求，或收到請求沒有回傳這樣不好處理的狀況。&lt;/p&gt;
+&lt;p&gt;為了處理上述一些在訊息傳遞交換過程所面臨的問題，我們除了在邏輯上，對服務進行切分成更小的服務顆粒，對於傳遞過程可能造成的錯誤與重試必須進行掌控。NSQ 實作了我們對于訊息交換的需求，特別是在自動重試這個部分，NSQ 幫助我們可以確保資訊是有被接受並處理的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day25 Istio (Load Balance gRPC)</title>
+      <link>/posts/2020-ithome-day25/</link>
+      <pubDate>Sat, 03 Oct 2020 11:31:26 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day25/</guid>
+      <description>&lt;p&gt;今天我們實作 gRPC services，觀察 gRPC services 是否可以在有 Istio 的協助下，真的能夠順利的對流量進行 load balance。&lt;/p&gt;
+&lt;h2 id=&#34;test-example&#34;&gt;Test Example&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/gRPCExample&#34;&gt;下載完整範例&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/client/grpc-client.yaml&#34;&gt;gRPC client * 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/grpc-server.yaml&#34;&gt;gRPC server * 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/main.go&#34;&gt;Server side&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day24 Istio (Install &amp; Simple Usage)</title>
+      <link>/posts/2020-ithome-day24/</link>
+      <pubDate>Fri, 02 Oct 2020 10:35:18 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day24/</guid>
+      <description>&lt;p&gt;我們今天飛遠一點，來介紹一下 Istio。Istio 可以提供我們更好的 load balance 能力，特別是在使用 gRPC 連線時，當前版本的 Kubernetes 本身是無法對 gRPC 連線進行 load balance 的，我們需要自己實作 sidecar 來完成 load balance 的目的，而 Istio 正好提供了我們所需要的功能。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day23 Kubernetes (Kubernetes on Docker Desktop &amp; Pod Lifetime)</title>
+      <link>/posts/2020-ithome-day23/</link>
+      <pubDate>Thu, 01 Oct 2020 15:04:13 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day23/</guid>
+      <description>&lt;p&gt;今天會用一個簡單範例跟大家分享 Pods 的生命週期，藉由範例觀察 Pods status 的變化。但在此之前先，另外介紹一個在本機啟用 Kubernetes 的方式，如果有安裝 Docker Desktop 的話，可以透過介面的方式，產出本地運行的 Kubernetes cluster，與 MineKube 不同的是它提供 GUI，這在我們觀察狀態進行監控的時候會更加友善。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day22 Kubernetes (Minikube &amp; Deployment)</title>
+      <link>/posts/2020-ithome-day22/</link>
+      <pubDate>Wed, 30 Sep 2020 08:58:34 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day22/</guid>
+      <description>&lt;p&gt;今天我們會先介紹部署檔的構成，再利用 Minikube 在本機建立測試環境，實際感受一下 Pod 如何被創建與異動的。&lt;/p&gt;
+&lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
+&lt;p&gt;描述檔是用來描述或更新 Pods 的設定，當我們寫好 .yaml 並且利用命令或介面部署上 kubernetes，等同於實作了一個 &lt;a href=&#34;https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/&#34;&gt;Kubernetes objects&lt;/a&gt;，藉此創建 &lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#when-to-use-a-replicaset&#34;&gt;ReplicaSet&lt;/a&gt;(一群同性質的 Pods) 或更新其狀態。特別提一下會用 Controllers 當標題，是因為&lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/&#34;&gt;官方文件&lt;/a&gt;的分類，將各種描述設定所啟用後的 replica，分別歸類在此類別下，筆者自己覺得滿特別的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day21 Kubernetes (Pods &amp; Services)</title>
+      <link>/posts/2020-ithome-day21/</link>
+      <pubDate>Tue, 29 Sep 2020 10:03:28 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day21/</guid>
+      <description>&lt;p&gt;昨天我們認識了 kubernetes 基礎架構，由 Cluster, Master Node, Worker Nodes 構成。今天我們要來了解一下 Node 裏實際最小工作單位 Pod，以及用來訪問隨著 Master 調度可能改變 ip address 的 Service。&lt;/p&gt;
+&lt;h2 id=&#34;pod&#34;&gt;Pod&lt;/h2&gt;
+&lt;p&gt;Pod 是 Kubernetes 下最小工作單位，分布在不同的 Nodes 中，由 Master 管理與調度。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每一 Pod 都為獨立實體，有獨立的虛擬 ip address、獨站部分實體資源&lt;/li&gt;
+&lt;li&gt;每一個 Pod 裡面可以運行多個 containers，裡面的 containers 共享該 Pod 的資源&lt;/li&gt;
+&lt;li&gt;Pod 內 containers 共享同一個 pod ip address&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>Day20 Kubernetes (Cluster Architecture)</title>
       <link>/posts/2020-ithome-day20/</link>

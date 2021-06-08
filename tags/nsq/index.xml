@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nsq on WeiWeiWesley</title>
+    <link>/tags/nsq/</link>
+    <description>Recent content in nsq on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Oct 2020 14:45:17 +0800</lastBuildDate><atom:link href="/tags/nsq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day27 NSQ (Client Usage &amp; RDY)</title>
+      <link>/posts/2020-ithome-day27/</link>
+      <pubDate>Mon, 05 Oct 2020 14:45:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day27/</guid>
+      <description>&lt;p&gt;昨天簡單介紹過 NSQ架構與組成要件，今天我們來看一下實際使用的方式，與使用時需要注意的地方。範例會延續昨天架在 kubernetes 的 NSQ，請還沒有安裝朋友，自行利用&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/nsqExample&#34;&gt;範例設定&lt;/a&gt;部署。&lt;/p&gt;
+&lt;p&gt;如果照著範例啟動的話，我們可以得到 3個使用相同 channel 的 consumer pods，與一個負責推送訊息至 topic 的 producer。注意到這次範例實作 Producer-Consumer Mode，故 3個 consumer 收到的 messages 總數，應等於 channel messages 總數。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/9OUPKD4.png&#34; alt=&#34;nsqadmin&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day28 NSQ (Tips)</title>
+      <link>/posts/2020-ithome-day28/</link>
+      <pubDate>Mon, 05 Oct 2020 14:45:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day28/</guid>
+      <description>&lt;p&gt;針對一些可能遇到的問題或需求，跟大家分享一下須注意的地方或處裡的方式。&lt;/p&gt;
+&lt;h2 id=&#34;config-options&#34;&gt;Config Options&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MaxAttempts : NSQ consumer 嘗試處理訊息次數，並非無限的，預設 5次，可透過 max_attempts 進行變更&lt;/li&gt;
+&lt;li&gt;BackoffStrategy : 每次重新嘗試處理訊息時，會對 &lt;code&gt;backoff +1&lt;/code&gt; ，表示下一次重新處理的時間將延後，預設延遲為指數性成長(ex 2, 4, 16 &amp;hellip;)&lt;/li&gt;
+&lt;li&gt;MsgTimeout : 可設置訊息若堆積過久，沒有被送到 client 端時，自動失效&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day26 NSQ (Features &amp; Install)</title>
+      <link>/posts/2020-ithome-day26/</link>
+      <pubDate>Sun, 04 Oct 2020 15:12:12 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day26/</guid>
+      <description>&lt;p&gt;在進行分散式運算時如果是想發送至不同實體， 我們可直接發出請求並等待回傳結果，但這樣在等待回傳時的運算能力是被閒置的，故此聰明的我們可能會用 &lt;code&gt;goroutine&lt;/code&gt; 將請求發送去，再利用 &lt;code&gt;select channel&lt;/code&gt; 等待回傳結果。但大量使用 &lt;code&gt;channel&lt;/code&gt; 的設計又較為複雜，維護較為困難，且依然有著請求對象沒有收到請求，或收到請求沒有回傳這樣不好處理的狀況。&lt;/p&gt;
+&lt;p&gt;為了處理上述一些在訊息傳遞交換過程所面臨的問題，我們除了在邏輯上，對服務進行切分成更小的服務顆粒，對於傳遞過程可能造成的錯誤與重試必須進行掌控。NSQ 實作了我們對于訊息交換的需求，特別是在自動重試這個部分，NSQ 幫助我們可以確保資訊是有被接受並處理的。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

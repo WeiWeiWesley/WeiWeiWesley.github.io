@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>service on WeiWeiWesley</title>
+    <link>/tags/service/</link>
+    <description>Recent content in service on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Sep 2020 10:03:28 +0800</lastBuildDate><atom:link href="/tags/service/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day21 Kubernetes (Pods &amp; Services)</title>
+      <link>/posts/2020-ithome-day21/</link>
+      <pubDate>Tue, 29 Sep 2020 10:03:28 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day21/</guid>
+      <description>&lt;p&gt;昨天我們認識了 kubernetes 基礎架構，由 Cluster, Master Node, Worker Nodes 構成。今天我們要來了解一下 Node 裏實際最小工作單位 Pod，以及用來訪問隨著 Master 調度可能改變 ip address 的 Service。&lt;/p&gt;
+&lt;h2 id=&#34;pod&#34;&gt;Pod&lt;/h2&gt;
+&lt;p&gt;Pod 是 Kubernetes 下最小工作單位，分布在不同的 Nodes 中，由 Master 管理與調度。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每一 Pod 都為獨立實體，有獨立的虛擬 ip address、獨站部分實體資源&lt;/li&gt;
+&lt;li&gt;每一個 Pod 裡面可以運行多個 containers，裡面的 containers 共享該 Pod 的資源&lt;/li&gt;
+&lt;li&gt;Pod 內 containers 共享同一個 pod ip address&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -151,6 +151,202 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day30/" class="link black dim">
+        Day30 系列文總結與回顧
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>這次很快的來到了鐵人賽最後一天呢～今天讓我們簡單的回顧一下，系列文的結構與其中可能值得運用的地方。<a href="https://ithelp.ithome.com.tw/users/20103420/ironman/3134">Go Distributed &amp; Go Consistently</a> 這系列文以 golang 為基底，目標在建立可靠的分散式服務或系統，如果是直接跳到本篇總結的朋友，不訪參考一下結構分析，再決定本系列文是否有適合你的地方。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day29/" class="link black dim">
+        Day29 Drone (Install &amp; Usage)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>本系列文已經接近尾深，今天分享一個跟前面比較不一樣的主題，Drone CI/CD。分享這個工具的主因，是因為體會過 CI/CD 的美好就回不去了，剛好 Drone 是一套以 golang 編程的 CI/CD 工具，本篇讓我們使用 Github repo 當作目標，實現簡易的 CI testting。
+<a href="https://drone.io/"><img src="https://i.imgur.com/nv3AUgI.png" alt="drone"></a></p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day27/" class="link black dim">
+        Day27 NSQ (Client Usage &amp; RDY)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>昨天簡單介紹過 NSQ架構與組成要件，今天我們來看一下實際使用的方式，與使用時需要注意的地方。範例會延續昨天架在 kubernetes 的 NSQ，請還沒有安裝朋友，自行利用<a href="https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/nsqExample">範例設定</a>部署。</p>
+<p>如果照著範例啟動的話，我們可以得到 3個使用相同 channel 的 consumer pods，與一個負責推送訊息至 topic 的 producer。注意到這次範例實作 Producer-Consumer Mode，故 3個 consumer 收到的 messages 總數，應等於 channel messages 總數。</p>
+<p><img src="https://i.imgur.com/9OUPKD4.png" alt="nsqadmin"></p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day28/" class="link black dim">
+        Day28 NSQ (Tips)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>針對一些可能遇到的問題或需求，跟大家分享一下須注意的地方或處裡的方式。</p>
+<h2 id="config-options">Config Options</h2>
+<ul>
+<li>MaxAttempts : NSQ consumer 嘗試處理訊息次數，並非無限的，預設 5次，可透過 max_attempts 進行變更</li>
+<li>BackoffStrategy : 每次重新嘗試處理訊息時，會對 <code>backoff +1</code> ，表示下一次重新處理的時間將延後，預設延遲為指數性成長(ex 2, 4, 16 &hellip;)</li>
+<li>MsgTimeout : 可設置訊息若堆積過久，沒有被送到 client 端時，自動失效</li>
+</ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day26/" class="link black dim">
+        Day26 NSQ (Features &amp; Install)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>在進行分散式運算時如果是想發送至不同實體， 我們可直接發出請求並等待回傳結果，但這樣在等待回傳時的運算能力是被閒置的，故此聰明的我們可能會用 <code>goroutine</code> 將請求發送去，再利用 <code>select channel</code> 等待回傳結果。但大量使用 <code>channel</code> 的設計又較為複雜，維護較為困難，且依然有著請求對象沒有收到請求，或收到請求沒有回傳這樣不好處理的狀況。</p>
+<p>為了處理上述一些在訊息傳遞交換過程所面臨的問題，我們除了在邏輯上，對服務進行切分成更小的服務顆粒，對於傳遞過程可能造成的錯誤與重試必須進行掌控。NSQ 實作了我們對于訊息交換的需求，特別是在自動重試這個部分，NSQ 幫助我們可以確保資訊是有被接受並處理的。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day25/" class="link black dim">
+        Day25 Istio (Load Balance gRPC)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天我們實作 gRPC services，觀察 gRPC services 是否可以在有 Istio 的協助下，真的能夠順利的對流量進行 load balance。</p>
+<h2 id="test-example">Test Example</h2>
+<p><a href="https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/gRPCExample">下載完整範例</a></p>
+<ul>
+<li><a href="https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/client/grpc-client.yaml">gRPC client * 1</a></li>
+<li><a href="https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/grpc-server.yaml">gRPC server * 3</a></li>
+</ul>
+<p><a href="https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/main.go">Server side</a></p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day24/" class="link black dim">
+        Day24 Istio (Install &amp; Simple Usage)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>我們今天飛遠一點，來介紹一下 Istio。Istio 可以提供我們更好的 load balance 能力，特別是在使用 gRPC 連線時，當前版本的 Kubernetes 本身是無法對 gRPC 連線進行 load balance 的，我們需要自己實作 sidecar 來完成 load balance 的目的，而 Istio 正好提供了我們所需要的功能。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day23/" class="link black dim">
+        Day23 Kubernetes (Kubernetes on Docker Desktop &amp; Pod Lifetime)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天會用一個簡單範例跟大家分享 Pods 的生命週期，藉由範例觀察 Pods status 的變化。但在此之前先，另外介紹一個在本機啟用 Kubernetes 的方式，如果有安裝 Docker Desktop 的話，可以透過介面的方式，產出本地運行的 Kubernetes cluster，與 MineKube 不同的是它提供 GUI，這在我們觀察狀態進行監控的時候會更加友善。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day22/" class="link black dim">
+        Day22 Kubernetes (Minikube &amp; Deployment)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天我們會先介紹部署檔的構成，再利用 Minikube 在本機建立測試環境，實際感受一下 Pod 如何被創建與異動的。</p>
+<h2 id="controllers">Controllers</h2>
+<p>描述檔是用來描述或更新 Pods 的設定，當我們寫好 .yaml 並且利用命令或介面部署上 kubernetes，等同於實作了一個 <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Kubernetes objects</a>，藉此創建 <a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#when-to-use-a-replicaset">ReplicaSet</a>(一群同性質的 Pods) 或更新其狀態。特別提一下會用 Controllers 當標題，是因為<a href="https://kubernetes.io/docs/concepts/workloads/controllers/">官方文件</a>的分類，將各種描述設定所啟用後的 replica，分別歸類在此類別下，筆者自己覺得滿特別的。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day21/" class="link black dim">
+        Day21 Kubernetes (Pods &amp; Services)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>昨天我們認識了 kubernetes 基礎架構，由 Cluster, Master Node, Worker Nodes 構成。今天我們要來了解一下 Node 裏實際最小工作單位 Pod，以及用來訪問隨著 Master 調度可能改變 ip address 的 Service。</p>
+<h2 id="pod">Pod</h2>
+<p>Pod 是 Kubernetes 下最小工作單位，分布在不同的 Nodes 中，由 Master 管理與調度。</p>
+<ul>
+<li>每一 Pod 都為獨立實體，有獨立的虛擬 ip address、獨站部分實體資源</li>
+<li>每一個 Pod 裡面可以運行多個 containers，裡面的 containers 共享該 Pod 的資源</li>
+<li>Pod 內 containers 共享同一個 pod ip address</li>
+</ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2020-ithome-day20/" class="link black dim">
         Day20 Kubernetes (Cluster Architecture)
       </a>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>broadcast on WeiWeiWesley</title>
+    <link>/tags/broadcast/</link>
+    <description>Recent content in broadcast on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Oct 2020 14:45:17 +0800</lastBuildDate><atom:link href="/tags/broadcast/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day28 NSQ (Tips)</title>
+      <link>/posts/2020-ithome-day28/</link>
+      <pubDate>Mon, 05 Oct 2020 14:45:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day28/</guid>
+      <description>&lt;p&gt;針對一些可能遇到的問題或需求，跟大家分享一下須注意的地方或處裡的方式。&lt;/p&gt;
+&lt;h2 id=&#34;config-options&#34;&gt;Config Options&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MaxAttempts : NSQ consumer 嘗試處理訊息次數，並非無限的，預設 5次，可透過 max_attempts 進行變更&lt;/li&gt;
+&lt;li&gt;BackoffStrategy : 每次重新嘗試處理訊息時，會對 &lt;code&gt;backoff +1&lt;/code&gt; ，表示下一次重新處理的時間將延後，預設延遲為指數性成長(ex 2, 4, 16 &amp;hellip;)&lt;/li&gt;
+&lt;li&gt;MsgTimeout : 可設置訊息若堆積過久，沒有被送到 client 端時，自動失效&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>minikube on WeiWeiWesley</title>
+    <link>/tags/minikube/</link>
+    <description>Recent content in minikube on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Sep 2020 08:58:34 +0800</lastBuildDate><atom:link href="/tags/minikube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day22 Kubernetes (Minikube &amp; Deployment)</title>
+      <link>/posts/2020-ithome-day22/</link>
+      <pubDate>Wed, 30 Sep 2020 08:58:34 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day22/</guid>
+      <description>&lt;p&gt;今天我們會先介紹部署檔的構成，再利用 Minikube 在本機建立測試環境，實際感受一下 Pod 如何被創建與異動的。&lt;/p&gt;
+&lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
+&lt;p&gt;描述檔是用來描述或更新 Pods 的設定，當我們寫好 .yaml 並且利用命令或介面部署上 kubernetes，等同於實作了一個 &lt;a href=&#34;https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/&#34;&gt;Kubernetes objects&lt;/a&gt;，藉此創建 &lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#when-to-use-a-replicaset&#34;&gt;ReplicaSet&lt;/a&gt;(一群同性質的 Pods) 或更新其狀態。特別提一下會用 Controllers 當標題，是因為&lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/&#34;&gt;官方文件&lt;/a&gt;的分類，將各種描述設定所啟用後的 replica，分別歸類在此類別下，筆者自己覺得滿特別的。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

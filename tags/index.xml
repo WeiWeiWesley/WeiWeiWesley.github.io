@@ -6,31 +6,157 @@
     <description>Recent content in Tags on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 09:56:21 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>container</title>
-      <link>/tags/container/</link>
-      <pubDate>Mon, 28 Sep 2020 09:56:21 +0800</pubDate>
-      
-      <guid>/tags/container/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Thu, 08 Oct 2020 09:47:51 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>distributed system</title>
       <link>/tags/distributed-system/</link>
-      <pubDate>Mon, 28 Sep 2020 09:56:21 +0800</pubDate>
+      <pubDate>Thu, 08 Oct 2020 09:47:51 +0800</pubDate>
       
       <guid>/tags/distributed-system/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>golang</title>
+      <link>/tags/golang/</link>
+      <pubDate>Thu, 08 Oct 2020 09:47:51 +0800</pubDate>
+      
+      <guid>/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>kubernetes</title>
       <link>/tags/kubernetes/</link>
-      <pubDate>Mon, 28 Sep 2020 09:56:21 +0800</pubDate>
+      <pubDate>Thu, 08 Oct 2020 09:47:51 +0800</pubDate>
       
       <guid>/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drone</title>
+      <link>/tags/drone/</link>
+      <pubDate>Wed, 07 Oct 2020 09:11:26 +0800</pubDate>
+      
+      <guid>/tags/drone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>broadcast</title>
+      <link>/tags/broadcast/</link>
+      <pubDate>Mon, 05 Oct 2020 14:45:17 +0800</pubDate>
+      
+      <guid>/tags/broadcast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>message queue</title>
+      <link>/tags/message-queue/</link>
+      <pubDate>Mon, 05 Oct 2020 14:45:17 +0800</pubDate>
+      
+      <guid>/tags/message-queue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nsq</title>
+      <link>/tags/nsq/</link>
+      <pubDate>Mon, 05 Oct 2020 14:45:17 +0800</pubDate>
+      
+      <guid>/tags/nsq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grpc</title>
+      <link>/tags/grpc/</link>
+      <pubDate>Sat, 03 Oct 2020 11:31:26 +0800</pubDate>
+      
+      <guid>/tags/grpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>istio</title>
+      <link>/tags/istio/</link>
+      <pubDate>Sat, 03 Oct 2020 11:31:26 +0800</pubDate>
+      
+      <guid>/tags/istio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>loadbalance</title>
+      <link>/tags/loadbalance/</link>
+      <pubDate>Sat, 03 Oct 2020 11:31:26 +0800</pubDate>
+      
+      <guid>/tags/loadbalance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Thu, 01 Oct 2020 15:04:13 +0800</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recovery</title>
+      <link>/tags/recovery/</link>
+      <pubDate>Thu, 01 Oct 2020 15:04:13 +0800</pubDate>
+      
+      <guid>/tags/recovery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deployment</title>
+      <link>/tags/deployment/</link>
+      <pubDate>Wed, 30 Sep 2020 08:58:34 +0800</pubDate>
+      
+      <guid>/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>minikube</title>
+      <link>/tags/minikube/</link>
+      <pubDate>Wed, 30 Sep 2020 08:58:34 +0800</pubDate>
+      
+      <guid>/tags/minikube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pods</title>
+      <link>/tags/pods/</link>
+      <pubDate>Tue, 29 Sep 2020 10:03:28 +0800</pubDate>
+      
+      <guid>/tags/pods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>service</title>
+      <link>/tags/service/</link>
+      <pubDate>Tue, 29 Sep 2020 10:03:28 +0800</pubDate>
+      
+      <guid>/tags/service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>container</title>
+      <link>/tags/container/</link>
+      <pubDate>Mon, 28 Sep 2020 09:56:21 +0800</pubDate>
+      
+      <guid>/tags/container/</guid>
       <description></description>
     </item>
     
@@ -58,15 +184,6 @@
       <pubDate>Sat, 26 Sep 2020 14:39:08 +0800</pubDate>
       
       <guid>/tags/cache/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>/tags/golang/</link>
-      <pubDate>Sat, 26 Sep 2020 14:39:08 +0800</pubDate>
-      
-      <guid>/tags/golang/</guid>
       <description></description>
     </item>
     
@@ -134,15 +251,6 @@
     </item>
     
     <item>
-      <title>docker</title>
-      <link>/tags/docker/</link>
-      <pubDate>Tue, 22 Sep 2020 10:38:17 +0800</pubDate>
-      
-      <guid>/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>docker-compose</title>
       <link>/tags/docker-compose/</link>
       <pubDate>Tue, 22 Sep 2020 10:38:17 +0800</pubDate>
@@ -184,6 +292,15 @@
       <pubDate>Wed, 25 Sep 2019 14:12:14 +0800</pubDate>
       
       <guid>/tags/elk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ci/cd</title>
+      <link>/tags/ci/cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ci/cd/</guid>
       <description></description>
     </item>
     

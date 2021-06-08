@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ci/cd on WeiWeiWesley</title>
+    <link>/tags/ci/cd/</link>
+    <description>Recent content in ci/cd on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day29 Drone (Install &amp; Usage)</title>
+      <link>/posts/2020-ithome-day29/</link>
+      <pubDate>Wed, 07 Oct 2020 09:11:26 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day29/</guid>
+      <description>&lt;p&gt;本系列文已經接近尾深，今天分享一個跟前面比較不一樣的主題，Drone CI/CD。分享這個工具的主因，是因為體會過 CI/CD 的美好就回不去了，剛好 Drone 是一套以 golang 編程的 CI/CD 工具，本篇讓我們使用 Github repo 當作目標，實現簡易的 CI testting。
+&lt;a href=&#34;https://drone.io/&#34;&gt;&lt;img src=&#34;https://i.imgur.com/nv3AUgI.png&#34; alt=&#34;drone&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

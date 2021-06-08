@@ -6,7 +6,16 @@
     <description>Recent content in docker on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2020 10:38:17 +0800</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 15:04:13 +0800</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day23 Kubernetes (Kubernetes on Docker Desktop &amp; Pod Lifetime)</title>
+      <link>/posts/2020-ithome-day23/</link>
+      <pubDate>Thu, 01 Oct 2020 15:04:13 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day23/</guid>
+      <description>&lt;p&gt;今天會用一個簡單範例跟大家分享 Pods 的生命週期，藉由範例觀察 Pods status 的變化。但在此之前先，另外介紹一個在本機啟用 Kubernetes 的方式，如果有安裝 Docker Desktop 的話，可以透過介面的方式，產出本地運行的 Kubernetes cluster，與 MineKube 不同的是它提供 GUI，這在我們觀察狀態進行監控的時候會更加友善。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day14 Dockerfile &amp; Docker-Compose</title>
       <link>/posts/2020-ithome-day14/</link>
