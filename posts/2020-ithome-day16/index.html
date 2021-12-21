@@ -46,7 +46,7 @@ Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止�
 <meta name="twitter:description" content="為了保持我們的資料能正確的寫入與正確的不寫入，今天我們要來了解一下 transactions 是怎麼運作的，以及如果沒有實作 transactions 會發生怎樣的悲劇，最後提供 gorm 實作 transactions 的範例程式碼給大家參考。
 Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止服務需更新多筆資料或多個 table 時，任一筆資料更新失敗而產生的更新不完整狀態出現。被包在 transactions 中的的操作只要有一筆失敗便可以透過 rollback 來將其它已操作的部分復原。"/>
 
-	
+	<meta name="image" property="og:image" content="https://i.imgur.com/YwCew1d.png">
   </head>
 
   <body class="ma0 avenir bg-near-white">

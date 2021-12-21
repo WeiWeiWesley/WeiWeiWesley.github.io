@@ -46,7 +46,7 @@
 <meta name="twitter:description" content="在進行分散式運算時如果是想發送至不同實體， 我們可直接發出請求並等待回傳結果，但這樣在等待回傳時的運算能力是被閒置的，故此聰明的我們可能會用 goroutine 將請求發送去，再利用 select channel 等待回傳結果。但大量使用 channel 的設計又較為複雜，維護較為困難，且依然有著請求對象沒有收到請求，或收到請求沒有回傳這樣不好處理的狀況。
 為了處理上述一些在訊息傳遞交換過程所面臨的問題，我們除了在邏輯上，對服務進行切分成更小的服務顆粒，對於傳遞過程可能造成的錯誤與重試必須進行掌控。NSQ 實作了我們對于訊息交換的需求，特別是在自動重試這個部分，NSQ 幫助我們可以確保資訊是有被接受並處理的。"/>
 
-	
+	<meta name="image" property="og:image" content="https://i.imgur.com/YwCew1d.png">
   </head>
 
   <body class="ma0 avenir bg-near-white">
