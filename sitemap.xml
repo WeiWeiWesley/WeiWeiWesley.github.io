@@ -212,10 +212,13 @@
     <loc>/posts/2019-11-04-devops2019/</loc>
     <lastmod>2019-11-04T15:44:14+08:00</lastmod>
   </url><url>
-    <loc>/categories/2017-ithome%E9%90%B5%E4%BA%BA30/</loc>
+    <loc>/tags/elk/</loc>
     <lastmod>2019-09-25T14:12:14+08:00</lastmod>
   </url><url>
-    <loc>/tags/elk/</loc>
+    <loc>/categories/elk/</loc>
+    <lastmod>2019-09-25T14:12:14+08:00</lastmod>
+  </url><url>
+    <loc>/tags/log/</loc>
     <lastmod>2019-09-25T14:12:14+08:00</lastmod>
   </url><url>
     <loc>/posts/2019-09-25-redis-elk/</loc>
@@ -230,13 +233,25 @@
     <loc>/posts/2019-09-18-modernweb2049/</loc>
     <lastmod>2019-09-18T09:37:00+08:00</lastmod>
   </url><url>
-    <loc>/categories/golang-test/</loc>
+    <loc>/categories/golang/</loc>
+    <lastmod>2019-06-30T22:48:14+08:00</lastmod>
+  </url><url>
+    <loc>/tags/test/</loc>
+    <lastmod>2019-06-30T22:48:14+08:00</lastmod>
+  </url><url>
+    <loc>/tags/websocket/</loc>
     <lastmod>2019-06-30T22:48:14+08:00</lastmod>
   </url><url>
     <loc>/posts/2019-06-30-webocketya-ce-gong-ju/</loc>
     <lastmod>2019-06-30T22:48:14+08:00</lastmod>
   </url><url>
+    <loc>/series/2017-ithome%E9%90%B5%E4%BA%BA30/</loc>
+    <lastmod>2017-01-14T14:28:00+08:00</lastmod>
+  </url><url>
     <loc>/posts/2019-01-14-elk/</loc>
+    <lastmod>2017-01-14T14:28:00+08:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
     <lastmod>2017-01-14T14:28:00+08:00</lastmod>
   </url><url>
     <loc>/posts/2018-01-13-elk/</loc>

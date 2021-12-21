@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>test on WeiWeiWesley</title>
+    <link>/tags/test/</link>
+    <description>Recent content in test on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Jun 2019 22:48:14 +0800</lastBuildDate><atom:link href="/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Websocket 壓測工具</title>
+      <link>/posts/2019-06-30-webocketya-ce-gong-ju/</link>
+      <pubDate>Sun, 30 Jun 2019 22:48:14 +0800</pubDate>
+      
+      <guid>/posts/2019-06-30-webocketya-ce-gong-ju/</guid>
+      <description>&lt;p&gt;這是一個以 go語言編寫的 websocket壓測工具，提供併發連線、結果驗證、時間計算等功能。筆者目前使用的環境多為 Linux &amp;amp; MacOS，如果想在CLI簡單地對 websocket服務進行壓力測試的話，這邊提供一個簡單的工具給大家。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/WsTestTool&#34;&gt;Github Link&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

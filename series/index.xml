@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on WeiWeiWesley</title>
+    <link>/series/</link>
+    <description>Recent content in Series on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Jan 2017 14:28:00 +0800</lastBuildDate><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2017-ithome鐵人30</title>
+      <link>/series/2017-ithome%E9%90%B5%E4%BA%BA30/</link>
+      <pubDate>Sat, 14 Jan 2017 14:28:00 +0800</pubDate>
+      
+      <guid>/series/2017-ithome%E9%90%B5%E4%BA%BA30/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

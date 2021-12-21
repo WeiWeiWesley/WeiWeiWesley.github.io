@@ -208,5 +208,15 @@
 &lt;p&gt;HiHi~!時隔多年又回來參賽拉，本次希望已經涉入軟體系統開發的工程師可以從此系列文中得到一些想法，也希望還沒應用到分散式架構或對一致性不太了解的朋友，可以體會看看遇到什麼問題的時候會需要這樣的架構編排&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Websocket 壓測工具</title>
+      <link>/posts/2019-06-30-webocketya-ce-gong-ju/</link>
+      <pubDate>Sun, 30 Jun 2019 22:48:14 +0800</pubDate>
+      
+      <guid>/posts/2019-06-30-webocketya-ce-gong-ju/</guid>
+      <description>&lt;p&gt;這是一個以 go語言編寫的 websocket壓測工具，提供併發連線、結果驗證、時間計算等功能。筆者目前使用的環境多為 Linux &amp;amp; MacOS，如果想在CLI簡單地對 websocket服務進行壓力測試的話，這邊提供一個簡單的工具給大家。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/WsTestTool&#34;&gt;Github Link&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
