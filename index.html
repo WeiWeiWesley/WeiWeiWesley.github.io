@@ -179,14 +179,21 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day30/" class="color-inherit dim link">
-            Day30 系列文總結與回顧
+          <a href="/posts/2021-ithome-day10/" class="color-inherit dim link">
+            Day10 Overlapping Example
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>這次很快的來到了鐵人賽最後一天呢～今天讓我們簡單的回顧一下，系列文的結構與其中可能值得運用的地方。<a href="https://ithelp.ithome.com.tw/users/20103420/ironman/3134">Go Distributed &amp; Go Consistently</a> 這系列文以 golang 為基底，目標在建立可靠的分散式服務或系統，如果是直接跳到本篇總結的朋友，不訪參考一下結構分析，再決定本系列文是否有適合你的地方。</p>
+          <p>昨天已經看過我們在實務上可能會遇到的需求，利用多個可能重複範圍的配對池，當作匹配搜尋條件，今天讓我們用實作範例來觀察其效果。</p>
+<h2 id="角色等級-overlapping-範例">角色等級 Overlapping 範例</h2>
+<p>本範例同樣基於官方 demo，藉由更改範例內容重新 build images 後完成。</p>
+<h3 id="images">Images</h3>
+<ul>
+<li>weiweiwesley/open-match:overlapping</li>
+<li>weiweiwesley/mmf:overlapping</li>
+</ul>
         </div>
-          <a href="/posts/2020-ithome-day30/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/posts/2021-ithome-day10/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -203,15 +210,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day29/" class="color-inherit dim link">
-            Day29 Drone (Install &amp; Usage)
+          <a href="/posts/2021-ithome-day9/" class="color-inherit dim link">
+            Day9 重疊條件配對池 Overlapping MatchProfiles
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>本系列文已經接近尾深，今天分享一個跟前面比較不一樣的主題，Drone CI/CD。分享這個工具的主因，是因為體會過 CI/CD 的美好就回不去了，剛好 Drone 是一套以 golang 編程的 CI/CD 工具，本篇讓我們使用 Github repo 當作目標，實現簡易的 CI testting。
-<a href="https://drone.io/"><img src="https://i.imgur.com/nv3AUgI.png" alt="drone"></a></p>
+          <p>在一些比較普通的應用場景，我們產生一個 matches 的流程會像是，由 Director 輪詢呼叫 Open-Match Backend 取得一組 <code>MatchProfile</code>，而過程中會觸發 MMF 的執行，並且依照 <code>MatchProfile filter</code> 的條件獲得對應的 <code>tickets</code>，最後 MMF 依照設定的邏輯匹配這些 <code>tickets</code>，返回 <code>matches</code>。</p>
         </div>
-          <a href="/posts/2020-ithome-day29/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/posts/2021-ithome-day9/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -228,16 +234,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2020-ithome-day27/" class="color-inherit dim link">
-            Day27 NSQ (Client Usage &amp; RDY)
+          <a href="/posts/2021-ithome-day8/" class="color-inherit dim link">
+            Day8 Swagger UI &amp; Open Match APIs
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>昨天簡單介紹過 NSQ架構與組成要件，今天我們來看一下實際使用的方式，與使用時需要注意的地方。範例會延續昨天架在 kubernetes 的 NSQ，請還沒有安裝朋友，自行利用<a href="https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/nsqExample">範例設定</a>部署。</p>
-<p>如果照著範例啟動的話，我們可以得到 3個使用相同 channel 的 consumer pods，與一個負責推送訊息至 topic 的 producer。注意到這次範例實作 Producer-Consumer Mode，故 3個 consumer 收到的 messages 總數，應等於 channel messages 總數。</p>
-<p><img src="https://i.imgur.com/9OUPKD4.png" alt="nsqadmin"></p>
+          <p><a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> 是一個將 API 文件與 API 請求產生結合的介面套件，官方已於建立核心的 yaml 中，幫我們部署好 swagger ui service，但今天主要介紹的並非 Swagger UI 本身，而是利用 Swagger UI 來閱讀 Open-Match 所提供的 HTTP API 接口。</p>
         </div>
-          <a href="/posts/2020-ithome-day27/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/posts/2021-ithome-day8/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -254,26 +258,26 @@
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2020-ithome-day28/" class="link black dim">
-              Day28 NSQ (Tips)
+            <a href="/posts/2021-ithome-day7/" class="link black dim">
+              Day7 配對條件範例 (角色，人數上限)
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2020-ithome-day26/" class="link black dim">
-              Day26 NSQ (Features &amp; Install)
+            <a href="/posts/2021-ithome-day6/" class="link black dim">
+              Day6 Director &amp; Match Function
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2020-ithome-day25/" class="link black dim">
-              Day25 Istio (Load Balance gRPC)
+            <a href="/posts/2021-ithome-day5/" class="link black dim">
+              Day5 Game Frontend
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2020-ithome-day24/" class="link black dim">
-              Day24 Istio (Install &amp; Simple Usage)
+            <a href="/posts/2021-ithome-day4/" class="link black dim">
+              Day4 官方 Demo 說明
             </a>
           </h2>
         

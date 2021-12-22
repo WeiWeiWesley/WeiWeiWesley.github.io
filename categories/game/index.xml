@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>game on WeiWeiWesley</title>
+    <link>/categories/game/</link>
+    <description>Recent content in game on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Sep 2021 11:29:38 +0800</lastBuildDate><atom:link href="/categories/game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day10 Overlapping Example</title>
+      <link>/posts/2021-ithome-day10/</link>
+      <pubDate>Sat, 18 Sep 2021 11:29:38 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day10/</guid>
+      <description>&lt;p&gt;昨天已經看過我們在實務上可能會遇到的需求，利用多個可能重複範圍的配對池，當作匹配搜尋條件，今天讓我們用實作範例來觀察其效果。&lt;/p&gt;
+&lt;h2 id=&#34;角色等級-overlapping-範例&#34;&gt;角色等級 Overlapping 範例&lt;/h2&gt;
+&lt;p&gt;本範例同樣基於官方 demo，藉由更改範例內容重新 build images 後完成。&lt;/p&gt;
+&lt;h3 id=&#34;images&#34;&gt;Images&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;weiweiwesley/open-match:overlapping&lt;/li&gt;
+&lt;li&gt;weiweiwesley/mmf:overlapping&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day9 重疊條件配對池 Overlapping MatchProfiles</title>
+      <link>/posts/2021-ithome-day9/</link>
+      <pubDate>Fri, 17 Sep 2021 08:42:40 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day9/</guid>
+      <description>&lt;p&gt;在一些比較普通的應用場景，我們產生一個 matches 的流程會像是，由 Director 輪詢呼叫 Open-Match Backend 取得一組 &lt;code&gt;MatchProfile&lt;/code&gt;，而過程中會觸發 MMF 的執行，並且依照 &lt;code&gt;MatchProfile filter&lt;/code&gt; 的條件獲得對應的 &lt;code&gt;tickets&lt;/code&gt;，最後 MMF 依照設定的邏輯匹配這些 &lt;code&gt;tickets&lt;/code&gt;，返回 &lt;code&gt;matches&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day8 Swagger UI &amp; Open Match APIs</title>
+      <link>/posts/2021-ithome-day8/</link>
+      <pubDate>Thu, 16 Sep 2021 08:46:40 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day8/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://swagger.io/tools/swagger-ui/&#34;&gt;Swagger UI&lt;/a&gt; 是一個將 API 文件與 API 請求產生結合的介面套件，官方已於建立核心的 yaml 中，幫我們部署好 swagger ui service，但今天主要介紹的並非 Swagger UI 本身，而是利用 Swagger UI 來閱讀 Open-Match 所提供的 HTTP API 接口。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day7 配對條件範例 (角色，人數上限)</title>
+      <link>/posts/2021-ithome-day7/</link>
+      <pubDate>Wed, 15 Sep 2021 08:34:49 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day7/</guid>
+      <description>&lt;p&gt;今天我們要自己假訂一個配對情境，來做一個比官方稍微複雜一點點的 Demo，並且透過這個模擬情境的實踐，來熟悉 Open-Match 在實作上須滿足的接口與函式用法。&lt;/p&gt;
+&lt;h2 id=&#34;情境&#34;&gt;情境&lt;/h2&gt;
+&lt;p&gt;隨機產生兩個地區、兩種職業與不同等級條件的配對請求，並且將兩個不同職業才能配對的邏輯，加入我們的配對邏輯中&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day6 Director &amp; Match Function</title>
+      <link>/posts/2021-ithome-day6/</link>
+      <pubDate>Tue, 14 Sep 2021 08:27:47 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day6/</guid>
+      <description>&lt;p&gt;首先我們會介紹 Director 是如何實作的，並介紹 Director 跟 Open-Match 核心互動的方式。而 Director 在完成配對指派的過程中，向核心調用 Match Function 所需完成的邏輯與接口，會一併於本編介紹。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day5 Game Frontend</title>
+      <link>/posts/2021-ithome-day5/</link>
+      <pubDate>Mon, 13 Sep 2021 08:38:44 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day5/</guid>
+      <description>&lt;p&gt;今天我們來了解一下 Game Frontend 這個須由我們實作的部件，在 Open-Match 所設計的流程中，玩家用戶端發送配對請求後，首先接收到配對請求的便是 Game Frontend。此部件內通常會實作使用者認證與獲取使用者個人資料，用以確認可進行配對，與利用個人資料組成配對參數，最後產生配對請求 Tickets 給 Open-Match 核心。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/mwH29cs.png&#34; alt=&#34;https://i.imgur.com/mwH29cs.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day4 官方 Demo 說明</title>
+      <link>/posts/2021-ithome-day4/</link>
+      <pubDate>Sun, 12 Sep 2021 11:01:13 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day4/</guid>
+      <description>&lt;p&gt;今天我們要藉由官方所提供的 &lt;a href=&#34;https://open-match.dev/site/docs/getting-started/&#34;&gt;Demo&lt;/a&gt;，來介紹幾個關鍵實體與流程的運作。再開始本篇 Demo 安裝前，請確認已參照前一天的核心安裝步驟，把 Open-Match 部署完成。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day3 安裝 Kubernetes &amp; Open-Match 核心</title>
+      <link>/posts/2021-ithome-day3/</link>
+      <pubDate>Sat, 11 Sep 2021 11:13:58 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day3/</guid>
+      <description>&lt;p&gt;在昨天我們簡單介紹了框架是如何產生配對後，今天我們要來部署 Open-Match 所需要的環境與核心。基於彈性拓展需求，首先需要的是 Kubernetes Cluster，Open-Match 的核心便是安裝於此，且後續我們也會把須實作的部件，以容器的方式搭載於 Kubernetes 上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day2 初次窺探配對框架</title>
+      <link>/posts/2021-ithome-day2/</link>
+      <pubDate>Fri, 10 Sep 2021 08:39:51 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day2/</guid>
+      <description>&lt;p&gt;在開始實作與瞭解細部功能前，讓我們先初步的看過整體架構是怎麼運作的，以利後續 demo 實作與各部件解析時，有個目前資料流動到哪裡的概念，並且會說明哪個部件是我們使用 Open-Match 需要實作的部件，哪些是 Open-Match 無需異動的核心。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day1 Open-Match 簡介</title>
+      <link>/posts/2021-ithome-day1/</link>
+      <pubDate>Thu, 09 Sep 2021 08:41:08 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day1/</guid>
+      <description>&lt;p&gt;在眾多遊戲類型中，對戰遊戲類型遊戲佔有很重要的一席之地。不論是手機遊戲市場，還是以電腦為主的競技遊戲，當有玩家對玩家互動時，便會需要遊戲伺服器的參與，其中可能涉及連線、配對、遊戲邏輯、安全驗證等等機制。本次主題將專注在“配對”這件事上，配對可以很簡單也可以很複雜，簡單的連線數分配，或細至玩家群體分房，抑或是特定職業的搭配，都屬於配對遊程的一環。希望可以藉由本次對 Open-Match 框架介紹，讓自己與觀看此系列文的朋友都對使用此框架進行配對有基礎的認識與了解。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

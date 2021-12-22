@@ -153,12 +153,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day12/" class="link black dim">
-        Day12 Atomic
+      <a href="/posts/2020-ithome-day22/" class="link black dim">
+        Day22 Kubernetes (Minikube &amp; Deployment)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>關於 <a href="https://golang.org/pkg/sync/atomic/">sync/atomic</a> 是於 <a href="mailto:go@v1.14">go@v1.14</a> 才推出的新東西，筆者也是最近才知道有這個包可以使用。Atomic 目標在一些單純的操作上，完成最小原子性操作，使用上甚至比 mutex 更為簡便。</p>
+      <p>今天我們會先介紹部署檔的構成，再利用 Minikube 在本機建立測試環境，實際感受一下 Pod 如何被創建與異動的。</p>
+<h2 id="controllers">Controllers</h2>
+<p>描述檔是用來描述或更新 Pods 的設定，當我們寫好 .yaml 並且利用命令或介面部署上 kubernetes，等同於實作了一個 <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Kubernetes objects</a>，藉此創建 <a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#when-to-use-a-replicaset">ReplicaSet</a>(一群同性質的 Pods) 或更新其狀態。特別提一下會用 Controllers 當標題，是因為<a href="https://kubernetes.io/docs/concepts/workloads/controllers/">官方文件</a>的分類，將各種描述設定所啟用後的 replica，分別歸類在此類別下，筆者自己覺得滿特別的。</p>
     </div>
   </div>
 </div>
@@ -168,12 +170,19 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day11/" class="link black dim">
-        Day11 Mutex vs Channel
+      <a href="/posts/2020-ithome-day21/" class="link black dim">
+        Day21 Kubernetes (Pods &amp; Services)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>昨天看過 race condiction 的情況後，我們了解了 mutex.Lock 與 channel，可以幫助我們同步 memory 狀態，避免發生奇怪的資料異常狀態。今天我們要延續昨天的技巧，並且用 benchmark 比較兩個在速度上的優劣。</p>
+      <p>昨天我們認識了 kubernetes 基礎架構，由 Cluster, Master Node, Worker Nodes 構成。今天我們要來了解一下 Node 裏實際最小工作單位 Pod，以及用來訪問隨著 Master 調度可能改變 ip address 的 Service。</p>
+<h2 id="pod">Pod</h2>
+<p>Pod 是 Kubernetes 下最小工作單位，分布在不同的 Nodes 中，由 Master 管理與調度。</p>
+<ul>
+<li>每一 Pod 都為獨立實體，有獨立的虛擬 ip address、獨站部分實體資源</li>
+<li>每一個 Pod 裡面可以運行多個 containers，裡面的 containers 共享該 Pod 的資源</li>
+<li>Pod 內 containers 共享同一個 pod ip address</li>
+</ul>
     </div>
   </div>
 </div>
@@ -183,16 +192,13 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day10/" class="link black dim">
-        Day10 Race Condition
+      <a href="/posts/2020-ithome-day20/" class="link black dim">
+        Day20 Kubernetes (Cluster Architecture)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在昨天我們已經看過了 golang 併發的方式，今天我們要來學習如何控制我們的 goroutines。首先我們先來看一下 race condition(或稱data race) 的定義與範例，接著我們在使用 channel 與 mutex lock 來處理這樣的問題。</p>
-<h2 id="race-condition">Race Condition</h2>
-<blockquote>
-<p>A race condition or race hazard is the behavior of an electronics, software, or other system where the output is dependent on the sequence or timing of other uncontrollable events</p>
-</blockquote>
+      <p>今天介紹一下以 golang 為主編程語言，建立當前最知名的容器管理服務 — Kubernetes。我們在上一篇已經簡單的敘述過，服務是如何演進成分散式服務，而微服務又是如何因應分散式服務而產生，今天的我們會介紹 Kubernetes 的運作架構，以及關於 Kubernetes 幾個關鍵名詞解釋，Here we go。</p>
+<p><img src="https://i.imgur.com/BJOsuWS.png" alt="k8s-golang"></p>
     </div>
   </div>
 </div>
@@ -202,19 +208,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day9/" class="link black dim">
-        Day9 Goroutine &amp; Concurrency
+      <a href="/posts/2020-ithome-day19/" class="link black dim">
+        Day19 Distributed Micoservices
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天不延用 BasicGo 的標題，並非 Concurrency 很困難，而是他在 golnag 中可以被輕易實踐，反而容易造成初學者的一些困擾與誤解，建議首次使用的朋友們慎重看待他。</p>
-<h2 id="concurrency">Concurrency</h2>
-<blockquote>
-<p>In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome</p>
-</blockquote>
-<p>以下圖為例，將兩個任務個別拆分成較小的子任務，並且同時丟到 thread 中執行，由於是同時丟入 thread 中，所以順序上無法保證哪一個任務先被處理完成。</p>
-<p><a href="https://www.monades.dev/concurrency-is-different-than-parallelism">圖片來源</a>
-<img src="https://user-images.githubusercontent.com/4419992/35572695-ee6275c8-05b3-11e8-8460-2c1ac7081574.jpg" alt="Concurrency"></p>
+      <p>我們前面花了一些時間了解 golang 的基本用法，以及資料一致性的重要性，並且在上一篇中討論到多 server 快取資料可能發生的狀況，其中在多 server 下如果能夠保持資料存取一致，並且依據流量更彈性的增減，便是 microservices 的最大特色。</p>
     </div>
   </div>
 </div>
@@ -224,20 +223,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day8/" class="link black dim">
-        Day8 Basic Go (Initialize, Scope)
+      <a href="/posts/2020-ithome-day18/" class="link black dim">
+        Day18 Cache (Local Cache vs Redis)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天我們要回來重新檢視一下 golang 的各種 Scope(作用域)，在開始 scope 的說明前還必須提到 golang 程式在 runtime 初始化的順序，確保我們對運行時每一個階段的掌握。</p>
-<h2 id="initialization-order">Initialization Order</h2>
-<p>當我們開始執行 golang 的程序時，首先會將 import packages 內部的常數變數與 init() 完成後，才開始當前 main package 下的常數變數與 init()，最後執行 main()。此外需注意的是每個 package 內的 init() 都只會被執行一次，如同其保留的命名為“初始化”時使用。</p>
-<ol>
-<li>import package</li>
-<li>const &amp; var</li>
-<li>init()</li>
-<li>main()</li>
-</ol>
+      <p>會有快取的需求是來自於使用者，對相同資料目標進行大量讀取，為了降低 RMDBS 連線數量與 RMDBS 的實體資源，所產生出來的架構策略。今天我們要來實作 cache，並且分別使用本地記憶體與共用noSQL兩種方式，進行比較其效果與其優劣。</p>
     </div>
   </div>
 </div>
@@ -247,24 +238,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day7/" class="link black dim">
-        Day7 Basic Go (Run, Syntax, Struct)
+      <a href="/posts/2020-ithome-day17/" class="link black dim">
+        Day17 Transactions (Redis)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在對環境有基本的了解後，我們終於要開始說基本語法拉～如果你是已經使用過 golang 的朋友，今天可以放心跳過這篇惹。今天我們會全速通過 golang所有基本該知道的語法，因為考量到後續篇幅的關係一些常見的型態介紹會被我省略。</p>
-<h2 id="執行">執行</h2>
-<p>讓我們以最簡單的範例檔開始吧！</p>
-<p>main.go</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-
-<span style="color:#75715e">//主程式名稱固定為 main()
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>)
-}
-</code></pre></div>
+      <p>是的，我們今天要來討論一下 Redis 的 transaction。我們知道 Transaction 要嘛全執行要嘛全不執行，Redis 在 2.2 之後提供了 optimistic lock，讓我們得以進行 check-and-set 的可能，並且實作了幾個方法讓我們可以達成 transaction 的需求。</p>
     </div>
   </div>
 </div>
@@ -297,13 +276,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/11/">11</a>
+    <a class="page-link" href="/posts/page/13/">13</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/5/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/11/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/13/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

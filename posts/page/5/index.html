@@ -153,18 +153,13 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day6/" class="link black dim">
-        Day6 Basic Go (GO MODULES)
+      <a href="/posts/2020-ithome-day16/" class="link black dim">
+        Day16 Transactions (MySQL)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="go-modules">Go Modules</h2>
-<p>為了解決 <a href="mailto:go@1.11">go@1.11</a> 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。</p>
-<ul>
-<li>on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找</li>
-<li>off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找</li>
-<li>auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules</li>
-</ul>
+      <p>為了保持我們的資料能<strong>正確的寫入</strong>與<strong>正確的不寫入</strong>，今天我們要來了解一下 transactions 是怎麼運作的，以及如果沒有實作 transactions 會發生怎樣的悲劇，最後提供 gorm 實作 transactions 的範例程式碼給大家參考。</p>
+<p>Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止服務需更新多筆資料或多個 table 時，任一筆資料更新失敗而產生的更新不完整狀態出現。被包在 transactions 中的的操作只要有一筆失敗便可以透過 rollback 來將其它已操作的部分復原。</p>
     </div>
   </div>
 </div>
@@ -174,18 +169,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day5/" class="link black dim">
-        Day5 Basic Go (Install &amp; GOPATH)
+      <a href="/posts/2020-ithome-day15/" class="link black dim">
+        Day15 Http Server &amp; Gorm
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="來個快速安裝吧">來個快速安裝吧</h2>
-<ol>
-<li>
-<p>官網下載安裝檔執行</p>
-<p><a href="https://golang.org/doc/install"><img src="https://i.imgur.com/54I2HSl.png" alt="Download and install"></a></p>
-</li>
-</ol>
+      <p>依據進度我們要進入實做的部分了，昨天的 docker-compose，剛好幫我們建立了一組 slave-master MySQL database，今天將利用昨日的 DB 加上 Gin &amp; Gorm packages，完成最簡易的 HTTP service。</p>
     </div>
   </div>
 </div>
@@ -195,12 +184,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day4/" class="link black dim">
-        Day4 Why Go
+      <a href="/posts/2020-ithome-day14/" class="link black dim">
+        Day14 Dockerfile &amp; Docker-Compose
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>先前幾天介紹 data consistency 的部分，是希望我們可以謹記資料對系統的重要性，從今天開始我們要進入用 golang 搭建 server 的實作部分，在我們可以實作前，不免俗的要介紹一下為什麼要用 golang 這個語言來進行。</p>
+      <p>本日文章內容目標能讓我們了解，Dockerfile 撰寫的格式與啟動的效果，並且使用 docker-compose 啟動多個 containers，並建立兩個 containers 溝通的橋樑。</p>
     </div>
   </div>
 </div>
@@ -210,12 +199,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day3/" class="link black dim">
-        Day3 CAP 定理
+      <a href="/posts/2020-ithome-day13/" class="link black dim">
+        Day13 Docker
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>Consistency(一致性), Availability (可用性), Partition Tolerance(分區容忍性) 組成 CAP 定理，在前一文中提到依據不同的狀況下我們必須面臨取捨的問題，藉由了解三者的定義與任取其二所產生出來的效果了解該如何取捨。</p>
+      <p>為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。</p>
     </div>
   </div>
 </div>
@@ -225,12 +214,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day2/" class="link black dim">
-        Day2 Data consistency
+      <a href="/posts/2020-ithome-day12/" class="link black dim">
+        Day12 Atomic
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>會選擇在 distributed(分散式)之前先討論 consistency(一致性)，是由於如果我們的分散式系統所提供的服務無法保有一定程度的正確性的話，不論可以回應多大量或多快速的請求都是沒有意義的，而且可能會是一場巨大的災難。一般來說我們會討論到 data consistency，是基於複數存取實體因為時間差或實體間同步異常中斷，而產生的資料或狀態不一致，而單一 server 內因為多併發而產生的資料不一致屬於 data race 範疇，我們在後面一點的文章另外討論。</p>
+      <p>關於 <a href="https://golang.org/pkg/sync/atomic/">sync/atomic</a> 是於 <a href="mailto:go@v1.14">go@v1.14</a> 才推出的新東西，筆者也是最近才知道有這個包可以使用。Atomic 目標在一些單純的操作上，完成最小原子性操作，使用上甚至比 mutex 更為簡便。</p>
     </div>
   </div>
 </div>
@@ -240,13 +229,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day1/" class="link black dim">
-        Day1 系列文結構介紹
+      <a href="/posts/2020-ithome-day11/" class="link black dim">
+        Day11 Mutex vs Channel
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="前言">前言</h2>
-<p>HiHi~!時隔多年又回來參賽拉，本次希望已經涉入軟體系統開發的工程師可以從此系列文中得到一些想法，也希望還沒應用到分散式架構或對一致性不太了解的朋友，可以體會看看遇到什麼問題的時候會需要這樣的架構編排</p>
+      <p>昨天看過 race condiction 的情況後，我們了解了 mutex.Lock 與 channel，可以幫助我們同步 memory 狀態，避免發生奇怪的資料異常狀態。今天我們要延續昨天的技巧，並且用 benchmark 比較兩個在速度上的優劣。</p>
     </div>
   </div>
 </div>
@@ -282,13 +270,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/11/">11</a>
+    <a class="page-link" href="/posts/page/13/">13</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/6/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/11/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/13/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swagger on WeiWeiWesley</title>
+    <link>/tags/swagger/</link>
+    <description>Recent content in swagger on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Sep 2021 08:46:40 +0800</lastBuildDate><atom:link href="/tags/swagger/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day8 Swagger UI &amp; Open Match APIs</title>
+      <link>/posts/2021-ithome-day8/</link>
+      <pubDate>Thu, 16 Sep 2021 08:46:40 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day8/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://swagger.io/tools/swagger-ui/&#34;&gt;Swagger UI&lt;/a&gt; 是一個將 API 文件與 API 請求產生結合的介面套件，官方已於建立核心的 yaml 中，幫我們部署好 swagger ui service，但今天主要介紹的並非 Swagger UI 本身，而是利用 Swagger UI 來閱讀 Open-Match 所提供的 HTTP API 接口。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

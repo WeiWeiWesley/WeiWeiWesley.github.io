@@ -153,65 +153,18 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day30/" class="link black dim">
-        Day30 系列文總結與回顧
+      <a href="/posts/2021-ithome-day10/" class="link black dim">
+        Day10 Overlapping Example
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>這次很快的來到了鐵人賽最後一天呢～今天讓我們簡單的回顧一下，系列文的結構與其中可能值得運用的地方。<a href="https://ithelp.ithome.com.tw/users/20103420/ironman/3134">Go Distributed &amp; Go Consistently</a> 這系列文以 golang 為基底，目標在建立可靠的分散式服務或系統，如果是直接跳到本篇總結的朋友，不訪參考一下結構分析，再決定本系列文是否有適合你的地方。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day29/" class="link black dim">
-        Day29 Drone (Install &amp; Usage)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>本系列文已經接近尾深，今天分享一個跟前面比較不一樣的主題，Drone CI/CD。分享這個工具的主因，是因為體會過 CI/CD 的美好就回不去了，剛好 Drone 是一套以 golang 編程的 CI/CD 工具，本篇讓我們使用 Github repo 當作目標，實現簡易的 CI testting。
-<a href="https://drone.io/"><img src="https://i.imgur.com/nv3AUgI.png" alt="drone"></a></p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day27/" class="link black dim">
-        Day27 NSQ (Client Usage &amp; RDY)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>昨天簡單介紹過 NSQ架構與組成要件，今天我們來看一下實際使用的方式，與使用時需要注意的地方。範例會延續昨天架在 kubernetes 的 NSQ，請還沒有安裝朋友，自行利用<a href="https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/nsqExample">範例設定</a>部署。</p>
-<p>如果照著範例啟動的話，我們可以得到 3個使用相同 channel 的 consumer pods，與一個負責推送訊息至 topic 的 producer。注意到這次範例實作 Producer-Consumer Mode，故 3個 consumer 收到的 messages 總數，應等於 channel messages 總數。</p>
-<p><img src="https://i.imgur.com/9OUPKD4.png" alt="nsqadmin"></p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day28/" class="link black dim">
-        Day28 NSQ (Tips)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>針對一些可能遇到的問題或需求，跟大家分享一下須注意的地方或處裡的方式。</p>
-<h2 id="config-options">Config Options</h2>
+      <p>昨天已經看過我們在實務上可能會遇到的需求，利用多個可能重複範圍的配對池，當作匹配搜尋條件，今天讓我們用實作範例來觀察其效果。</p>
+<h2 id="角色等級-overlapping-範例">角色等級 Overlapping 範例</h2>
+<p>本範例同樣基於官方 demo，藉由更改範例內容重新 build images 後完成。</p>
+<h3 id="images">Images</h3>
 <ul>
-<li>MaxAttempts : NSQ consumer 嘗試處理訊息次數，並非無限的，預設 5次，可透過 max_attempts 進行變更</li>
-<li>BackoffStrategy : 每次重新嘗試處理訊息時，會對 <code>backoff +1</code> ，表示下一次重新處理的時間將延後，預設延遲為指數性成長(ex 2, 4, 16 &hellip;)</li>
-<li>MsgTimeout : 可設置訊息若堆積過久，沒有被送到 client 端時，自動失效</li>
+<li>weiweiwesley/open-match:overlapping</li>
+<li>weiweiwesley/mmf:overlapping</li>
 </ul>
     </div>
   </div>
@@ -222,13 +175,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day26/" class="link black dim">
-        Day26 NSQ (Features &amp; Install)
+      <a href="/posts/2021-ithome-day9/" class="link black dim">
+        Day9 重疊條件配對池 Overlapping MatchProfiles
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在進行分散式運算時如果是想發送至不同實體， 我們可直接發出請求並等待回傳結果，但這樣在等待回傳時的運算能力是被閒置的，故此聰明的我們可能會用 <code>goroutine</code> 將請求發送去，再利用 <code>select channel</code> 等待回傳結果。但大量使用 <code>channel</code> 的設計又較為複雜，維護較為困難，且依然有著請求對象沒有收到請求，或收到請求沒有回傳這樣不好處理的狀況。</p>
-<p>為了處理上述一些在訊息傳遞交換過程所面臨的問題，我們除了在邏輯上，對服務進行切分成更小的服務顆粒，對於傳遞過程可能造成的錯誤與重試必須進行掌控。NSQ 實作了我們對于訊息交換的需求，特別是在自動重試這個部分，NSQ 幫助我們可以確保資訊是有被接受並處理的。</p>
+      <p>在一些比較普通的應用場景，我們產生一個 matches 的流程會像是，由 Director 輪詢呼叫 Open-Match Backend 取得一組 <code>MatchProfile</code>，而過程中會觸發 MMF 的執行，並且依照 <code>MatchProfile filter</code> 的條件獲得對應的 <code>tickets</code>，最後 MMF 依照設定的邏輯匹配這些 <code>tickets</code>，返回 <code>matches</code>。</p>
     </div>
   </div>
 </div>
@@ -238,19 +190,60 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day25/" class="link black dim">
-        Day25 Istio (Load Balance gRPC)
+      <a href="/posts/2021-ithome-day8/" class="link black dim">
+        Day8 Swagger UI &amp; Open Match APIs
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天我們實作 gRPC services，觀察 gRPC services 是否可以在有 Istio 的協助下，真的能夠順利的對流量進行 load balance。</p>
-<h2 id="test-example">Test Example</h2>
-<p><a href="https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/gRPCExample">下載完整範例</a></p>
-<ul>
-<li><a href="https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/client/grpc-client.yaml">gRPC client * 1</a></li>
-<li><a href="https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/grpc-server.yaml">gRPC server * 3</a></li>
-</ul>
-<p><a href="https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/main.go">Server side</a></p>
+      <p><a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> 是一個將 API 文件與 API 請求產生結合的介面套件，官方已於建立核心的 yaml 中，幫我們部署好 swagger ui service，但今天主要介紹的並非 Swagger UI 本身，而是利用 Swagger UI 來閱讀 Open-Match 所提供的 HTTP API 接口。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day7/" class="link black dim">
+        Day7 配對條件範例 (角色，人數上限)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天我們要自己假訂一個配對情境，來做一個比官方稍微複雜一點點的 Demo，並且透過這個模擬情境的實踐，來熟悉 Open-Match 在實作上須滿足的接口與函式用法。</p>
+<h2 id="情境">情境</h2>
+<p>隨機產生兩個地區、兩種職業與不同等級條件的配對請求，並且將兩個不同職業才能配對的邏輯，加入我們的配對邏輯中</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day6/" class="link black dim">
+        Day6 Director &amp; Match Function
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>首先我們會介紹 Director 是如何實作的，並介紹 Director 跟 Open-Match 核心互動的方式。而 Director 在完成配對指派的過程中，向核心調用 Match Function 所需完成的邏輯與接口，會一併於本編介紹。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day5/" class="link black dim">
+        Day5 Game Frontend
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天我們來了解一下 Game Frontend 這個須由我們實作的部件，在 Open-Match 所設計的流程中，玩家用戶端發送配對請求後，首先接收到配對請求的便是 Game Frontend。此部件內通常會實作使用者認證與獲取使用者個人資料，用以確認可進行配對，與利用個人資料組成配對參數，最後產生配對請求 Tickets 給 Open-Match 核心。</p>
+<p><img src="https://i.imgur.com/mwH29cs.png" alt="https://i.imgur.com/mwH29cs.png"></p>
     </div>
   </div>
 </div>
@@ -277,13 +270,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/11/">11</a>
+    <a class="page-link" href="/posts/page/13/">13</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/11/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/13/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

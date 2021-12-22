@@ -153,12 +153,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day18/" class="link black dim">
-        Day18 Cache (Local Cache vs Redis)
+      <a href="/posts/2020-ithome-day27/" class="link black dim">
+        Day27 NSQ (Client Usage &amp; RDY)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>會有快取的需求是來自於使用者，對相同資料目標進行大量讀取，為了降低 RMDBS 連線數量與 RMDBS 的實體資源，所產生出來的架構策略。今天我們要來實作 cache，並且分別使用本地記憶體與共用noSQL兩種方式，進行比較其效果與其優劣。</p>
+      <p>昨天簡單介紹過 NSQ架構與組成要件，今天我們來看一下實際使用的方式，與使用時需要注意的地方。範例會延續昨天架在 kubernetes 的 NSQ，請還沒有安裝朋友，自行利用<a href="https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/nsqExample">範例設定</a>部署。</p>
+<p>如果照著範例啟動的話，我們可以得到 3個使用相同 channel 的 consumer pods，與一個負責推送訊息至 topic 的 producer。注意到這次範例實作 Producer-Consumer Mode，故 3個 consumer 收到的 messages 總數，應等於 channel messages 總數。</p>
+<p><img src="https://i.imgur.com/9OUPKD4.png" alt="nsqadmin"></p>
     </div>
   </div>
 </div>
@@ -168,12 +170,18 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day17/" class="link black dim">
-        Day17 Transactions (Redis)
+      <a href="/posts/2020-ithome-day28/" class="link black dim">
+        Day28 NSQ (Tips)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>是的，我們今天要來討論一下 Redis 的 transaction。我們知道 Transaction 要嘛全執行要嘛全不執行，Redis 在 2.2 之後提供了 optimistic lock，讓我們得以進行 check-and-set 的可能，並且實作了幾個方法讓我們可以達成 transaction 的需求。</p>
+      <p>針對一些可能遇到的問題或需求，跟大家分享一下須注意的地方或處裡的方式。</p>
+<h2 id="config-options">Config Options</h2>
+<ul>
+<li>MaxAttempts : NSQ consumer 嘗試處理訊息次數，並非無限的，預設 5次，可透過 max_attempts 進行變更</li>
+<li>BackoffStrategy : 每次重新嘗試處理訊息時，會對 <code>backoff +1</code> ，表示下一次重新處理的時間將延後，預設延遲為指數性成長(ex 2, 4, 16 &hellip;)</li>
+<li>MsgTimeout : 可設置訊息若堆積過久，沒有被送到 client 端時，自動失效</li>
+</ul>
     </div>
   </div>
 </div>
@@ -183,13 +191,13 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day16/" class="link black dim">
-        Day16 Transactions (MySQL)
+      <a href="/posts/2020-ithome-day26/" class="link black dim">
+        Day26 NSQ (Features &amp; Install)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>為了保持我們的資料能<strong>正確的寫入</strong>與<strong>正確的不寫入</strong>，今天我們要來了解一下 transactions 是怎麼運作的，以及如果沒有實作 transactions 會發生怎樣的悲劇，最後提供 gorm 實作 transactions 的範例程式碼給大家參考。</p>
-<p>Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止服務需更新多筆資料或多個 table 時，任一筆資料更新失敗而產生的更新不完整狀態出現。被包在 transactions 中的的操作只要有一筆失敗便可以透過 rollback 來將其它已操作的部分復原。</p>
+      <p>在進行分散式運算時如果是想發送至不同實體， 我們可直接發出請求並等待回傳結果，但這樣在等待回傳時的運算能力是被閒置的，故此聰明的我們可能會用 <code>goroutine</code> 將請求發送去，再利用 <code>select channel</code> 等待回傳結果。但大量使用 <code>channel</code> 的設計又較為複雜，維護較為困難，且依然有著請求對象沒有收到請求，或收到請求沒有回傳這樣不好處理的狀況。</p>
+<p>為了處理上述一些在訊息傳遞交換過程所面臨的問題，我們除了在邏輯上，對服務進行切分成更小的服務顆粒，對於傳遞過程可能造成的錯誤與重試必須進行掌控。NSQ 實作了我們對于訊息交換的需求，特別是在自動重試這個部分，NSQ 幫助我們可以確保資訊是有被接受並處理的。</p>
     </div>
   </div>
 </div>
@@ -199,12 +207,19 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day15/" class="link black dim">
-        Day15 Http Server &amp; Gorm
+      <a href="/posts/2020-ithome-day25/" class="link black dim">
+        Day25 Istio (Load Balance gRPC)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>依據進度我們要進入實做的部分了，昨天的 docker-compose，剛好幫我們建立了一組 slave-master MySQL database，今天將利用昨日的 DB 加上 Gin &amp; Gorm packages，完成最簡易的 HTTP service。</p>
+      <p>今天我們實作 gRPC services，觀察 gRPC services 是否可以在有 Istio 的協助下，真的能夠順利的對流量進行 load balance。</p>
+<h2 id="test-example">Test Example</h2>
+<p><a href="https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/gRPCExample">下載完整範例</a></p>
+<ul>
+<li><a href="https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/client/grpc-client.yaml">gRPC client * 1</a></li>
+<li><a href="https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/grpc-server.yaml">gRPC server * 3</a></li>
+</ul>
+<p><a href="https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/main.go">Server side</a></p>
     </div>
   </div>
 </div>
@@ -214,12 +229,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day14/" class="link black dim">
-        Day14 Dockerfile &amp; Docker-Compose
+      <a href="/posts/2020-ithome-day24/" class="link black dim">
+        Day24 Istio (Install &amp; Simple Usage)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>本日文章內容目標能讓我們了解，Dockerfile 撰寫的格式與啟動的效果，並且使用 docker-compose 啟動多個 containers，並建立兩個 containers 溝通的橋樑。</p>
+      <p>我們今天飛遠一點，來介紹一下 Istio。Istio 可以提供我們更好的 load balance 能力，特別是在使用 gRPC 連線時，當前版本的 Kubernetes 本身是無法對 gRPC 連線進行 load balance 的，我們需要自己實作 sidecar 來完成 load balance 的目的，而 Istio 正好提供了我們所需要的功能。</p>
     </div>
   </div>
 </div>
@@ -229,12 +244,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day13/" class="link black dim">
-        Day13 Docker
+      <a href="/posts/2020-ithome-day23/" class="link black dim">
+        Day23 Kubernetes (Kubernetes on Docker Desktop &amp; Pod Lifetime)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。</p>
+      <p>今天會用一個簡單範例跟大家分享 Pods 的生命週期，藉由範例觀察 Pods status 的變化。但在此之前先，另外介紹一個在本機啟用 Kubernetes 的方式，如果有安裝 Docker Desktop 的話，可以透過介面的方式，產出本地運行的 Kubernetes cluster，與 MineKube 不同的是它提供 GUI，這在我們觀察狀態進行監控的時候會更加友善。</p>
     </div>
   </div>
 </div>
@@ -264,13 +279,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/11/">11</a>
+    <a class="page-link" href="/posts/page/13/">13</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/11/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/13/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
