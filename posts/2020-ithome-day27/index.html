@@ -38,6 +38,7 @@
 <meta property="article:published_time" content="2020-10-05T14:45:17&#43;08:00" />
 <meta property="article:modified_time" content="2020-10-05T14:45:17&#43;08:00" />
 
+
 <meta itemprop="name" content="Day27 NSQ (Client Usage &amp; RDY)">
 <meta itemprop="description" content="昨天簡單介紹過 NSQ架構與組成要件，今天我們來看一下實際使用的方式，與使用時需要注意的地方。範例會延續昨天架在 kubernetes 的 NSQ，請還沒有安裝朋友，自行利用範例設定部署。
 如果照著範例啟動的話，我們可以得到 3個使用相同 channel 的 consumer pods，與一個負責推送訊息至 topic 的 producer。注意到這次範例實作 Producer-Consumer Mode，故 3個 consumer 收到的 messages 總數，應等於 channel messages 總數。
@@ -76,14 +77,20 @@
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
-              Categories
+            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
+              Tags
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
-              Tags
+            <a class="hover-white no-underline white-90" href="/series/" title="Series page">
+              Series
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
+              Categories
             </a>
           </li>
           

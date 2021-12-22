@@ -36,6 +36,7 @@ Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止�
 <meta property="article:published_time" content="2020-09-24T18:01:01&#43;08:00" />
 <meta property="article:modified_time" content="2020-09-24T18:01:01&#43;08:00" />
 
+
 <meta itemprop="name" content="Day16 Transactions (MySQL)">
 <meta itemprop="description" content="為了保持我們的資料能正確的寫入與正確的不寫入，今天我們要來了解一下 transactions 是怎麼運作的，以及如果沒有實作 transactions 會發生怎樣的悲劇，最後提供 gorm 實作 transactions 的範例程式碼給大家參考。
 Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止服務需更新多筆資料或多個 table 時，任一筆資料更新失敗而產生的更新不完整狀態出現。被包在 transactions 中的的操作只要有一筆失敗便可以透過 rollback 來將其它已操作的部分復原。"><meta itemprop="datePublished" content="2020-09-24T18:01:01&#43;08:00" />
@@ -72,14 +73,20 @@ Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止�
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
-              Categories
+            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
+              Tags
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
-              Tags
+            <a class="hover-white no-underline white-90" href="/series/" title="Series page">
+              Series
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
+              Categories
             </a>
           </li>
           
@@ -363,6 +370,10 @@ Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止�
 	    
 	     <li  class="mb2">
           <a href="/posts/2020-ithome-day1/">Day1 系列文結構介紹</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-11-26-test/">Private method 是否該進行單元測試？</a>
         </li>
 	    
 	     <li  class="mb2">

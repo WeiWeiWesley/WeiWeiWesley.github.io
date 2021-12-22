@@ -36,6 +36,7 @@
 <meta property="article:published_time" content="2020-10-04T15:12:12&#43;08:00" />
 <meta property="article:modified_time" content="2020-10-04T15:12:12&#43;08:00" />
 
+
 <meta itemprop="name" content="Day26 NSQ (Features &amp; Install)">
 <meta itemprop="description" content="在進行分散式運算時如果是想發送至不同實體， 我們可直接發出請求並等待回傳結果，但這樣在等待回傳時的運算能力是被閒置的，故此聰明的我們可能會用 goroutine 將請求發送去，再利用 select channel 等待回傳結果。但大量使用 channel 的設計又較為複雜，維護較為困難，且依然有著請求對象沒有收到請求，或收到請求沒有回傳這樣不好處理的狀況。
 為了處理上述一些在訊息傳遞交換過程所面臨的問題，我們除了在邏輯上，對服務進行切分成更小的服務顆粒，對於傳遞過程可能造成的錯誤與重試必須進行掌控。NSQ 實作了我們對于訊息交換的需求，特別是在自動重試這個部分，NSQ 幫助我們可以確保資訊是有被接受並處理的。"><meta itemprop="datePublished" content="2020-10-04T15:12:12&#43;08:00" />
@@ -72,14 +73,20 @@
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
-              Categories
+            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
+              Tags
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/tags/" title="Tags page">
-              Tags
+            <a class="hover-white no-underline white-90" href="/series/" title="Series page">
+              Series
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="Categories page">
+              Categories
             </a>
           </li>
           

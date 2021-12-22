@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s on WeiWeiWesley</title>
+    <link>/tags/k8s/</link>
+    <description>Recent content in k8s on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Sep 2019 18:04:14 +0800</lastBuildDate><atom:link href="/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernet Summit 2019</title>
+      <link>/posts/2019-09-20-kubernet-summit-2019/</link>
+      <pubDate>Fri, 20 Sep 2019 18:04:14 +0800</pubDate>
+      
+      <guid>/posts/2019-09-20-kubernet-summit-2019/</guid>
+      <description>&lt;h3 id=&#34;簡易重點&#34;&gt;簡易重點&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;賣 K8s 的人不敢告訴你的事 - 葉秉哲（William）
+&lt;ul&gt;
+&lt;li&gt;導入前必須提出的問題：維運成本、拓展性、管理性&lt;/li&gt;
+&lt;li&gt;供應商提供的數據是否符合現實需求&lt;/li&gt;
+&lt;li&gt;現有架構是否已經完成解耦合微服務化，已適合搬遷&lt;/li&gt;
+&lt;li&gt;配套CI/CD與分散式log收集監視是否完備&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

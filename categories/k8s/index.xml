@@ -6,24 +6,103 @@
     <description>Recent content in k8s on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Sep 2019 18:04:14 +0800</lastBuildDate><atom:link href="/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Oct 2020 11:31:26 +0800</lastBuildDate><atom:link href="/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Kubernet Summit 2019</title>
-      <link>/posts/2019-09-20-kubernet-summit-2019/</link>
-      <pubDate>Fri, 20 Sep 2019 18:04:14 +0800</pubDate>
+      <title>Day25 Istio (Load Balance gRPC)</title>
+      <link>/posts/2020-ithome-day25/</link>
+      <pubDate>Sat, 03 Oct 2020 11:31:26 +0800</pubDate>
       
-      <guid>/posts/2019-09-20-kubernet-summit-2019/</guid>
-      <description>&lt;h3 id=&#34;簡易重點&#34;&gt;簡易重點&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;賣 K8s 的人不敢告訴你的事 - 葉秉哲（William）
+      <guid>/posts/2020-ithome-day25/</guid>
+      <description>&lt;p&gt;今天我們實作 gRPC services，觀察 gRPC services 是否可以在有 Istio 的協助下，真的能夠順利的對流量進行 load balance。&lt;/p&gt;
+&lt;h2 id=&#34;test-example&#34;&gt;Test Example&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/tree/master/kubernetes/gRPCExample&#34;&gt;下載完整範例&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;導入前必須提出的問題：維運成本、拓展性、管理性&lt;/li&gt;
-&lt;li&gt;供應商提供的數據是否符合現實需求&lt;/li&gt;
-&lt;li&gt;現有架構是否已經完成解耦合微服務化，已適合搬遷&lt;/li&gt;
-&lt;li&gt;配套CI/CD與分散式log收集監視是否完備&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/client/grpc-client.yaml&#34;&gt;gRPC client * 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/grpc-server.yaml&#34;&gt;gRPC server * 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/ithome12/blob/master/kubernetes/gRPCExample/server/main.go&#34;&gt;Server side&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day24 Istio (Install &amp; Simple Usage)</title>
+      <link>/posts/2020-ithome-day24/</link>
+      <pubDate>Fri, 02 Oct 2020 10:35:18 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day24/</guid>
+      <description>&lt;p&gt;我們今天飛遠一點，來介紹一下 Istio。Istio 可以提供我們更好的 load balance 能力，特別是在使用 gRPC 連線時，當前版本的 Kubernetes 本身是無法對 gRPC 連線進行 load balance 的，我們需要自己實作 sidecar 來完成 load balance 的目的，而 Istio 正好提供了我們所需要的功能。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day23 Kubernetes (Kubernetes on Docker Desktop &amp; Pod Lifetime)</title>
+      <link>/posts/2020-ithome-day23/</link>
+      <pubDate>Thu, 01 Oct 2020 15:04:13 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day23/</guid>
+      <description>&lt;p&gt;今天會用一個簡單範例跟大家分享 Pods 的生命週期，藉由範例觀察 Pods status 的變化。但在此之前先，另外介紹一個在本機啟用 Kubernetes 的方式，如果有安裝 Docker Desktop 的話，可以透過介面的方式，產出本地運行的 Kubernetes cluster，與 MineKube 不同的是它提供 GUI，這在我們觀察狀態進行監控的時候會更加友善。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day22 Kubernetes (Minikube &amp; Deployment)</title>
+      <link>/posts/2020-ithome-day22/</link>
+      <pubDate>Wed, 30 Sep 2020 08:58:34 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day22/</guid>
+      <description>&lt;p&gt;今天我們會先介紹部署檔的構成，再利用 Minikube 在本機建立測試環境，實際感受一下 Pod 如何被創建與異動的。&lt;/p&gt;
+&lt;h2 id=&#34;controllers&#34;&gt;Controllers&lt;/h2&gt;
+&lt;p&gt;描述檔是用來描述或更新 Pods 的設定，當我們寫好 .yaml 並且利用命令或介面部署上 kubernetes，等同於實作了一個 &lt;a href=&#34;https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/&#34;&gt;Kubernetes objects&lt;/a&gt;，藉此創建 &lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#when-to-use-a-replicaset&#34;&gt;ReplicaSet&lt;/a&gt;(一群同性質的 Pods) 或更新其狀態。特別提一下會用 Controllers 當標題，是因為&lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/&#34;&gt;官方文件&lt;/a&gt;的分類，將各種描述設定所啟用後的 replica，分別歸類在此類別下，筆者自己覺得滿特別的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day21 Kubernetes (Pods &amp; Services)</title>
+      <link>/posts/2020-ithome-day21/</link>
+      <pubDate>Tue, 29 Sep 2020 10:03:28 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day21/</guid>
+      <description>&lt;p&gt;昨天我們認識了 kubernetes 基礎架構，由 Cluster, Master Node, Worker Nodes 構成。今天我們要來了解一下 Node 裏實際最小工作單位 Pod，以及用來訪問隨著 Master 調度可能改變 ip address 的 Service。&lt;/p&gt;
+&lt;h2 id=&#34;pod&#34;&gt;Pod&lt;/h2&gt;
+&lt;p&gt;Pod 是 Kubernetes 下最小工作單位，分布在不同的 Nodes 中，由 Master 管理與調度。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每一 Pod 都為獨立實體，有獨立的虛擬 ip address、獨站部分實體資源&lt;/li&gt;
+&lt;li&gt;每一個 Pod 裡面可以運行多個 containers，裡面的 containers 共享該 Pod 的資源&lt;/li&gt;
+&lt;li&gt;Pod 內 containers 共享同一個 pod ip address&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day20 Kubernetes (Cluster Architecture)</title>
+      <link>/posts/2020-ithome-day20/</link>
+      <pubDate>Mon, 28 Sep 2020 09:56:21 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day20/</guid>
+      <description>&lt;p&gt;今天介紹一下以 golang 為主編程語言，建立當前最知名的容器管理服務 — Kubernetes。我們在上一篇已經簡單的敘述過，服務是如何演進成分散式服務，而微服務又是如何因應分散式服務而產生，今天的我們會介紹 Kubernetes 的運作架構，以及關於 Kubernetes 幾個關鍵名詞解釋，Here we go。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/BJOsuWS.png&#34; alt=&#34;k8s-golang&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day19 Distributed Micoservices</title>
+      <link>/posts/2020-ithome-day19/</link>
+      <pubDate>Sun, 27 Sep 2020 12:40:34 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day19/</guid>
+      <description>&lt;p&gt;我們前面花了一些時間了解 golang 的基本用法，以及資料一致性的重要性，並且在上一篇中討論到多 server 快取資料可能發生的狀況，其中在多 server 下如果能夠保持資料存取一致，並且依據流量更彈性的增減，便是 microservices 的最大特色。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day14 Dockerfile &amp; Docker-Compose</title>
+      <link>/posts/2020-ithome-day14/</link>
+      <pubDate>Tue, 22 Sep 2020 10:38:17 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day14/</guid>
+      <description>&lt;p&gt;本日文章內容目標能讓我們了解，Dockerfile 撰寫的格式與啟動的效果，並且使用 docker-compose 啟動多個 containers，並建立兩個 containers 溝通的橋樑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day13 Docker</title>
+      <link>/posts/2020-ithome-day13/</link>
+      <pubDate>Mon, 21 Sep 2020 11:31:32 +0800</pubDate>
+      
+      <guid>/posts/2020-ithome-day13/</guid>
+      <description>&lt;p&gt;為了讓我們可以快速獲得乾淨的測試資料庫，與後續 Go Distributed at Kubernetes，於此開始介紹一些關於容器的概念。希望能夠幫助一些對於環境苦手的朋友，可以在開發上有一個更快速乾淨的選擇。&lt;/p&gt;</description>
     </item>
     
   </channel>

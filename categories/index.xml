@@ -8,29 +8,47 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Oct 2020 09:47:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>2020 ithome鐵人30</title>
-      <link>/categories/2020-ithome%E9%90%B5%E4%BA%BA30/</link>
+      <title>golang</title>
+      <link>/categories/golang/</link>
       <pubDate>Thu, 08 Oct 2020 09:47:51 +0800</pubDate>
       
-      <guid>/categories/2020-ithome%E9%90%B5%E4%BA%BA30/</guid>
+      <guid>/categories/golang/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>test</title>
-      <link>/categories/test/</link>
-      <pubDate>Tue, 26 Nov 2019 15:09:00 +0800</pubDate>
-      
-      <guid>/categories/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DevOps</title>
+      <title>devops</title>
       <link>/categories/devops/</link>
-      <pubDate>Mon, 04 Nov 2019 15:44:14 +0800</pubDate>
+      <pubDate>Wed, 07 Oct 2020 09:11:26 +0800</pubDate>
       
       <guid>/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nsq</title>
+      <link>/categories/nsq/</link>
+      <pubDate>Mon, 05 Oct 2020 14:45:17 +0800</pubDate>
+      
+      <guid>/categories/nsq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>/categories/k8s/</link>
+      <pubDate>Sat, 03 Oct 2020 11:31:26 +0800</pubDate>
+      
+      <guid>/categories/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conferenece</title>
+      <link>/categories/conferenece/</link>
+      <pubDate>Mon, 04 Nov 2019 15:44:14 +0800</pubDate>
+      
+      <guid>/categories/conferenece/</guid>
       <description></description>
     </item>
     
@@ -40,24 +58,6 @@
       <pubDate>Wed, 25 Sep 2019 14:12:14 +0800</pubDate>
       
       <guid>/categories/elk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>k8s</title>
-      <link>/categories/k8s/</link>
-      <pubDate>Fri, 20 Sep 2019 18:04:14 +0800</pubDate>
-      
-      <guid>/categories/k8s/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>/categories/golang/</link>
-      <pubDate>Sun, 30 Jun 2019 22:48:14 +0800</pubDate>
-      
-      <guid>/categories/golang/</guid>
       <description></description>
     </item>
     
