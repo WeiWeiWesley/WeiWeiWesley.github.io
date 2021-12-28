@@ -6,7 +6,64 @@
     <description>Recent content on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Sep 2021 11:29:38 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Sep 2021 08:29:46 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day15 Open-Match 監控安裝</title>
+      <link>/posts/2021-ithome-day15/</link>
+      <pubDate>Thu, 23 Sep 2021 08:29:46 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day15/</guid>
+      <description>&lt;p&gt;Open-Match 的基礎建構採用了 &lt;a href=&#34;https://opencensus.io/&#34;&gt;OpenCensus&lt;/a&gt; 所提供的 library，因此可暴露 metrics 提供我們即時監控的需求 ，目前可使用的有以下常見的四種工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://prometheus.io/&#34;&gt;Prometheus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jaegertracing.io/&#34;&gt;Jaeger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.google.com/products/operations?hl=zh-tw&amp;amp;utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=japac-TW-all-en-dr-bkws-all-all-trial-e-dr-1009882&amp;amp;utm_content=text-ad-none-none-DEV_c-CRE_495210765296-ADGP_Hybrid%20%7C%20BKWS%20-%20EXA%20%7C%20Txt%20~%20Hybrid%20and%20Multi-cloud%20~%20Operations%20(formerly%20Stackdriver)_stackdriver-New-KWID_43700029827991853-kwd-316511609920&amp;amp;userloc_9040380-network_g&amp;amp;utm_term=KW_stackdriver&amp;amp;gclid=EAIaIQobChMI8s_ItquP8wIVGamWCh1B_gTNEAAYASAAEgKDMvD_BwE&amp;amp;gclsrc=aw.ds&#34;&gt;Stackdriver&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day14 Example of Backfill</title>
+      <link>/posts/2021-ithome-day14/</link>
+      <pubDate>Wed, 22 Sep 2021 08:26:03 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day14/</guid>
+      <description>&lt;p&gt;延續昨天補位的情境，我們今天要來實作一下補位的範例，同樣以&lt;a href=&#34;https://github.com/googleforgames/open-match/blob/main/examples/functions/golang/backfill/mmf/matchfunction.go&#34;&gt;官方提供的範例碼&lt;/a&gt;，由筆者加上註解與 debuf log 編譯完成後，放到 docker hub 上提供大家體驗看看，請使用這份 &lt;a href=&#34;https://github.com/WeiWeiWesley/open-match/blob/backfills/backfill.yml&#34;&gt;backfill.yaml&lt;/a&gt; 部署，裏面使用的是註解過後的 &lt;a href=&#34;https://github.com/WeiWeiWesley/open-match/blob/backfills/examples/functions/golang/backfill/mmf/matchfunction.go&#34;&gt;MMF&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day13 補位策略 Backfill</title>
+      <link>/posts/2021-ithome-day13/</link>
+      <pubDate>Tue, 21 Sep 2021 12:37:34 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day13/</guid>
+      <description>&lt;p&gt;在不同遊戲的類型可以用不同的條件配對成團，以下為常見配對後可以接受補位的情境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在一場遊戲中，有一名遊戲玩家離開了遊戲，為了保持遊戲平衡與樂趣，配對系統會將新進玩家配對至本局遊戲&lt;/li&gt;
+&lt;li&gt;像 APEX 大逃殺類型的遊戲，配對的過程是由按下配對後，開始等待共計 60 名玩家才能出發，若等待過程中有玩家取消等待，則會增加一個待捕空缺，伺服器會將人數補滿 60 人後才開始遊戲&lt;/li&gt;
+&lt;li&gt;擁有巨大世界觀的線上 MMORPG 遊戲，為了豐富社交行為與玩家互動，會希望玩家盡可能的，填滿現有的遊戲伺服器。只有在現有伺服器已滿的情況下，才會而外加開新伺服器，但由於每個伺服器再有玩家離線時，都會產生 backfill，因此玩家來來去去時產生一個動態平衡&lt;/li&gt;
+&lt;li&gt;同樣是多人配對遊戲，在有一名遊戲玩家離開後，可以透過現有遊戲玩家，邀請其好友加入遊戲的方式，產生補位的效果，而這時系統的自動補位應該取消&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day12 同步狀態控制 Synchronizer</title>
+      <link>/posts/2021-ithome-day12/</link>
+      <pubDate>Mon, 20 Sep 2021 12:46:16 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day12/</guid>
+      <description>&lt;p&gt;由於我們可藉由產生帶重疊範圍的配對請求，而這些配對請求將併發(Concurrently)的觸發 MMF，就算是 Evaluation 已經針對這些 overlapping 選舉出最合適的結果，這會在其餘併發中的 MMF 選舉過程，產生一個短暫的衝突時間點，為了解決這樣的困擾，我們需要使用一個外力來中斷這些 MMF，這便是 Synchronizer 的同步作用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day11 配對品質評估 Evaluator</title>
+      <link>/posts/2021-ithome-day11/</link>
+      <pubDate>Sun, 19 Sep 2021 11:00:23 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day11/</guid>
+      <description>&lt;p&gt;由於 Open-Match 在架構上，允許使用同一張 ticket，對不同的配對池進行搜尋與配對，這便是先前提到的 overlapping MatchProfiles，但如何使這些具有重疊性的匹配，最後只產生出一個最適合的匹配結果，則需要 Evaluator 介入參與。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day10 Overlapping Example</title>
       <link>/posts/2021-ithome-day10/</link>

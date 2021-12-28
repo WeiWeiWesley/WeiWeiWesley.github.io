@@ -153,88 +153,90 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day9/" class="link black dim">
+        Day9 重疊條件配對池 Overlapping MatchProfiles
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>在一些比較普通的應用場景，我們產生一個 matches 的流程會像是，由 Director 輪詢呼叫 Open-Match Backend 取得一組 <code>MatchProfile</code>，而過程中會觸發 MMF 的執行，並且依照 <code>MatchProfile filter</code> 的條件獲得對應的 <code>tickets</code>，最後 MMF 依照設定的邏輯匹配這些 <code>tickets</code>，返回 <code>matches</code>。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day8/" class="link black dim">
+        Day8 Swagger UI &amp; Open Match APIs
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p><a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> 是一個將 API 文件與 API 請求產生結合的介面套件，官方已於建立核心的 yaml 中，幫我們部署好 swagger ui service，但今天主要介紹的並非 Swagger UI 本身，而是利用 Swagger UI 來閱讀 Open-Match 所提供的 HTTP API 接口。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day7/" class="link black dim">
+        Day7 配對條件範例 (角色，人數上限)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天我們要自己假訂一個配對情境，來做一個比官方稍微複雜一點點的 Demo，並且透過這個模擬情境的實踐，來熟悉 Open-Match 在實作上須滿足的接口與函式用法。</p>
+<h2 id="情境">情境</h2>
+<p>隨機產生兩個地區、兩種職業與不同等級條件的配對請求，並且將兩個不同職業才能配對的邏輯，加入我們的配對邏輯中</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day6/" class="link black dim">
+        Day6 Director &amp; Match Function
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>首先我們會介紹 Director 是如何實作的，並介紹 Director 跟 Open-Match 核心互動的方式。而 Director 在完成配對指派的過程中，向核心調用 Match Function 所需完成的邏輯與接口，會一併於本編介紹。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day5/" class="link black dim">
+        Day5 Game Frontend
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天我們來了解一下 Game Frontend 這個須由我們實作的部件，在 Open-Match 所設計的流程中，玩家用戶端發送配對請求後，首先接收到配對請求的便是 Game Frontend。此部件內通常會實作使用者認證與獲取使用者個人資料，用以確認可進行配對，與利用個人資料組成配對參數，最後產生配對請求 Tickets 給 Open-Match 核心。</p>
+<p><img src="https://i.imgur.com/mwH29cs.png" alt="https://i.imgur.com/mwH29cs.png"></p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2021-ithome-day4/" class="link black dim">
         Day4 官方 Demo 說明
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       <p>今天我們要藉由官方所提供的 <a href="https://open-match.dev/site/docs/getting-started/">Demo</a>，來介紹幾個關鍵實體與流程的運作。再開始本篇 Demo 安裝前，請確認已參照前一天的核心安裝步驟，把 Open-Match 部署完成。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day3/" class="link black dim">
-        Day3 安裝 Kubernetes &amp; Open-Match 核心
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在昨天我們簡單介紹了框架是如何產生配對後，今天我們要來部署 Open-Match 所需要的環境與核心。基於彈性拓展需求，首先需要的是 Kubernetes Cluster，Open-Match 的核心便是安裝於此，且後續我們也會把須實作的部件，以容器的方式搭載於 Kubernetes 上。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day2/" class="link black dim">
-        Day2 初次窺探配對框架
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在開始實作與瞭解細部功能前，讓我們先初步的看過整體架構是怎麼運作的，以利後續 demo 實作與各部件解析時，有個目前資料流動到哪裡的概念，並且會說明哪個部件是我們使用 Open-Match 需要實作的部件，哪些是 Open-Match 無需異動的核心。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day1/" class="link black dim">
-        Day1 Open-Match 簡介
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在眾多遊戲類型中，對戰遊戲類型遊戲佔有很重要的一席之地。不論是手機遊戲市場，還是以電腦為主的競技遊戲，當有玩家對玩家互動時，便會需要遊戲伺服器的參與，其中可能涉及連線、配對、遊戲邏輯、安全驗證等等機制。本次主題將專注在“配對”這件事上，配對可以很簡單也可以很複雜，簡單的連線數分配，或細至玩家群體分房，抑或是特定職業的搭配，都屬於配對遊程的一環。希望可以藉由本次對 Open-Match 框架介紹，讓自己與觀看此系列文的朋友都對使用此框架進行配對有基礎的認識與了解。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day30/" class="link black dim">
-        Day30 系列文總結與回顧
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>這次很快的來到了鐵人賽最後一天呢～今天讓我們簡單的回顧一下，系列文的結構與其中可能值得運用的地方。<a href="https://ithelp.ithome.com.tw/users/20103420/ironman/3134">Go Distributed &amp; Go Consistently</a> 這系列文以 golang 為基底，目標在建立可靠的分散式服務或系統，如果是直接跳到本篇總結的朋友，不訪參考一下結構分析，再決定本系列文是否有適合你的地方。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day29/" class="link black dim">
-        Day29 Drone (Install &amp; Usage)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>本系列文已經接近尾深，今天分享一個跟前面比較不一樣的主題，Drone CI/CD。分享這個工具的主因，是因為體會過 CI/CD 的美好就回不去了，剛好 Drone 是一套以 golang 編程的 CI/CD 工具，本篇讓我們使用 Github repo 當作目標，實現簡易的 CI testting。
-<a href="https://drone.io/"><img src="https://i.imgur.com/nv3AUgI.png" alt="drone"></a></p>
     </div>
   </div>
 </div>
@@ -261,13 +263,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/13/">13</a>
+    <a class="page-link" href="/posts/page/14/">14</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/13/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/14/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
