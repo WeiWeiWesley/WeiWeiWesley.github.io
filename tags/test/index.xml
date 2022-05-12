@@ -6,7 +6,17 @@
     <description>Recent content in test on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Nov 2019 15:09:00 +0800</lastBuildDate><atom:link href="/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2022 04:36:00 +0800</lastBuildDate><atom:link href="/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go1.18 特色簡介</title>
+      <link>/posts/2022-05-12-go1.18/</link>
+      <pubDate>Thu, 12 May 2022 04:36:00 +0800</pubDate>
+      
+      <guid>/posts/2022-05-12-go1.18/</guid>
+      <description>&lt;p&gt;Go1.18 除了推出大家期待已久的泛型(generics)之外，也同時追加了兩個新的功能，模糊測試(fuzzing)與工作區(workspaces)，本文將以簡單的範例介紹這三個新功能。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/WeiWeiWesley/go1.18&#34;&gt;範例位置&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Private method 是否該進行單元測試？</title>
       <link>/posts/2019-11-26-test/</link>

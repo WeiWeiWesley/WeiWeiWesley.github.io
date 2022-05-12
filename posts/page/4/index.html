@@ -153,6 +153,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day13/" class="link black dim">
+        Day13 補位策略 Backfill
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>在不同遊戲的類型可以用不同的條件配對成團，以下為常見配對後可以接受補位的情境：</p>
+<ul>
+<li>在一場遊戲中，有一名遊戲玩家離開了遊戲，為了保持遊戲平衡與樂趣，配對系統會將新進玩家配對至本局遊戲</li>
+<li>像 APEX 大逃殺類型的遊戲，配對的過程是由按下配對後，開始等待共計 60 名玩家才能出發，若等待過程中有玩家取消等待，則會增加一個待捕空缺，伺服器會將人數補滿 60 人後才開始遊戲</li>
+<li>擁有巨大世界觀的線上 MMORPG 遊戲，為了豐富社交行為與玩家互動，會希望玩家盡可能的，填滿現有的遊戲伺服器。只有在現有伺服器已滿的情況下，才會而外加開新伺服器，但由於每個伺服器再有玩家離線時，都會產生 backfill，因此玩家來來去去時產生一個動態平衡</li>
+<li>同樣是多人配對遊戲，在有一名遊戲玩家離開後，可以透過現有遊戲玩家，邀請其好友加入遊戲的方式，產生補位的效果，而這時系統的自動補位應該取消</li>
+</ul>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2021-ithome-day12/" class="link black dim">
         Day12 同步狀態控制 Synchronizer
       </a>
@@ -231,23 +252,6 @@
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day7/" class="link black dim">
-        Day7 配對條件範例 (角色，人數上限)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天我們要自己假訂一個配對情境，來做一個比官方稍微複雜一點點的 Demo，並且透過這個模擬情境的實踐，來熟悉 Open-Match 在實作上須滿足的接口與函式用法。</p>
-<h2 id="情境">情境</h2>
-<p>隨機產生兩個地區、兩種職業與不同等級條件的配對請求，並且將兩個不同職業才能配對的邏輯，加入我們的配對邏輯中</p>
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 <ul class="pagination">
   <li class="page-item">
@@ -275,13 +279,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/16/">16</a>
+    <a class="page-link" href="/posts/page/17/">17</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/5/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/16/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/17/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
