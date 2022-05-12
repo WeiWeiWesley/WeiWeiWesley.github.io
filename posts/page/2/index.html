@@ -153,6 +153,58 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day12/" class="link black dim">
+        Day12 同步狀態控制 Synchronizer
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>由於我們可藉由產生帶重疊範圍的配對請求，而這些配對請求將併發(Concurrently)的觸發 MMF，就算是 Evaluation 已經針對這些 overlapping 選舉出最合適的結果，這會在其餘併發中的 MMF 選舉過程，產生一個短暫的衝突時間點，為了解決這樣的困擾，我們需要使用一個外力來中斷這些 MMF，這便是 Synchronizer 的同步作用。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day11/" class="link black dim">
+        Day11 配對品質評估 Evaluator
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>由於 Open-Match 在架構上，允許使用同一張 ticket，對不同的配對池進行搜尋與配對，這便是先前提到的 overlapping MatchProfiles，但如何使這些具有重疊性的匹配，最後只產生出一個最適合的匹配結果，則需要 Evaluator 介入參與。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day10/" class="link black dim">
+        Day10 Overlapping Example
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>昨天已經看過我們在實務上可能會遇到的需求，利用多個可能重複範圍的配對池，當作匹配搜尋條件，今天讓我們用實作範例來觀察其效果。</p>
+<h2 id="角色等級-overlapping-範例">角色等級 Overlapping 範例</h2>
+<p>本範例同樣基於官方 demo，藉由更改範例內容重新 build images 後完成。</p>
+<h3 id="images">Images</h3>
+<ul>
+<li>weiweiwesley/open-match:overlapping</li>
+<li>weiweiwesley/mmf:overlapping</li>
+</ul>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2021-ithome-day9/" class="link black dim">
         Day9 重疊條件配對池 Overlapping MatchProfiles
       </a>
@@ -196,52 +248,6 @@
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day6/" class="link black dim">
-        Day6 Director &amp; Match Function
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>首先我們會介紹 Director 是如何實作的，並介紹 Director 跟 Open-Match 核心互動的方式。而 Director 在完成配對指派的過程中，向核心調用 Match Function 所需完成的邏輯與接口，會一併於本編介紹。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day5/" class="link black dim">
-        Day5 Game Frontend
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天我們來了解一下 Game Frontend 這個須由我們實作的部件，在 Open-Match 所設計的流程中，玩家用戶端發送配對請求後，首先接收到配對請求的便是 Game Frontend。此部件內通常會實作使用者認證與獲取使用者個人資料，用以確認可進行配對，與利用個人資料組成配對參數，最後產生配對請求 Tickets 給 Open-Match 核心。</p>
-<p><img src="https://i.imgur.com/mwH29cs.png" alt="https://i.imgur.com/mwH29cs.png"></p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day4/" class="link black dim">
-        Day4 官方 Demo 說明
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天我們要藉由官方所提供的 <a href="https://open-match.dev/site/docs/getting-started/">Demo</a>，來介紹幾個關鍵實體與流程的運作。再開始本篇 Demo 安裝前，請確認已參照前一天的核心安裝步驟，把 Open-Match 部署完成。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 <ul class="pagination">
   <li class="page-item">
@@ -279,7 +285,7 @@
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
-    &copy;  WeiWeiWesley 2021 
+    &copy;  WeiWeiWesley 2022 
   </a>
     <div>
 

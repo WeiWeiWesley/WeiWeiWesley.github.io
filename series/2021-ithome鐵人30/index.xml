@@ -6,7 +6,34 @@
     <description>Recent content in 2021 ithome鐵人30 on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Sep 2021 08:29:46 +0800</lastBuildDate><atom:link href="/series/2021-ithome%E9%90%B5%E4%BA%BA30/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Sep 2021 15:42:14 +0800</lastBuildDate><atom:link href="/series/2021-ithome%E9%90%B5%E4%BA%BA30/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day18 Helm</title>
+      <link>/posts/2021-ithome-day18/</link>
+      <pubDate>Sun, 26 Sep 2021 15:42:14 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day18/</guid>
+      <description>&lt;p&gt;今天我們要先來介紹一下 &lt;a href=&#34;https://helm.sh/&#34;&gt;Helm&lt;/a&gt;，由於 Open-Match 是基於微服務建立的分散式架構，在部署上會使用大量的 yaml 檔，這在管理上會是一個小麻煩，畢竟如果每次我們在不同環境部署的時候，都需要準備不同的 yaml，小心翼翼地去調整 replicas 的數量、使用的 image 版號、核心參數的微調等等細節，是非常麻煩的，故此我們需要一套組態管理工具 Helm。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day17 Grafana (gRPC, Go Processes, Redis)</title>
+      <link>/posts/2021-ithome-day17/</link>
+      <pubDate>Sat, 25 Sep 2021 11:40:40 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day17/</guid>
+      <description>&lt;p&gt;昨天已經介紹過，透過 grafana 監控 matching 的品質 ，今天來介紹一下，透過 grafana 監控服務在資源上的消耗，包含了 gRPC 連線狀況、Redis 的存取狀況，以及由 golang 撰寫的 Open-Match，核心程序所消耗的資源。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day16 Grafana  (Match Making)</title>
+      <link>/posts/2021-ithome-day16/</link>
+      <pubDate>Fri, 24 Sep 2021 08:51:11 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day16/</guid>
+      <description>&lt;p&gt;昨天我們安裝了 Prometheus  與 Grafana ，來協助我們觀察 Open-Match 的活動狀況，由於他的安裝實在花了我一番功夫，決定把一些監控的內容，拆分到今天來說明。所以今天會來介紹一下，我們透過 metrics 可以獲得哪些資訊，以及是使用了哪些設定檔，才能協助我們將這些 metric，轉換成易於閱讀的圖表的。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day15 Open-Match 監控安裝</title>
       <link>/posts/2021-ithome-day15/</link>

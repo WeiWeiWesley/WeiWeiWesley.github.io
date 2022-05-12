@@ -153,6 +153,53 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day24/" class="link black dim">
+        Day24 Istio (Install &amp; Simple Usage)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>我們今天飛遠一點，來介紹一下 Istio。Istio 可以提供我們更好的 load balance 能力，特別是在使用 gRPC 連線時，當前版本的 Kubernetes 本身是無法對 gRPC 連線進行 load balance 的，我們需要自己實作 sidecar 來完成 load balance 的目的，而 Istio 正好提供了我們所需要的功能。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day23/" class="link black dim">
+        Day23 Kubernetes (Kubernetes on Docker Desktop &amp; Pod Lifetime)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天會用一個簡單範例跟大家分享 Pods 的生命週期，藉由範例觀察 Pods status 的變化。但在此之前先，另外介紹一個在本機啟用 Kubernetes 的方式，如果有安裝 Docker Desktop 的話，可以透過介面的方式，產出本地運行的 Kubernetes cluster，與 MineKube 不同的是它提供 GUI，這在我們觀察狀態進行監控的時候會更加友善。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day22/" class="link black dim">
+        Day22 Kubernetes (Minikube &amp; Deployment)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天我們會先介紹部署檔的構成，再利用 Minikube 在本機建立測試環境，實際感受一下 Pod 如何被創建與異動的。</p>
+<h2 id="controllers">Controllers</h2>
+<p>描述檔是用來描述或更新 Pods 的設定，當我們寫好 .yaml 並且利用命令或介面部署上 kubernetes，等同於實作了一個 <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Kubernetes objects</a>，藉此創建 <a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#when-to-use-a-replicaset">ReplicaSet</a>(一群同性質的 Pods) 或更新其狀態。特別提一下會用 Controllers 當標題，是因為<a href="https://kubernetes.io/docs/concepts/workloads/controllers/">官方文件</a>的分類，將各種描述設定所啟用後的 replica，分別歸類在此類別下，筆者自己覺得滿特別的。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2020-ithome-day21/" class="link black dim">
         Day21 Kubernetes (Pods &amp; Services)
       </a>
@@ -197,52 +244,6 @@
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       <p>我們前面花了一些時間了解 golang 的基本用法，以及資料一致性的重要性，並且在上一篇中討論到多 server 快取資料可能發生的狀況，其中在多 server 下如果能夠保持資料存取一致，並且依據流量更彈性的增減，便是 microservices 的最大特色。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day18/" class="link black dim">
-        Day18 Cache (Local Cache vs Redis)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>會有快取的需求是來自於使用者，對相同資料目標進行大量讀取，為了降低 RMDBS 連線數量與 RMDBS 的實體資源，所產生出來的架構策略。今天我們要來實作 cache，並且分別使用本地記憶體與共用noSQL兩種方式，進行比較其效果與其優劣。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day17/" class="link black dim">
-        Day17 Transactions (Redis)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>是的，我們今天要來討論一下 Redis 的 transaction。我們知道 Transaction 要嘛全執行要嘛全不執行，Redis 在 2.2 之後提供了 optimistic lock，讓我們得以進行 check-and-set 的可能，並且實作了幾個方法讓我們可以達成 transaction 的需求。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day16/" class="link black dim">
-        Day16 Transactions (MySQL)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>為了保持我們的資料能<strong>正確的寫入</strong>與<strong>正確的不寫入</strong>，今天我們要來了解一下 transactions 是怎麼運作的，以及如果沒有實作 transactions 會發生怎樣的悲劇，最後提供 gorm 實作 transactions 的範例程式碼給大家參考。</p>
-<p>Transactions 資料庫用來處理一連串 SQL queries的方式，用來防止服務需更新多筆資料或多個 table 時，任一筆資料更新失敗而產生的更新不完整狀態出現。被包在 transactions 中的的操作只要有一筆失敗便可以透過 rollback 來將其它已操作的部分復原。</p>
     </div>
   </div>
 </div>
@@ -294,7 +295,7 @@
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
-    &copy;  WeiWeiWesley 2021 
+    &copy;  WeiWeiWesley 2022 
   </a>
     <div>
 

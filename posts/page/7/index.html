@@ -153,6 +153,55 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day12/" class="link black dim">
+        Day12 Atomic
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>關於 <a href="https://golang.org/pkg/sync/atomic/">sync/atomic</a> 是於 <a href="mailto:go@v1.14">go@v1.14</a> 才推出的新東西，筆者也是最近才知道有這個包可以使用。Atomic 目標在一些單純的操作上，完成最小原子性操作，使用上甚至比 mutex 更為簡便。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day11/" class="link black dim">
+        Day11 Mutex vs Channel
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>昨天看過 race condiction 的情況後，我們了解了 mutex.Lock 與 channel，可以幫助我們同步 memory 狀態，避免發生奇怪的資料異常狀態。今天我們要延續昨天的技巧，並且用 benchmark 比較兩個在速度上的優劣。</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-ithome-day10/" class="link black dim">
+        Day10 Race Condition
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>在昨天我們已經看過了 golang 併發的方式，今天我們要來學習如何控制我們的 goroutines。首先我們先來看一下 race condition(或稱data race) 的定義與範例，接著我們在使用 channel 與 mutex lock 來處理這樣的問題。</p>
+<h2 id="race-condition">Race Condition</h2>
+<blockquote>
+<p>A race condition or race hazard is the behavior of an electronics, software, or other system where the output is dependent on the sequence or timing of other uncontrollable events</p>
+</blockquote>
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2020-ithome-day9/" class="link black dim">
         Day9 Goroutine &amp; Concurrency
       </a>
@@ -221,63 +270,6 @@
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day6/" class="link black dim">
-        Day6 Basic Go (GO MODULES)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="go-modules">Go Modules</h2>
-<p>為了解決 <a href="mailto:go@1.11">go@1.11</a> 前，程式運行被限制於 GOPATH/src 下相依與編譯問題，套件相依管理 go modules 誕生了。先前提到 便是  Go Modules 是否啟用的環境設定值，可分為 on, off, auto 三種。</p>
-<ul>
-<li>on : 固定啟用 Go Modules ，在進行套件相依時會從 GOPATH/pkg/ 下查找</li>
-<li>off : 固定停用 Go Modules ，在進行套件相依時會從 GOPATH/src/ 下查找</li>
-<li>auto : Default setting 會依據你執行 go run or go build 等命令時的位置決定是否啟用 Go Modules ，若執行位置不在 GOPATH/src/ 下且目錄裡存在 go.mod 會啟用 Go Modules</li>
-</ul>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day5/" class="link black dim">
-        Day5 Basic Go (Install &amp; GOPATH)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="來個快速安裝吧">來個快速安裝吧</h2>
-<ol>
-<li>
-<p>官網下載安裝檔執行</p>
-<p><a href="https://golang.org/doc/install"><img src="https://i.imgur.com/54I2HSl.png" alt="Download and install"></a></p>
-</li>
-</ol>
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-ithome-day4/" class="link black dim">
-        Day4 Why Go
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>先前幾天介紹 data consistency 的部分，是希望我們可以謹記資料對系統的重要性，從今天開始我們要進入用 golang 搭建 server 的實作部分，在我們可以實作前，不免俗的要介紹一下為什麼要用 golang 這個語言來進行。</p>
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 <ul class="pagination">
   <li class="page-item">
@@ -327,7 +319,7 @@
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
-    &copy;  WeiWeiWesley 2021 
+    &copy;  WeiWeiWesley 2022 
   </a>
     <div>
 

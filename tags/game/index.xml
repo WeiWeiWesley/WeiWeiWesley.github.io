@@ -6,7 +6,25 @@
     <description>Recent content in game on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Sep 2021 08:29:46 +0800</lastBuildDate><atom:link href="/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Sep 2021 11:40:40 +0800</lastBuildDate><atom:link href="/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day17 Grafana (gRPC, Go Processes, Redis)</title>
+      <link>/posts/2021-ithome-day17/</link>
+      <pubDate>Sat, 25 Sep 2021 11:40:40 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day17/</guid>
+      <description>&lt;p&gt;昨天已經介紹過，透過 grafana 監控 matching 的品質 ，今天來介紹一下，透過 grafana 監控服務在資源上的消耗，包含了 gRPC 連線狀況、Redis 的存取狀況，以及由 golang 撰寫的 Open-Match，核心程序所消耗的資源。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day16 Grafana  (Match Making)</title>
+      <link>/posts/2021-ithome-day16/</link>
+      <pubDate>Fri, 24 Sep 2021 08:51:11 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day16/</guid>
+      <description>&lt;p&gt;昨天我們安裝了 Prometheus  與 Grafana ，來協助我們觀察 Open-Match 的活動狀況，由於他的安裝實在花了我一番功夫，決定把一些監控的內容，拆分到今天來說明。所以今天會來介紹一下，我們透過 metrics 可以獲得哪些資訊，以及是使用了哪些設定檔，才能協助我們將這些 metric，轉換成易於閱讀的圖表的。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day15 Open-Match 監控安裝</title>
       <link>/posts/2021-ithome-day15/</link>

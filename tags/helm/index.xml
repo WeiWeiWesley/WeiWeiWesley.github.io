@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>helm on WeiWeiWesley</title>
+    <link>/tags/helm/</link>
+    <description>Recent content in helm on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Sep 2021 15:42:14 +0800</lastBuildDate><atom:link href="/tags/helm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day18 Helm</title>
+      <link>/posts/2021-ithome-day18/</link>
+      <pubDate>Sun, 26 Sep 2021 15:42:14 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day18/</guid>
+      <description>&lt;p&gt;今天我們要先來介紹一下 &lt;a href=&#34;https://helm.sh/&#34;&gt;Helm&lt;/a&gt;，由於 Open-Match 是基於微服務建立的分散式架構，在部署上會使用大量的 yaml 檔，這在管理上會是一個小麻煩，畢竟如果每次我們在不同環境部署的時候，都需要準備不同的 yaml，小心翼翼地去調整 replicas 的數量、使用的 image 版號、核心參數的微調等等細節，是非常麻煩的，故此我們需要一套組態管理工具 Helm。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
