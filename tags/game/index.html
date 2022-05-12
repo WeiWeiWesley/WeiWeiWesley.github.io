@@ -154,6 +154,211 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day30/" class="link black dim">
+        Day30 Open-Match 使用與參賽心得
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>很開心能夠完成 30天的 Open-Match 文章分享，其實中間有些東西，是我一邊研究一邊寫出來的，所以在某些篇幅可能會顯得不夠連貫，這部分先跟有看到文章的各位，說聲不好意思。也小抱怨一下，官方提供的監控安裝流程，不知道怎會有版本過舊的問，經過了幾次嘗試與調整，才好不容易部署成功，害我多卡了三天（然後我就把監控的內容拆成三天了!）。</p>
+<p>而框架使用上本身給我的感受是，能完成的配對方式很周全，並且在<code>範圍的選擇</code>與<code>配對的條件</code>抽象的不錯，分別以 Director 與 MMF 來滿足我們，彈性抽換範圍與條件的需求，列出幾個比較強烈的幾個優點。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day28/" class="link black dim">
+        Day28 Apex 模擬配對實作
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>昨天我們已經初步了解了，Apex 這款遊戲的玩法與配對機制，今天我們將基於 Open-Match 配對框架，來實作看看 Apex 的配對過程。我們將透過兩種模式、多個角色、多個區間與不同級分，來簡單模擬一下，配對可能會需要注意的地方。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day29/" class="link black dim">
+        Day29 總結篇
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>Open-Match 配對框架為了可以彈性調整部署規模，使用了微服務架構並結合 kubernetes 部署，同時提供了水平拓展與高可用的特性。而在這樣的設計下，衍生的問題是產生更多的接口，與不好追蹤的資料流程，故此在系列文接近尾聲的時候，讓我們來回顧一下 Open-Match 的全貌，以及我們在設計配對系統時，可以用來輔助我們工具。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day27/" class="link black dim">
+        Day27 Apex 配對機制分析
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p><a href="https://www.ea.com/zh-tw/games/apex-legends/about">Apex</a> 為一款筆者近期最喜歡的競技遊戲，想藉著分析的名義，趁機推廣一下這款大逃殺遊戲。由於此遊戲一開始就是以競技類別推出，他本身的牌位系統，很適合延續我們討論到的牌位與配對設計，且<a href="https://store.steampowered.com/stats/?l=tchinese">遊戲人數</a>基數夠多，勢必必須考量到配對速度的系統問題，最後就讓我們來看看想達到這樣的設計，需要在配對系統上進行的設計有哪些。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day26/" class="link black dim">
+        Day26 玩家技巧、階級與配對關係
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>我們在設計我們的競技類配對系統時，有幾個主要的中心想法分別是，想讓玩家可以與，自己技巧相近的玩家遊玩，相同階級的玩家能分出勝負，每一場配對體驗不會過於懸殊。而今天我們想要認識的，便是這些與配對系統交互影響的系統，這可以在我們評估配對系統，是否產生更好的遊玩體驗的時候，能夠有更多面向的想法。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day25/" class="link black dim">
+        Day25 測試與評量 MMF
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>Open-Match 將 MMF 以獨立部件拆出，其中一個好處是，可以讓我們單獨對配對邏輯進行單元測試。測試這個環節在想要進入營運前，也是大家不可避免的一個環節，今天會簡單實驗一下，針對官方 demo 所提供的 MMF，進行測試與 benchmark。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day24/" class="link black dim">
+        Day24 生產環境需要注意的部分
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>在介紹過監控、yaml 控管、網路的端點暴露與附載平衡後，官方有給我們一些在，生產環境部署的建議。透過調整這些設定與部署方式，應可以使我們的 Open-Match 在水平拓展性、穩定性與可用性有更好的表現。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day23/" class="link black dim">
+        Day23 Load balance with Istio
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>昨天非常粗淺的介紹過 istio 後，今天我們要來實際將 Istio mesh 注入我們的 cluster。此外會將今天的內容獨立為一篇，是因為筆者在嘗試，將 Istio 與 Open-Match 結合的過程並不順利，這邊準備好了最後成功的範例，希望可以多少幫助大家。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day22/" class="link black dim">
+        Day22 Istio
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>由於 Open-Match 在 service 與 service 之間，是建議使用 gRPC 進行連線的，但在 kubernetes pods 上使用 gRPC 時，並沒有辦法自動地進行負載平衡，建立好的連線無法在各個 pods 之前切換，這時我們可以利用 <a href="https://istio.io/latest/">Istio service mesh</a>，來幫助我們達成目標，特別是當我們的 MMF, Director &amp; Frontend，需要能有負載平衡的與核心溝通時。今天讓我們簡單的看一下 Istio 的概觀，與最最基本的使用方法，想有更多瞭解可以參考這篇 <a href="https://ithelp.ithome.com.tw/users/20129516/ironman/3135">淺談 Istio</a>。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day21/" class="link black dim">
+        Day21 Open-Match 端點暴露
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天會說明一下，實務上如何將 Open-Match svc endpoints，從 kubernetes 中暴露出來。由於先前都是以同 cluster 之間呼叫，並不會有需要外部 ip 的問題，但進入生產環境時，極有可能會將核心與部件分開在不同的 clusters 中，故此介紹一下端點暴露的方式與呼叫的方法。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day20/" class="link black dim">
+        Day20 常用設定參數
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>在我們實際部署一套，可以在生產環境運行的 Open-Match 之前，我還是必須了解一下，套件本身預留哪一些空間，讓我們可以依據實際需求進行調整。這些參數除了可以透過 <code>helm —set</code> 進行調整以外，當然也可以透過直接修改 <code>yaml</code> 或 <code>open-match-configmap-override</code> 內調整。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2021-ithome-day19/" class="link black dim">
+        Day19 Helm manage Open-Match
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>昨天非常快速的介紹了一下 Helm，了解了基礎的安裝與使用方式後，今天我們要試著用 Helm 來重新部署並安裝我們的 Open-Match，試著感受一下，有使用 Helm 將 yaml 拆分為 template 與 value 的好處。</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2021-ithome-day17/" class="link black dim">
         Day17 Grafana (gRPC, Go Processes, Redis)
       </a>

@@ -153,14 +153,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2017-01-08-elk/" class="link black dim">
-        30Days ELK - Day24 Kinban Plugin X-Pack Monitoring
+      <a href="/posts/2019-11-26-test/" class="link black dim">
+        Private method 是否該進行單元測試？
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>不好意思昨天出了意料之外的錯誤 (註：其實這篇應該昨天就要打出來的)，其實我也是一邊查資料一邊安裝 x-pack 這個 kibana plugin <img src="/ithome/emoticon16.gif" alt="emoticon16.gif"></p>
-<p>所以先前雖然裝好了 x-pack 也成功登入我們的 kibana web 介面，但最重要的就是這個 &ldquo;but&rdquo;，他完全沒有達到我本來想跟大家分享的功能，觀察 elasticsearch cluster nodes。其實僅是我在安裝的時候竟然！竟然！只在 elasticsearch 一個節點上未安裝 x-pack</p>
-<p>這下真是尷尬今天會再重新分享一下更簡單的安裝方式，以及 X-Pack 提供的主要功能。想用昨天那種直接進入容器的方式安裝也可以，只是要記得所有的 elasticsearch nodes 都要裝哦～要是你覺得這樣太麻煩了這邊提供一個比較優雅的方式，也是一樣直接在啟動容器上改變設置：</p>
+      <p><strong>先講結論，不需要。</strong></p>
     </div>
   </div>
 </div>
@@ -170,13 +168,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2017-01-07-elk/" class="link black dim">
-        30Days ELK - Day23 Kibana Plugin X-Pack Install
+      <a href="/posts/2019-11-04-devops2019/" class="link black dim">
+        DevOps 2019
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天要介紹一個超好用的 kibana plugin，X-Pack。你一定要安裝的好用插件讓我們先裝在說。</p>
-<p>就讓我們照著<a href="https://www.elastic.co/downloads/x-pack">官網</a>的六步驟來安裝吧(只是我們是裝在 docker 上)</p>
+      <h2 id="day1-opens-space">Day1 Opens Space</h2>
+<p>首次參加 Opens Space 這樣形式的交流方式，藉由成員各自發起議題自由且自發的進行討論，能收穫多少取決於參與的程度，不僅是聆聽者也是意見與問題的提供者，透過議題發起、討論、提問、回答來持續的找出可能性與盲點。</p>
+<p>其中參加了 “Waterfall 中的 Agile Scrum”、“到底是 DevOps 包含 Agile 還是 Agile 包含 DevOps”、“如何讓主管了解 DevOps 真正的理論好處” 這三個主題。三個主題的共通點是都有討論到如何去實踐 DevOps，DevOps 並非規範不是單一流程更非單一系統，更接近一個文化一個共同的價值交付的過程，但價值與文化的統一談何容易，故此狹義的 DevOps 可以讓我們從 CI/CD 做起，藉由統一持續驗證系統開發結果，減少人工手動的繁複程序加速交付流程，增加團隊信心，也同時直接增加商業利益。</p>
     </div>
   </div>
 </div>
@@ -186,24 +185,20 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2017-01-06-elk/" class="link black dim">
-        30Days ELK - Day22 Multi logstash machines used for monitoring.
+      <a href="/posts/2019-09-25-redis-elk/" class="link black dim">
+        Redis ELK
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天介紹的是一個利用虛擬機使用 logstash 的技巧，當我們有一台較高效能實體機器且有多個不同的資料來源時，我們可能會把 logstash.conf 用 file 檔名或 tcp port 來進行區別如：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">input</span> {
-        <span style="color:#a6e22e">tcp</span> {
-                <span style="color:#a6e22e">port</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#ae81ff">5000</span>
-                <span style="color:#a6e22e">type</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#e6db74">&#34;access&#34;</span>
-        }
-
-        <span style="color:#a6e22e">tcp</span> {
-                <span style="color:#a6e22e">port</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#ae81ff">5001</span>
-                <span style="color:#a6e22e">type</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#e6db74">&#34;error&#34;</span>
-        }
-}
-</code></pre></div>
+      <p>結合 reids &amp; ELK 搜集分散式 log。適合想統一異質平台或已微服務化的系統使用。</p>
+<p>僅需將目標 log RPUSH 至指定的 redis key，便可輕鬆地藉由 logstash 取出至 elasticserach 最後由 kibana 呈現。</p>
+<h3 id="需求">需求</h3>
+<ul>
+<li>docker-compose</li>
+<li>redis</li>
+</ul>
+<h3 id="repo">Repo</h3>
+<p><a href="https://github.com/WeiWeiWesley/ELK">https://github.com/WeiWeiWesley/ELK</a></p>
     </div>
   </div>
 </div>
@@ -213,12 +208,22 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2017-01-05-elk/" class="link black dim">
-        30Days ELK - Day21 Elasticsearch Cluster
+      <a href="/posts/2019-09-20-kubernet-summit-2019/" class="link black dim">
+        Kubernet Summit 2019
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>我們進行到今天已經可以將 E.L.K 運行並實現資料分析、資料儲存、資料探索與視覺化，現在我們需要做的是提升它的可靠性與面對效能瓶頸時拓展自身的能力。這時候 elasticsearch cluster 就派上用場拉，至少要讓你的資料能夠有個備份，假設 docker container 毀損甚至機器毀損時能不受引響。</p>
+      <h3 id="簡易重點">簡易重點</h3>
+<ol>
+<li>賣 K8s 的人不敢告訴你的事 - 葉秉哲（William）
+<ul>
+<li>導入前必須提出的問題：維運成本、拓展性、管理性</li>
+<li>供應商提供的數據是否符合現實需求</li>
+<li>現有架構是否已經完成解耦合微服務化，已適合搬遷</li>
+<li>配套CI/CD與分散式log收集監視是否完備</li>
+</ul>
+</li>
+</ol>
     </div>
   </div>
 </div>
@@ -228,12 +233,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2017-01-04-elk/" class="link black dim">
-        30Days ELK - Day20 Dockerfile &amp; docker-compose
+      <a href="/posts/2019-09-18-modernweb2049/" class="link black dim">
+        ModernWeb 2019
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>有了 docker 基本的概念後我們回頭看一下 docker 的設定檔 Dockerfile 與 docker-compose.yml，瞭解一下 logstash, elasticsearch, kibana 的虛擬機是怎麼被設定與啟用的。有了這些知識後能幫助我們解決一些 E.L.K 使用上或配置上的問題。</p>
+      <h2 id="簡易重點">簡易重點</h2>
+<h4 id="day1">Day1</h4>
+<ol>
+<li>Progressive Deployment &amp; NoDeploy - 曾義峰 Ant
+<ul>
+<li>NoDeploy == No conscious Deploy(無察覺部署)</li>
+<li>ITIL -&gt; DevOps-&gt; SRE</li>
+<li>一切都在prodouction 完成(commit,測試,部署)</li>
+<li>適合工程師平均水準較高團隊</li>
+<li>漸進式部署，控制損壞範圍 (80% stable, 20% testing)</li>
+<li>chaos engineering</li>
+<li>所有程式皆為部署，並可控制開關，減少整合問題</li>
+<li>提交程式至主幹可能會影響其他功能</li>
+</ul>
+</li>
+</ol>
     </div>
   </div>
 </div>
@@ -243,12 +263,13 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2017-01-03-elk/" class="link black dim">
-        30Days ELK - Day19 Docker
+      <a href="/posts/2019-06-30-webocketya-ce-gong-ju/" class="link black dim">
+        Websocket 壓測工具
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>你以為看錯標題了嗎？沒有哦～就是 docker 沒錯，為了延續後面我要講一些插件與優化配置的方式，這邊必須簡單提一下 docker 讓後面在能夠比較簡單的銜接上，真的是簡單講一下因為接觸 docker 時間不夠長，讓我們快速走過吧。</p>
+      <p>這是一個以 go語言編寫的 websocket壓測工具，提供併發連線、結果驗證、時間計算等功能。筆者目前使用的環境多為 Linux &amp; MacOS，如果想在CLI簡單地對 websocket服務進行壓力測試的話，這邊提供一個簡單的工具給大家。</p>
+<p><a href="https://github.com/WeiWeiWesley/WsTestTool">Github Link</a></p>
     </div>
   </div>
 </div>
@@ -287,13 +308,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/14/">14</a>
+    <a class="page-link" href="/posts/page/16/">16</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/12/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/14/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/16/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

@@ -3,39 +3,93 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/series/2021-ithome%E9%90%B5%E4%BA%BA30/</loc>
-    <lastmod>2021-09-26T15:42:14+08:00</lastmod>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2021-09-26T15:42:14+08:00</lastmod>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day30/</loc>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
+  </url><url>
+    <loc>/tags/game/</loc>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
+  </url><url>
+    <loc>/categories/game/</loc>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
+  </url><url>
+    <loc>/tags/open-match/</loc>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-10-08T01:19:53+08:00</lastmod>
+  </url><url>
+    <loc>/tags/apex/</loc>
+    <lastmod>2021-10-06T14:33:39+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day28/</loc>
+    <lastmod>2021-10-06T14:33:39+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day29/</loc>
+    <lastmod>2021-10-06T14:33:39+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day27/</loc>
+    <lastmod>2021-10-05T09:48:07+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day26/</loc>
+    <lastmod>2021-10-04T12:12:26+08:00</lastmod>
+  </url><url>
+    <loc>/tags/skill-ranking/</loc>
+    <lastmod>2021-10-04T12:12:26+08:00</lastmod>
+  </url><url>
+    <loc>/tags/benchmark/</loc>
+    <lastmod>2021-10-03T00:04:26+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day25/</loc>
+    <lastmod>2021-10-03T00:04:26+08:00</lastmod>
+  </url><url>
+    <loc>/tags/golang/</loc>
+    <lastmod>2021-10-03T00:04:26+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day24/</loc>
+    <lastmod>2021-10-02T13:01:25+08:00</lastmod>
+  </url><url>
+    <loc>/tags/production/</loc>
+    <lastmod>2021-10-02T13:01:25+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day23/</loc>
+    <lastmod>2021-10-01T09:18:20+08:00</lastmod>
+  </url><url>
+    <loc>/tags/istio/</loc>
+    <lastmod>2021-10-01T09:18:20+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day22/</loc>
+    <lastmod>2021-09-30T09:17:44+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day21/</loc>
+    <lastmod>2021-09-29T08:45:08+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day20/</loc>
+    <lastmod>2021-09-28T09:05:55+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2021-ithome-day19/</loc>
+    <lastmod>2021-09-27T08:36:49+08:00</lastmod>
+  </url><url>
+    <loc>/tags/helm/</loc>
+    <lastmod>2021-09-27T08:36:49+08:00</lastmod>
   </url><url>
     <loc>/posts/2021-ithome-day18/</loc>
     <lastmod>2021-09-26T15:42:14+08:00</lastmod>
   </url><url>
-    <loc>/categories/game/</loc>
-    <lastmod>2021-09-26T15:42:14+08:00</lastmod>
-  </url><url>
-    <loc>/tags/helm/</loc>
-    <lastmod>2021-09-26T15:42:14+08:00</lastmod>
-  </url><url>
-    <loc>/tags/open-match/</loc>
-    <lastmod>2021-09-26T15:42:14+08:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2021-09-26T15:42:14+08:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
-    <lastmod>2021-09-26T15:42:14+08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2021-09-26T15:42:14+08:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2021-09-26T15:42:14+08:00</lastmod>
-  </url><url>
     <loc>/posts/2021-ithome-day17/</loc>
-    <lastmod>2021-09-25T11:40:40+08:00</lastmod>
-  </url><url>
-    <loc>/tags/game/</loc>
     <lastmod>2021-09-25T11:40:40+08:00</lastmod>
   </url><url>
     <loc>/tags/grafana/</loc>
@@ -104,9 +158,6 @@
     <loc>/posts/2020-ithome-day30/</loc>
     <lastmod>2020-10-08T09:47:51+08:00</lastmod>
   </url><url>
-    <loc>/tags/golang/</loc>
-    <lastmod>2020-10-08T09:47:51+08:00</lastmod>
-  </url><url>
     <loc>/categories/golang/</loc>
     <lastmod>2020-10-08T09:47:51+08:00</lastmod>
   </url><url>
@@ -144,9 +195,6 @@
     <lastmod>2020-10-03T11:31:26+08:00</lastmod>
   </url><url>
     <loc>/tags/grpc/</loc>
-    <lastmod>2020-10-03T11:31:26+08:00</lastmod>
-  </url><url>
-    <loc>/tags/istio/</loc>
     <lastmod>2020-10-03T11:31:26+08:00</lastmod>
   </url><url>
     <loc>/categories/k8s/</loc>

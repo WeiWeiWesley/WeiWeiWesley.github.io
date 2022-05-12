@@ -153,12 +153,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day12/" class="link black dim">
-        Day12 同步狀態控制 Synchronizer
+      <a href="/posts/2021-ithome-day24/" class="link black dim">
+        Day24 生產環境需要注意的部分
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>由於我們可藉由產生帶重疊範圍的配對請求，而這些配對請求將併發(Concurrently)的觸發 MMF，就算是 Evaluation 已經針對這些 overlapping 選舉出最合適的結果，這會在其餘併發中的 MMF 選舉過程，產生一個短暫的衝突時間點，為了解決這樣的困擾，我們需要使用一個外力來中斷這些 MMF，這便是 Synchronizer 的同步作用。</p>
+      <p>在介紹過監控、yaml 控管、網路的端點暴露與附載平衡後，官方有給我們一些在，生產環境部署的建議。透過調整這些設定與部署方式，應可以使我們的 Open-Match 在水平拓展性、穩定性與可用性有更好的表現。</p>
     </div>
   </div>
 </div>
@@ -168,12 +168,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day11/" class="link black dim">
-        Day11 配對品質評估 Evaluator
+      <a href="/posts/2021-ithome-day23/" class="link black dim">
+        Day23 Load balance with Istio
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>由於 Open-Match 在架構上，允許使用同一張 ticket，對不同的配對池進行搜尋與配對，這便是先前提到的 overlapping MatchProfiles，但如何使這些具有重疊性的匹配，最後只產生出一個最適合的匹配結果，則需要 Evaluator 介入參與。</p>
+      <p>昨天非常粗淺的介紹過 istio 後，今天我們要來實際將 Istio mesh 注入我們的 cluster。此外會將今天的內容獨立為一篇，是因為筆者在嘗試，將 Istio 與 Open-Match 結合的過程並不順利，這邊準備好了最後成功的範例，希望可以多少幫助大家。</p>
     </div>
   </div>
 </div>
@@ -183,19 +183,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day10/" class="link black dim">
-        Day10 Overlapping Example
+      <a href="/posts/2021-ithome-day22/" class="link black dim">
+        Day22 Istio
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>昨天已經看過我們在實務上可能會遇到的需求，利用多個可能重複範圍的配對池，當作匹配搜尋條件，今天讓我們用實作範例來觀察其效果。</p>
-<h2 id="角色等級-overlapping-範例">角色等級 Overlapping 範例</h2>
-<p>本範例同樣基於官方 demo，藉由更改範例內容重新 build images 後完成。</p>
-<h3 id="images">Images</h3>
-<ul>
-<li>weiweiwesley/open-match:overlapping</li>
-<li>weiweiwesley/mmf:overlapping</li>
-</ul>
+      <p>由於 Open-Match 在 service 與 service 之間，是建議使用 gRPC 進行連線的，但在 kubernetes pods 上使用 gRPC 時，並沒有辦法自動地進行負載平衡，建立好的連線無法在各個 pods 之前切換，這時我們可以利用 <a href="https://istio.io/latest/">Istio service mesh</a>，來幫助我們達成目標，特別是當我們的 MMF, Director &amp; Frontend，需要能有負載平衡的與核心溝通時。今天讓我們簡單的看一下 Istio 的概觀，與最最基本的使用方法，想有更多瞭解可以參考這篇 <a href="https://ithelp.ithome.com.tw/users/20129516/ironman/3135">淺談 Istio</a>。</p>
     </div>
   </div>
 </div>
@@ -205,12 +198,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day9/" class="link black dim">
-        Day9 重疊條件配對池 Overlapping MatchProfiles
+      <a href="/posts/2021-ithome-day21/" class="link black dim">
+        Day21 Open-Match 端點暴露
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>在一些比較普通的應用場景，我們產生一個 matches 的流程會像是，由 Director 輪詢呼叫 Open-Match Backend 取得一組 <code>MatchProfile</code>，而過程中會觸發 MMF 的執行，並且依照 <code>MatchProfile filter</code> 的條件獲得對應的 <code>tickets</code>，最後 MMF 依照設定的邏輯匹配這些 <code>tickets</code>，返回 <code>matches</code>。</p>
+      <p>今天會說明一下，實務上如何將 Open-Match svc endpoints，從 kubernetes 中暴露出來。由於先前都是以同 cluster 之間呼叫，並不會有需要外部 ip 的問題，但進入生產環境時，極有可能會將核心與部件分開在不同的 clusters 中，故此介紹一下端點暴露的方式與呼叫的方法。</p>
     </div>
   </div>
 </div>
@@ -220,12 +213,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day8/" class="link black dim">
-        Day8 Swagger UI &amp; Open Match APIs
+      <a href="/posts/2021-ithome-day20/" class="link black dim">
+        Day20 常用設定參數
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p><a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> 是一個將 API 文件與 API 請求產生結合的介面套件，官方已於建立核心的 yaml 中，幫我們部署好 swagger ui service，但今天主要介紹的並非 Swagger UI 本身，而是利用 Swagger UI 來閱讀 Open-Match 所提供的 HTTP API 接口。</p>
+      <p>在我們實際部署一套，可以在生產環境運行的 Open-Match 之前，我還是必須了解一下，套件本身預留哪一些空間，讓我們可以依據實際需求進行調整。這些參數除了可以透過 <code>helm —set</code> 進行調整以外，當然也可以透過直接修改 <code>yaml</code> 或 <code>open-match-configmap-override</code> 內調整。</p>
     </div>
   </div>
 </div>
@@ -235,14 +228,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2021-ithome-day7/" class="link black dim">
-        Day7 配對條件範例 (角色，人數上限)
+      <a href="/posts/2021-ithome-day19/" class="link black dim">
+        Day19 Helm manage Open-Match
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天我們要自己假訂一個配對情境，來做一個比官方稍微複雜一點點的 Demo，並且透過這個模擬情境的實踐，來熟悉 Open-Match 在實作上須滿足的接口與函式用法。</p>
-<h2 id="情境">情境</h2>
-<p>隨機產生兩個地區、兩種職業與不同等級條件的配對請求，並且將兩個不同職業才能配對的邏輯，加入我們的配對邏輯中</p>
+      <p>昨天非常快速的介紹了一下 Helm，了解了基礎的安裝與使用方式後，今天我們要試著用 Helm 來重新部署並安裝我們的 Open-Match，試著感受一下，有使用 Helm 將 yaml 拆分為 template 與 value 的好處。</p>
     </div>
   </div>
 </div>
@@ -269,13 +260,13 @@
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/14/">14</a>
+    <a class="page-link" href="/posts/page/16/">16</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/14/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/16/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

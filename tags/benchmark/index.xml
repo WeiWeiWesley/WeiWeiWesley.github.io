@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>benchmark on WeiWeiWesley</title>
+    <link>/tags/benchmark/</link>
+    <description>Recent content in benchmark on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Oct 2021 00:04:26 +0800</lastBuildDate><atom:link href="/tags/benchmark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day25 測試與評量 MMF</title>
+      <link>/posts/2021-ithome-day25/</link>
+      <pubDate>Sun, 03 Oct 2021 00:04:26 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day25/</guid>
+      <description>&lt;p&gt;Open-Match 將 MMF 以獨立部件拆出，其中一個好處是，可以讓我們單獨對配對邏輯進行單元測試。測試這個環節在想要進入營運前，也是大家不可避免的一個環節，今天會簡單實驗一下，針對官方 demo 所提供的 MMF，進行測試與 benchmark。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

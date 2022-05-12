@@ -153,12 +153,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-27-elk/" class="link black dim">
-        30Days ELK - Day12 Reformate timestamp
+      <a href="/posts/2017-01-08-elk/" class="link black dim">
+        30Days ELK - Day24 Kinban Plugin X-Pack Monitoring
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>延續先前 Discover 的部分，如何讓我們的紀錄時間 match 上 log 的紀錄時間呢?</p>
+      <p>不好意思昨天出了意料之外的錯誤 (註：其實這篇應該昨天就要打出來的)，其實我也是一邊查資料一邊安裝 x-pack 這個 kibana plugin <img src="/ithome/emoticon16.gif" alt="emoticon16.gif"></p>
+<p>所以先前雖然裝好了 x-pack 也成功登入我們的 kibana web 介面，但最重要的就是這個 &ldquo;but&rdquo;，他完全沒有達到我本來想跟大家分享的功能，觀察 elasticsearch cluster nodes。其實僅是我在安裝的時候竟然！竟然！只在 elasticsearch 一個節點上未安裝 x-pack</p>
+<p>這下真是尷尬今天會再重新分享一下更簡單的安裝方式，以及 X-Pack 提供的主要功能。想用昨天那種直接進入容器的方式安裝也可以，只是要記得所有的 elasticsearch nodes 都要裝哦～要是你覺得這樣太麻煩了這邊提供一個比較優雅的方式，也是一樣直接在啟動容器上改變設置：</p>
     </div>
   </div>
 </div>
@@ -168,12 +170,13 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-26-elk/" class="link black dim">
-        30Days ELK - Day11 Discover data freely by any shape anytime
+      <a href="/posts/2017-01-07-elk/" class="link black dim">
+        30Days ELK - Day23 Kibana Plugin X-Pack Install
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>首先我們先抓一份測試用的 apache log 協助我們有相同的資料可以做解說。</p>
+      <p>今天要介紹一個超好用的 kibana plugin，X-Pack。你一定要安裝的好用插件讓我們先裝在說。</p>
+<p>就讓我們照著<a href="https://www.elastic.co/downloads/x-pack">官網</a>的六步驟來安裝吧(只是我們是裝在 docker 上)</p>
     </div>
   </div>
 </div>
@@ -183,13 +186,24 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-25-elk/" class="link black dim">
-        30Days ELK - Day10 Kibana
+      <a href="/posts/2017-01-06-elk/" class="link black dim">
+        30Days ELK - Day22 Multi logstash machines used for monitoring.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>Ola~讓我們開心的使用圖形化介面吧。
-終於講到可以讓我們把資料以 html 顯示的方式囉，kibana 也就是 E.L.K 裡的 Ｋ將由 logstash 過濾完並儲存到 elasticsearch 的資料透過設定 index 進行索引。今天就先讓我們來檢視一下介面上有哪些區塊及其所屬的功能。</p>
+      <p>今天介紹的是一個利用虛擬機使用 logstash 的技巧，當我們有一台較高效能實體機器且有多個不同的資料來源時，我們可能會把 logstash.conf 用 file 檔名或 tcp port 來進行區別如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">input</span> {
+        <span style="color:#a6e22e">tcp</span> {
+                <span style="color:#a6e22e">port</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#ae81ff">5000</span>
+                <span style="color:#a6e22e">type</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#e6db74">&#34;access&#34;</span>
+        }
+
+        <span style="color:#a6e22e">tcp</span> {
+                <span style="color:#a6e22e">port</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#ae81ff">5001</span>
+                <span style="color:#a6e22e">type</span> =<span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#e6db74">&#34;error&#34;</span>
+        }
+}
+</code></pre></div>
     </div>
   </div>
 </div>
@@ -199,12 +213,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-24-elk/" class="link black dim">
-        30Days ELK - Day9 Elasticsearch 狀態檢視
+      <a href="/posts/2017-01-05-elk/" class="link black dim">
+        30Days ELK - Day21 Elasticsearch Cluster
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>今天簡單介紹一下幾個觀察 elasticsearch 的指令與方法，讓我從個人最常用的index目錄說起。</p>
+      <p>我們進行到今天已經可以將 E.L.K 運行並實現資料分析、資料儲存、資料探索與視覺化，現在我們需要做的是提升它的可靠性與面對效能瓶頸時拓展自身的能力。這時候 elasticsearch cluster 就派上用場拉，至少要讓你的資料能夠有個備份，假設 docker container 毀損甚至機器毀損時能不受引響。</p>
     </div>
   </div>
 </div>
@@ -214,12 +228,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-23-elk/" class="link black dim">
-        30Days ELK - Day8 Elasticsearch CRUD
+      <a href="/posts/2017-01-04-elk/" class="link black dim">
+        30Days ELK - Day20 Dockerfile &amp; docker-compose
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>之前提過 elasticsearh 是個擁有全 RESTful API 操作的分散式資料庫，於且向大家介紹一下其基本操作的方法。雖然不見得在使用 E.L.K 會用到，畢竟解析由 logstash 完成了，一般存取也可以由 kibana 完成，但如果想針對單筆紀錄作微調或測試你還是會用到以 curl CRUD 操作的。</p>
+      <p>有了 docker 基本的概念後我們回頭看一下 docker 的設定檔 Dockerfile 與 docker-compose.yml，瞭解一下 logstash, elasticsearch, kibana 的虛擬機是怎麼被設定與啟用的。有了這些知識後能幫助我們解決一些 E.L.K 使用上或配置上的問題。</p>
     </div>
   </div>
 </div>
@@ -229,12 +243,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/2016-12-22-elk/" class="link black dim">
-        30Days ELK - Day7 Elasticsearch
+      <a href="/posts/2017-01-03-elk/" class="link black dim">
+        30Days ELK - Day19 Docker
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>Elasticsearch 是我們之後再 kibana 之所以可以快速的呼叫與搜尋的關鍵，我們來簡單暸解一下 elasticsearch 的特性與他在 E.L.K 中扮演的角色。</p>
+      <p>你以為看錯標題了嗎？沒有哦～就是 docker 沒錯，為了延續後面我要講一些插件與優化配置的方式，這邊必須簡單提一下 docker 讓後面在能夠比較簡單的銜接上，真的是簡單講一下因為接觸 docker 時間不夠長，讓我們快速走過吧。</p>
     </div>
   </div>
 </div>
@@ -269,11 +283,17 @@
   <li class="page-item">
     <a class="page-link" href="/posts/page/14/">14</a>
   </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/page/16/">16</a>
+  </li>
   <li class="page-item">
     <a href="/posts/page/14/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/14/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/16/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

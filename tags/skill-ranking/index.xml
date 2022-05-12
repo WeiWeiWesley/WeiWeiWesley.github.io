@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>skill ranking on WeiWeiWesley</title>
+    <link>/tags/skill-ranking/</link>
+    <description>Recent content in skill ranking on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Oct 2021 12:12:26 +0800</lastBuildDate><atom:link href="/tags/skill-ranking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day26 玩家技巧、階級與配對關係</title>
+      <link>/posts/2021-ithome-day26/</link>
+      <pubDate>Mon, 04 Oct 2021 12:12:26 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day26/</guid>
+      <description>&lt;p&gt;我們在設計我們的競技類配對系統時，有幾個主要的中心想法分別是，想讓玩家可以與，自己技巧相近的玩家遊玩，相同階級的玩家能分出勝負，每一場配對體驗不會過於懸殊。而今天我們想要認識的，便是這些與配對系統交互影響的系統，這可以在我們評估配對系統，是否產生更好的遊玩體驗的時候，能夠有更多面向的想法。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

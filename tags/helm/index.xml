@@ -6,7 +6,16 @@
     <description>Recent content in helm on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Sep 2021 15:42:14 +0800</lastBuildDate><atom:link href="/tags/helm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 08:36:49 +0800</lastBuildDate><atom:link href="/tags/helm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day19 Helm manage Open-Match</title>
+      <link>/posts/2021-ithome-day19/</link>
+      <pubDate>Mon, 27 Sep 2021 08:36:49 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day19/</guid>
+      <description>&lt;p&gt;昨天非常快速的介紹了一下 Helm，了解了基礎的安裝與使用方式後，今天我們要試著用 Helm 來重新部署並安裝我們的 Open-Match，試著感受一下，有使用 Helm 將 yaml 拆分為 template 與 value 的好處。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day18 Helm</title>
       <link>/posts/2021-ithome-day18/</link>

@@ -6,7 +6,25 @@
     <description>Recent content in istio on WeiWeiWesley</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Oct 2020 11:31:26 +0800</lastBuildDate><atom:link href="/tags/istio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 09:18:20 +0800</lastBuildDate><atom:link href="/tags/istio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day23 Load balance with Istio</title>
+      <link>/posts/2021-ithome-day23/</link>
+      <pubDate>Fri, 01 Oct 2021 09:18:20 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day23/</guid>
+      <description>&lt;p&gt;昨天非常粗淺的介紹過 istio 後，今天我們要來實際將 Istio mesh 注入我們的 cluster。此外會將今天的內容獨立為一篇，是因為筆者在嘗試，將 Istio 與 Open-Match 結合的過程並不順利，這邊準備好了最後成功的範例，希望可以多少幫助大家。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day22 Istio</title>
+      <link>/posts/2021-ithome-day22/</link>
+      <pubDate>Thu, 30 Sep 2021 09:17:44 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day22/</guid>
+      <description>&lt;p&gt;由於 Open-Match 在 service 與 service 之間，是建議使用 gRPC 進行連線的，但在 kubernetes pods 上使用 gRPC 時，並沒有辦法自動地進行負載平衡，建立好的連線無法在各個 pods 之前切換，這時我們可以利用 &lt;a href=&#34;https://istio.io/latest/&#34;&gt;Istio service mesh&lt;/a&gt;，來幫助我們達成目標，特別是當我們的 MMF, Director &amp;amp; Frontend，需要能有負載平衡的與核心溝通時。今天讓我們簡單的看一下 Istio 的概觀，與最最基本的使用方法，想有更多瞭解可以參考這篇 &lt;a href=&#34;https://ithelp.ithome.com.tw/users/20129516/ironman/3135&#34;&gt;淺談 Istio&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Day25 Istio (Load Balance gRPC)</title>
       <link>/posts/2020-ithome-day25/</link>

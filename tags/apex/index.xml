@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>apex on WeiWeiWesley</title>
+    <link>/tags/apex/</link>
+    <description>Recent content in apex on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Oct 2021 14:33:39 +0800</lastBuildDate><atom:link href="/tags/apex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day28 Apex 模擬配對實作</title>
+      <link>/posts/2021-ithome-day28/</link>
+      <pubDate>Wed, 06 Oct 2021 14:33:39 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day28/</guid>
+      <description>&lt;p&gt;昨天我們已經初步了解了，Apex 這款遊戲的玩法與配對機制，今天我們將基於 Open-Match 配對框架，來實作看看 Apex 的配對過程。我們將透過兩種模式、多個角色、多個區間與不同級分，來簡單模擬一下，配對可能會需要注意的地方。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day27 Apex 配對機制分析</title>
+      <link>/posts/2021-ithome-day27/</link>
+      <pubDate>Tue, 05 Oct 2021 09:48:07 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day27/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.ea.com/zh-tw/games/apex-legends/about&#34;&gt;Apex&lt;/a&gt; 為一款筆者近期最喜歡的競技遊戲，想藉著分析的名義，趁機推廣一下這款大逃殺遊戲。由於此遊戲一開始就是以競技類別推出，他本身的牌位系統，很適合延續我們討論到的牌位與配對設計，且&lt;a href=&#34;https://store.steampowered.com/stats/?l=tchinese&#34;&gt;遊戲人數&lt;/a&gt;基數夠多，勢必必須考量到配對速度的系統問題，最後就讓我們來看看想達到這樣的設計，需要在配對系統上進行的設計有哪些。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

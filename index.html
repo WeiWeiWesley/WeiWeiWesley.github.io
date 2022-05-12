@@ -179,14 +179,15 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2021-ithome-day18/" class="color-inherit dim link">
-            Day18 Helm
+          <a href="/posts/2021-ithome-day30/" class="color-inherit dim link">
+            Day30 Open-Match 使用與參賽心得
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>今天我們要先來介紹一下 <a href="https://helm.sh/">Helm</a>，由於 Open-Match 是基於微服務建立的分散式架構，在部署上會使用大量的 yaml 檔，這在管理上會是一個小麻煩，畢竟如果每次我們在不同環境部署的時候，都需要準備不同的 yaml，小心翼翼地去調整 replicas 的數量、使用的 image 版號、核心參數的微調等等細節，是非常麻煩的，故此我們需要一套組態管理工具 Helm。</p>
+          <p>很開心能夠完成 30天的 Open-Match 文章分享，其實中間有些東西，是我一邊研究一邊寫出來的，所以在某些篇幅可能會顯得不夠連貫，這部分先跟有看到文章的各位，說聲不好意思。也小抱怨一下，官方提供的監控安裝流程，不知道怎會有版本過舊的問，經過了幾次嘗試與調整，才好不容易部署成功，害我多卡了三天（然後我就把監控的內容拆成三天了!）。</p>
+<p>而框架使用上本身給我的感受是，能完成的配對方式很周全，並且在<code>範圍的選擇</code>與<code>配對的條件</code>抽象的不錯，分別以 Director 與 MMF 來滿足我們，彈性抽換範圍與條件的需求，列出幾個比較強烈的幾個優點。</p>
         </div>
-          <a href="/posts/2021-ithome-day18/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/posts/2021-ithome-day30/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -203,14 +204,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2021-ithome-day17/" class="color-inherit dim link">
-            Day17 Grafana (gRPC, Go Processes, Redis)
+          <a href="/posts/2021-ithome-day28/" class="color-inherit dim link">
+            Day28 Apex 模擬配對實作
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>昨天已經介紹過，透過 grafana 監控 matching 的品質 ，今天來介紹一下，透過 grafana 監控服務在資源上的消耗，包含了 gRPC 連線狀況、Redis 的存取狀況，以及由 golang 撰寫的 Open-Match，核心程序所消耗的資源。</p>
+          <p>昨天我們已經初步了解了，Apex 這款遊戲的玩法與配對機制，今天我們將基於 Open-Match 配對框架，來實作看看 Apex 的配對過程。我們將透過兩種模式、多個角色、多個區間與不同級分，來簡單模擬一下，配對可能會需要注意的地方。</p>
         </div>
-          <a href="/posts/2021-ithome-day17/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/posts/2021-ithome-day28/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -227,14 +228,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/2021-ithome-day16/" class="color-inherit dim link">
-            Day16 Grafana  (Match Making)
+          <a href="/posts/2021-ithome-day29/" class="color-inherit dim link">
+            Day29 總結篇
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>昨天我們安裝了 Prometheus  與 Grafana ，來協助我們觀察 Open-Match 的活動狀況，由於他的安裝實在花了我一番功夫，決定把一些監控的內容，拆分到今天來說明。所以今天會來介紹一下，我們透過 metrics 可以獲得哪些資訊，以及是使用了哪些設定檔，才能協助我們將這些 metric，轉換成易於閱讀的圖表的。</p>
+          <p>Open-Match 配對框架為了可以彈性調整部署規模，使用了微服務架構並結合 kubernetes 部署，同時提供了水平拓展與高可用的特性。而在這樣的設計下，衍生的問題是產生更多的接口，與不好追蹤的資料流程，故此在系列文接近尾聲的時候，讓我們來回顧一下 Open-Match 的全貌，以及我們在設計配對系統時，可以用來輔助我們工具。</p>
         </div>
-          <a href="/posts/2021-ithome-day16/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/posts/2021-ithome-day29/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -251,26 +252,26 @@
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2021-ithome-day15/" class="link black dim">
-              Day15 Open-Match 監控安裝
+            <a href="/posts/2021-ithome-day27/" class="link black dim">
+              Day27 Apex 配對機制分析
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2021-ithome-day14/" class="link black dim">
-              Day14 Example of Backfill
+            <a href="/posts/2021-ithome-day26/" class="link black dim">
+              Day26 玩家技巧、階級與配對關係
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2021-ithome-day13/" class="link black dim">
-              Day13 補位策略 Backfill
+            <a href="/posts/2021-ithome-day25/" class="link black dim">
+              Day25 測試與評量 MMF
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/posts/2021-ithome-day12/" class="link black dim">
-              Day12 同步狀態控制 Synchronizer
+            <a href="/posts/2021-ithome-day24/" class="link black dim">
+              Day24 生產環境需要注意的部分
             </a>
           </h2>
         

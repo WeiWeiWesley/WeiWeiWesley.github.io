@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>production on WeiWeiWesley</title>
+    <link>/tags/production/</link>
+    <description>Recent content in production on WeiWeiWesley</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Oct 2021 13:01:25 +0800</lastBuildDate><atom:link href="/tags/production/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day24 生產環境需要注意的部分</title>
+      <link>/posts/2021-ithome-day24/</link>
+      <pubDate>Sat, 02 Oct 2021 13:01:25 +0800</pubDate>
+      
+      <guid>/posts/2021-ithome-day24/</guid>
+      <description>&lt;p&gt;在介紹過監控、yaml 控管、網路的端點暴露與附載平衡後，官方有給我們一些在，生產環境部署的建議。透過調整這些設定與部署方式，應可以使我們的 Open-Match 在水平拓展性、穩定性與可用性有更好的表現。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
