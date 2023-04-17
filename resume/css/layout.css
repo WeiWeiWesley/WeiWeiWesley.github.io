@@ -340,35 +340,40 @@ ul#nav li.current a { color: #F06000; }
   	-moz-animation: php 2s ease;
   	-webkit-animation: php 2s ease;
 }
-.linux {
+.shell {
   	width: 50%;
-  	-moz-animation: linux 2s ease;
-  	-webkit-animation: linux 2s ease;
+  	-moz-animation: shell 2s ease;
+  	-webkit-animation: shell 2s ease;
 }
 .restful {
   	width: 80%;
   	-moz-animation: restful 2s ease;
   	-webkit-animation: restful 2s ease;
 }
-.json-rpc {
+.grpc {
    width: 80%;
-   -moz-animation: json-rpc 2s ease;
-   -webkit-animation: json-rpc 2s ease;
+   -moz-animation: grpc 2s ease;
+   -webkit-animation: grpc 2s ease;
 }
 .k8s {
-  	width: 30%;
+  	width: 50%;
   	-moz-animation: k8s 2s ease;
   	-webkit-animation: k8s 2s ease;
 }
-.websocket {
-  	width: 80%;
-  	-moz-animation: websocket 2s ease;
-  	-webkit-animation: websocket 2s ease;
+.cicd {
+  	width: 50%;
+  	-moz-animation: cicd 2s ease;
+  	-webkit-animation: cicd 2s ease;
 }
-.docker {
-   width: 50%;
-   -moz-animation: docker 2s ease;
-   -webkit-animation: docker 2s ease;
+.db {
+   width: 80%;
+   -moz-animation: db 2s ease;
+   -webkit-animation: db 2s ease;
+}
+.msgqueue {
+   width: 60%;
+   -moz-animation: msgqueue 2s ease;
+   -webkit-animation: msgqueue 2s ease;
 }
 
 @-moz-keyframes golang {
@@ -379,7 +384,7 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-moz-keyframes linux {
+@-moz-keyframes shell {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
@@ -387,21 +392,25 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 80%;  }
 }
-@-moz-keyframes json-rpc {
+@-moz-keyframes grpc {
    0%   { width: 0px;  }
    100% { width: 80%;  }
  }
 @-moz-keyframes k8s {
   0%   { width: 0px;  }
-  100% { width: 30%;  }
+  100% { width: 50%;  }
 }
-@-moz-keyframes websocket {
+@-moz-keyframes cicd {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 50%;  }
 }
-@-moz-keyframes docker {
+@-moz-keyframes db {
    0%   { width: 0px;  }
-   100% { width: 50%;  }
+   100% { width: 80%;  }
+}
+@-moz-keyframes msgqueue {
+   0%   { width: 0px;  }
+   100% { width: 60%;  }
  }
 
 @-webkit-keyframes golang {
@@ -412,7 +421,7 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-webkit-keyframes linux {
+@-webkit-keyframes shell {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
@@ -420,22 +429,26 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 80%;  }
 }
-@-webkit-keyframes json-rpc {
+@-webkit-keyframes grpc {
    0%   { width: 0px;  }
    100% { width: 80%;  }
  }
 @-webkit-keyframes k8s {
   0%   { width: 0px;  }
-  100% { width: 30%;  }
+  100% { width: 50%;  }
 }
-@-webkit-keyframes websocket {
+@-webkit-keyframes cicd {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 50%;  }
 }
-@-webkit-keyframes docker {
+@-webkit-keyframes db {
    0%   { width: 0px;  }
-   100% { width: 50%;  }
- }
+   100% { width: 80%;  }
+}
+@-webkit-keyframes msgqueue {
+   0%   { width: 0px;  }
+   100% { width: 60%;  }
+}
 
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
