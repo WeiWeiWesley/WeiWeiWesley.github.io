@@ -261,11 +261,26 @@ ul#nav li.current a { color: #F06000; }
 #resume .header-col { padding-top: 9px; }
 #resume .main-col { padding-right: 10%; }
 
-.education, .work {
+.education {
    margin-bottom: 48px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
 }
+
+.work {
+   margin: 48px auto;
+   padding: 24px 0;
+   border-bottom: 1px solid #E8E8E8;
+   border-top: 1px solid #E8E8E8;
+}
+
+.skills {
+   margin: 48px auto;
+   padding: 24px 0;
+   border-bottom: 1px solid #E8E8E8;
+   border-top: 1px solid #E8E8E8;
+}
+
 #resume .info {
    font: 16px/24px 'librebaskerville-italic', serif;
    color: #313131;
@@ -298,8 +313,18 @@ ul#nav li.current a { color: #F06000; }
    float: left;
    margin: 0 2%;
    width: calc((100% - 12%) / 3);
-   height: 300px;
+   height: fit-content;
  }
+
+ @media only screen and (max-width: 767px) {
+   .skill-wrap .row .item {
+       margin: 0;
+       padding: 0 5%;
+       width: 100%;
+       float: none;
+       text-align: center;
+   }
+}
 
 .bars {
 	width: 95%;
