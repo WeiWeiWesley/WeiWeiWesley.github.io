@@ -165,6 +165,277 @@
 
 		</div> <!-- End skills -->
 
+		<!-- Portfolio Section
+	================================================== -->
+		<section id="portfolio">
+
+			<div class="row">
+
+				<div class="twelve columns collapsed">
+
+					<h1>開發經驗 ＆ Tech Note</h1>
+
+					<!-- portfolio-wrapper -->
+					<div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+						<a href="/categories/elk/" target="_blank" title="">
+							<div class="columns portfolio-item">
+								<div class="item-wrap">
+									<!-- <a href="#modal-06" title=""> -->
+									<img alt="" src="../resume/images/portfolio/elk.jpg">
+									<div class="overlay">
+										<div class="portfolio-item-meta">
+											<h5>ELK</h5>
+											<p>Log & analytics</p>
+										</div>
+									</div>
+									<div class="link-icon"><i class="icon-plus"></i></div>
+									<!-- </a> -->
+								</div>
+							</div>
+						</a><!-- item end -->
+
+						<a href="/tags/golang/" target="_blank" title="">
+							<div class="columns portfolio-item">
+								<div class="item-wrap">
+									<!-- <a href="#modal-02" title=""> -->
+									<img alt="" src="../resume/images/portfolio/mico.jpg">
+									<div class="overlay">
+										<div class="portfolio-item-meta">
+											<h5>Golang</h5>
+											<p>Develope langeage</p>
+										</div>
+									</div>
+									<div class="link-icon"><i class="icon-plus"></i></div>
+									<!-- </a> -->
+								</div>
+							</div>
+						</a><!-- item end -->
+
+						<a href="/categories/k8s/" target="_blank" title="">
+							<div class="columns portfolio-item">
+								<div class="item-wrap">
+									<!-- <a href="#modal-01" title=""> -->
+									<img alt="" src="../resume/images/portfolio/serverPic.jpg">
+									<div class="overlay">
+										<div class="portfolio-item-meta">
+											<h5>Kubernetes</h5>
+											<p>Scaling and containerized</p>
+										</div>
+									</div>
+									<div class="link-icon"><i class="icon-plus"></i></div>
+									<!-- </a> -->
+								</div>
+							</div>
+						</a><!-- item end -->
+
+						<a href="/" target="_blank" title="">
+							<div class="columns portfolio-item">
+								<div class="item-wrap">
+									<!-- <a href="#modal-04" title=""> -->
+									<img alt="" src="../resume/images/portfolio/blog-graphic.png">
+									<div class="overlay">
+										<div class="portfolio-item-meta">
+											<h5>Blog</h5>
+											<p>My tech note</p>
+										</div>
+									</div>
+									<div class="link-icon"><i class="icon-plus"></i></div>
+									<!-- </a> -->
+								</div>
+							</div>
+						</a><!-- item end -->
+
+						<!-- item end -->
+
+					</div> <!-- portfolio-wrapper end -->
+
+				</div> <!-- twelve columns end -->
+
+
+				<!-- Modal Popup
+			--------------------------------------------------------------- -->
+
+				<div id="modal-06" class="popup-modal mfp-hide">
+
+					<img class="scale-with-grid" src="../resume/images/portfolio/elk.jpg" alt="" />
+
+					<div class="description-box">
+						<h4>ELK</h4>
+						<p>ELK 搜集並整合分散式服務 log，適合想統一異質平台或已微服務化的系統使用</p>
+						<span class="categories"><i class="fa fa-tag"></i>elk</span>
+					</div>
+
+					<div class="link-box">
+						<a href="https://weiweiwesley.github.io/categories/elk/" target="_blank">SEE MORE</a>
+						<a class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- modal-01 End -->
+
+				<div id="modal-01" class="popup-modal mfp-hide">
+
+					<img class="scale-with-grid" src="../resume/images/portfolio/serverPic.jpg" alt="" />
+
+					<div class="description-box">
+						<h4>Instant Web Server</h4>
+						<p>
+							這是一個基於 Gin Web Framework 建立的 web server架構，提供簡易的 http 與 websocket 路由。可透過 docker
+							容器啟動，若有動態擴展與自動部署需求可參照
+							cloudbuild.yaml 進行部署。
+						</p>
+						<span class="categories">
+							<i class="fa fa-tag"></i>Go
+							<i class="fa fa-tag"></i>docker
+							<i class="fa fa-tag"></i>websocket
+						</span>
+					</div>
+
+					<div class="link-box">
+						<a href="https://github.com/WeiWeiWesley/webserver/tree/example" target="_blank">Github</a>
+						<a class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- modal-06 End -->
+
+				<div id="modal-02" class="popup-modal mfp-hide">
+
+					<img class="scale-with-grid" src="../resume/images/portfolio/mico.jpg" alt="" />
+
+					<div class="description-box">
+						<h4>RPC mico-service</h4>
+						<p>本套件提供以 json-rpc 協定連線的微服務框架，配合環境啟動變數可以容器形式運行多個不同的服務實體</p>
+						<span class="categories">
+							<i class="fa fa-tag"></i>json-rpc
+							<i class="fa fa-tag"></i>mico-service
+							<i class="fa fa-tag"></i>go
+						</span>
+					</div>
+
+					<div class="link-box">
+						<a href="https://github.com/WeiWeiWesley/rpc_server" target="_blank">Github</a>
+						<a class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- modal-02 End -->
+
+				<div id="modal-03" class="popup-modal mfp-hide">
+
+					<img class="scale-with-grid" src="../resume/images/portfolio/ram.jpg" alt="" />
+
+					<div class="description-box">
+						<h4>Simple Storage</h4>
+						<p>
+							分別以 redigo 與 gorm 建立簡易連線池，提供快速存取資料的方法而無需處理連線複用問題。
+							使用範例可參考 <a href="https://github.com/WeiWeiWesley/webserver/tree/example" target="_blank">Instant
+								Web
+								Server</a>
+						</p>
+						<span class="categories">
+							<i class="fa fa-tag"></i>Go
+							<i class="fa fa-tag"></i>Mysql
+							<i class="fa fa-tag"></i>Redis
+							<i class="fa fa-tag"></i>Conn Pool
+						</span>
+					</div>
+
+					<div class="link-box">
+						<a href="https://github.com/WeiWeiWesley/simple_redis" target="_blank">Redis</a>
+						<a href="https://github.com/WeiWeiWesley/simple_orm" target="_blank">MySQL</a>
+						<a class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- modal-03 End -->
+
+				<div id="modal-04" class="popup-modal mfp-hide">
+
+					<img class="scale-with-grid" src="../resume/images/portfolio/blog-graphic.png" alt="" />
+
+					<div class="description-box">
+						<h4>Blog</h4>
+						<p>
+							個人學習紀錄與分享
+						</p>
+						<span class="categories">
+							<i class="fa fa-tag"></i>Blog
+							<i class="fa fa-tag"></i>learning
+						</span>
+					</div>
+
+					<div class="link-box">
+						<a href="https://weiweiwesley.github.io/" target="_blank">MyBlog</a>
+						<a class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- modal-04 End -->
+
+				<div id="modal-05" class="popup-modal mfp-hide">
+
+					<img class="scale-with-grid" src="../resume/images/portfolio/jackpot.jpg" alt="" />
+
+					<div class="description-box">
+						<h4>Jackpot</h4>
+						<p>Server to Server 長連線系統架構設計與開發</p>
+						<span class="categories">
+							<i class="fa fa-tag"></i>Game
+							<i class="fa fa-tag"></i>Architecture
+							<i class="fa fa-tag"></i>Websocket
+							<i class="fa fa-tag"></i>Go
+						</span>
+					</div>
+
+					<div class="link-box">
+						<a href="https://hackmd.io/7OzKmJaWTvurwWShHKVkvg?view" target="_blank">Details</a>
+						<a class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- modal-05 End -->
+
+				<div id="modal-07" class="popup-modal mfp-hide">
+
+					<img class="scale-with-grid" src="../resume/images/portfolio/pressure_gauage.jpg" alt="" />
+
+					<div class="description-box">
+						<h4>WsTestTool</h4>
+						<p>這是一個以 go語言編寫的 websocket壓測工具，提供併發連線、結果驗證、時間計算等功能。筆者目前使用的環境多為 Linux & MacOS，如果想在CLI簡單地對
+							websocket服務進行壓力測試的話，這邊提供一個簡單的工具給大家</p>
+						<span class="categories">
+							<i class="fa fa-tag"></i>Go
+							<i class="fa fa-tag"></i>websocket
+							<i class="fa fa-tag"></i>test
+							<i class="fa fa-tag"></i>concurrent
+						</span>
+					</div>
+
+					<div class="link-box">
+						<a href="https://github.com/WeiWeiWesley/WsTestTool" target="_blank">Github</a>
+						<a class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- modal-07 End -->
+
+				<div id="modal-08" class="popup-modal mfp-hide">
+
+					<img class="scale-with-grid" src="../resume/images/portfolio/skill_tag_cloud.png" alt="" />
+
+					<div class="description-box">
+						<h4>Skills & Tools Tag Cloud</h4>
+						<p>常用技術與工具</p>
+						<span class="categories">
+							<i class="fa fa-tag"></i>Tag Cloud
+						</span>
+					</div>
+
+					<div class="link-box">
+						<a class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- modal-08 End -->
+
+			</div> <!-- row End -->
+
+		</section> <!-- Portfolio Section End-->
+
 		<!-- Work
 		----------------------------------------------- -->
 		<div class="row work">
@@ -257,274 +528,7 @@
 	</section> <!-- Resume Section End-->
 
 
-	<!-- Portfolio Section
-	================================================== -->
-	<section id="portfolio">
 
-		<div class="row">
-
-			<div class="twelve columns collapsed">
-
-				<h1>開發經驗 ＆ Tech Note</h1>
-
-				<!-- portfolio-wrapper -->
-				<div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-					<a href="/categories/elk/" target="_blank" title="">
-						<div class="columns portfolio-item">
-							<div class="item-wrap">
-								<!-- <a href="#modal-06" title=""> -->
-								<img alt="" src="../resume/images/portfolio/elk.jpg">
-								<div class="overlay">
-									<div class="portfolio-item-meta">
-										<h5>ELK</h5>
-										<p>Log & analytics</p>
-									</div>
-								</div>
-								<div class="link-icon"><i class="icon-plus"></i></div>
-								<!-- </a> -->
-							</div>
-						</div>
-					</a><!-- item end -->
-
-					<a href="/tags/golang/" target="_blank" title="">
-						<div class="columns portfolio-item">
-							<div class="item-wrap">
-								<!-- <a href="#modal-02" title=""> -->
-								<img alt="" src="../resume/images/portfolio/mico.jpg">
-								<div class="overlay">
-									<div class="portfolio-item-meta">
-										<h5>Golang</h5>
-										<p>Develope langeage</p>
-									</div>
-								</div>
-								<div class="link-icon"><i class="icon-plus"></i></div>
-								<!-- </a> -->
-							</div>
-						</div>
-					</a><!-- item end -->
-
-					<a href="/categories/k8s/" target="_blank" title="">
-						<div class="columns portfolio-item">
-							<div class="item-wrap">
-								<!-- <a href="#modal-01" title=""> -->
-								<img alt="" src="../resume/images/portfolio/serverPic.jpg">
-								<div class="overlay">
-									<div class="portfolio-item-meta">
-										<h5>Kubernetes</h5>
-										<p>Scaling and containerized</p>
-									</div>
-								</div>
-								<div class="link-icon"><i class="icon-plus"></i></div>
-								<!-- </a> -->
-							</div>
-						</div>
-					</a><!-- item end -->
-
-					<a href="/" target="_blank" title="">
-						<div class="columns portfolio-item">
-							<div class="item-wrap">
-								<!-- <a href="#modal-04" title=""> -->
-								<img alt="" src="../resume/images/portfolio/blog-graphic.png">
-								<div class="overlay">
-									<div class="portfolio-item-meta">
-										<h5>Blog</h5>
-										<p>My tech note</p>
-									</div>
-								</div>
-								<div class="link-icon"><i class="icon-plus"></i></div>
-								<!-- </a> -->
-							</div>
-						</div>
-					</a><!-- item end -->
-
-					<!-- item end -->
-
-				</div> <!-- portfolio-wrapper end -->
-
-			</div> <!-- twelve columns end -->
-
-
-			<!-- Modal Popup
-			--------------------------------------------------------------- -->
-
-			<div id="modal-06" class="popup-modal mfp-hide">
-
-				<img class="scale-with-grid" src="../resume/images/portfolio/elk.jpg" alt="" />
-
-				<div class="description-box">
-					<h4>ELK</h4>
-					<p>ELK 搜集並整合分散式服務 log，適合想統一異質平台或已微服務化的系統使用</p>
-					<span class="categories"><i class="fa fa-tag"></i>elk</span>
-				</div>
-
-				<div class="link-box">
-					<a href="https://weiweiwesley.github.io/categories/elk/" target="_blank">SEE MORE</a>
-					<a class="popup-modal-dismiss">Close</a>
-				</div>
-
-			</div><!-- modal-01 End -->
-
-			<div id="modal-01" class="popup-modal mfp-hide">
-
-				<img class="scale-with-grid" src="../resume/images/portfolio/serverPic.jpg" alt="" />
-
-				<div class="description-box">
-					<h4>Instant Web Server</h4>
-					<p>
-						這是一個基於 Gin Web Framework 建立的 web server架構，提供簡易的 http 與 websocket 路由。可透過 docker 容器啟動，若有動態擴展與自動部署需求可參照
-						cloudbuild.yaml 進行部署。
-					</p>
-					<span class="categories">
-						<i class="fa fa-tag"></i>Go
-						<i class="fa fa-tag"></i>docker
-						<i class="fa fa-tag"></i>websocket
-					</span>
-				</div>
-
-				<div class="link-box">
-					<a href="https://github.com/WeiWeiWesley/webserver/tree/example" target="_blank">Github</a>
-					<a class="popup-modal-dismiss">Close</a>
-				</div>
-
-			</div><!-- modal-06 End -->
-
-			<div id="modal-02" class="popup-modal mfp-hide">
-
-				<img class="scale-with-grid" src="../resume/images/portfolio/mico.jpg" alt="" />
-
-				<div class="description-box">
-					<h4>RPC mico-service</h4>
-					<p>本套件提供以 json-rpc 協定連線的微服務框架，配合環境啟動變數可以容器形式運行多個不同的服務實體</p>
-					<span class="categories">
-						<i class="fa fa-tag"></i>json-rpc
-						<i class="fa fa-tag"></i>mico-service
-						<i class="fa fa-tag"></i>go
-					</span>
-				</div>
-
-				<div class="link-box">
-					<a href="https://github.com/WeiWeiWesley/rpc_server" target="_blank">Github</a>
-					<a class="popup-modal-dismiss">Close</a>
-				</div>
-
-			</div><!-- modal-02 End -->
-
-			<div id="modal-03" class="popup-modal mfp-hide">
-
-				<img class="scale-with-grid" src="../resume/images/portfolio/ram.jpg" alt="" />
-
-				<div class="description-box">
-					<h4>Simple Storage</h4>
-					<p>
-						分別以 redigo 與 gorm 建立簡易連線池，提供快速存取資料的方法而無需處理連線複用問題。
-						使用範例可參考 <a href="https://github.com/WeiWeiWesley/webserver/tree/example" target="_blank">Instant Web
-							Server</a>
-					</p>
-					<span class="categories">
-						<i class="fa fa-tag"></i>Go
-						<i class="fa fa-tag"></i>Mysql
-						<i class="fa fa-tag"></i>Redis
-						<i class="fa fa-tag"></i>Conn Pool
-					</span>
-				</div>
-
-				<div class="link-box">
-					<a href="https://github.com/WeiWeiWesley/simple_redis" target="_blank">Redis</a>
-					<a href="https://github.com/WeiWeiWesley/simple_orm" target="_blank">MySQL</a>
-					<a class="popup-modal-dismiss">Close</a>
-				</div>
-
-			</div><!-- modal-03 End -->
-
-			<div id="modal-04" class="popup-modal mfp-hide">
-
-				<img class="scale-with-grid" src="../resume/images/portfolio/blog-graphic.png" alt="" />
-
-				<div class="description-box">
-					<h4>Blog</h4>
-					<p>
-						個人學習紀錄與分享
-					</p>
-					<span class="categories">
-						<i class="fa fa-tag"></i>Blog
-						<i class="fa fa-tag"></i>learning
-					</span>
-				</div>
-
-				<div class="link-box">
-					<a href="https://weiweiwesley.github.io/" target="_blank">MyBlog</a>
-					<a class="popup-modal-dismiss">Close</a>
-				</div>
-
-			</div><!-- modal-04 End -->
-
-			<div id="modal-05" class="popup-modal mfp-hide">
-
-				<img class="scale-with-grid" src="../resume/images/portfolio/jackpot.jpg" alt="" />
-
-				<div class="description-box">
-					<h4>Jackpot</h4>
-					<p>Server to Server 長連線系統架構設計與開發</p>
-					<span class="categories">
-						<i class="fa fa-tag"></i>Game
-						<i class="fa fa-tag"></i>Architecture
-						<i class="fa fa-tag"></i>Websocket
-						<i class="fa fa-tag"></i>Go
-					</span>
-				</div>
-
-				<div class="link-box">
-					<a href="https://hackmd.io/7OzKmJaWTvurwWShHKVkvg?view" target="_blank">Details</a>
-					<a class="popup-modal-dismiss">Close</a>
-				</div>
-
-			</div><!-- modal-05 End -->
-
-			<div id="modal-07" class="popup-modal mfp-hide">
-
-				<img class="scale-with-grid" src="../resume/images/portfolio/pressure_gauage.jpg" alt="" />
-
-				<div class="description-box">
-					<h4>WsTestTool</h4>
-					<p>這是一個以 go語言編寫的 websocket壓測工具，提供併發連線、結果驗證、時間計算等功能。筆者目前使用的環境多為 Linux & MacOS，如果想在CLI簡單地對
-						websocket服務進行壓力測試的話，這邊提供一個簡單的工具給大家</p>
-					<span class="categories">
-						<i class="fa fa-tag"></i>Go
-						<i class="fa fa-tag"></i>websocket
-						<i class="fa fa-tag"></i>test
-						<i class="fa fa-tag"></i>concurrent
-					</span>
-				</div>
-
-				<div class="link-box">
-					<a href="https://github.com/WeiWeiWesley/WsTestTool" target="_blank">Github</a>
-					<a class="popup-modal-dismiss">Close</a>
-				</div>
-
-			</div><!-- modal-07 End -->
-
-			<div id="modal-08" class="popup-modal mfp-hide">
-
-				<img class="scale-with-grid" src="../resume/images/portfolio/skill_tag_cloud.png" alt="" />
-
-				<div class="description-box">
-					<h4>Skills & Tools Tag Cloud</h4>
-					<p>常用技術與工具</p>
-					<span class="categories">
-						<i class="fa fa-tag"></i>Tag Cloud
-					</span>
-				</div>
-
-				<div class="link-box">
-					<a class="popup-modal-dismiss">Close</a>
-				</div>
-
-			</div><!-- modal-08 End -->
-
-		</div> <!-- row End -->
-
-	</section> <!-- Portfolio Section End-->
 
 	<!-- footer
 	================================================== -->
