@@ -64,10 +64,12 @@
 				<hr />
 				<ul class="social">
 					<!-- <li><a href="https://github.com/WeiWeiWesley" target="_blank"><i class="fa fa-github"></i></a></li> -->
-					<li><a href="http://www.linkedin.com/in/weiweiwesley" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<li><a href="http://www.linkedin.com/in/weiweiwesley" target="_blank"><i
+								class="fa fa-linkedin"></i></a>
 					</li>
 					<li><a href="https://weiweiwesley.github.io" target="_blank"><i class="fa fa-github"></i></a></li>
-					<li><a href="https://about.me/wesleysu/getstarted" target="_blank"><i class="fa fa-user"></i></a></li>
+					<li><a href="https://about.me/wesleysu/getstarted" target="_blank"><i class="fa fa-user"></i></a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -114,7 +116,8 @@
 
 					<div class="columns download">
 						<p>
-							<a href="/resume/Wesley_SU.pdf" download class="button"><i class="fa fa-download"></i>Download
+							<a href="/resume/Wesley_SU.pdf" download class="button"><i
+									class="fa fa-download"></i>Download
 								Resume</a>
 						</p>
 					</div>
@@ -258,25 +261,60 @@
 						<h3>中佑集團 - 研發組</h3>
 						<p class="info">遊戲後端資深工程師<span>&bull;</span> <em class="date">2020 to 2023</em></p>
 						<div class="context">
-							微服務功能整合, 引導遊戲開發, 系統效能追蹤 <br>
+							<!-- 微服務功能整合, 引導遊戲開發, 系統效能追蹤 <br>
 							- 滿足新商務需求的微服務功能整合 <br>
 							- 遊戲流程抽象化，便於各類遊戲實作，加速新人遊戲開發 <br>
 							- 內部工具封裝，便於版本控管與規格統一 <br>
 							- SRE 工作導向，協助問題排除，關鍵指標揭露 <br>
 							- CI/CD 基礎建置能力 <br>
-							- Message Queue NSQ 深度應用 <br>
+							- Message Queue NSQ 深度應用 <br> -->
+
+							<p class="info"> Driver Abstract and Integration </p>
+							<p>強化團隊以相同 interface 呼叫接口與工具，抽象化基礎功能套件，如 http-client, snowflake, NSQ
+								等基礎套件，即便在底層被抽換的情況下，引用套件的服務依然可不受影響，不需要做出額外的調整。具體的案例在 http-client 與 snowflake
+								的經驗被凸顯出來：</p>
+
+							<p>http-client: 由於一開始採用 benchmark 優秀的 fasthttp，當作 http-client 的基底實作，但 fasthttp 存在著
+								request body data race 的嚴重瑕疵，我們緊急抽換了底層的 fasthttp，過程中相依 http-client
+								的服務僅需 vendor 新版本，無須調整接口與參數的使用方式，完全符合一開始設計的目標。</p>
+
+							<p>snowflake: 此套件應用於分散式系統產生不重複 ID，因應服務的擴容，原有 bwmarrin/snowflake 的 10 Bit NodeID
+								已無法滿足我們的需求，因此底層抽換為有 16 bits NodeID 的 sony/sonyflake，同樣地相依此套件的服務，無須更換接口與參數，符合我們抽像化套件目的。
+							</p>
+
+							<p class="info"> Project Lead </p>
+							<p>於小型專案中執行任務拆分，結合團隊微服務架構，適當的將服務切分至合適的 micro-services，並協調專案參與人統合接口 spec，
+								確立開發人員可並行開發，以左移精神降低整體開發時程。規劃與抽象遊戲流程，提供適合多人共同開發遊戲框架，開發人員可專注於遊戲邏輯實現，無須費心於連線,存取,角色驗證等基礎實作。
+							</p>
+
+							<p class="info"> System Trace and Monitoring </p>
+							<p>運用 ELK 與 Kiali 等工具，追蹤系統錯誤及流量異常，可持續的針對系統特定功能或排程監控，觀察每個任務的執行時間，特別是離群峰值的觀察，做出及時對應的
+								alert，持續後續的效能瓶頸追蹤。利用 Kiali
+								於流量視覺化提供我們快速排查的能力，如舊服務需要下線時可透過其提供的圖表，觀察是否還有正在對服務使用的連線與流量。 </p>
+
+							<!-- <p class="info"> 微服務功能整合 </p> -->
+
 						</div>
 						<br>
 						<h3>中佑集團 - 遊戲研發組</h3>
 						<p class="info">遊戲後端資深工程師<span>&bull;</span> <em class="date">2017 to 2020</em></p>
 						<div class="context">
-							遊戲核心開發, 基礎架構優化, 遊戲插件模組 <br>
+							<!-- 遊戲核心開發, 基礎架構優化, 遊戲插件模組 <br>
 							- 運用 Golang Gin 套件開發遊戲核心 <br>
 							- gRPC 微服務連線框架 <br>
 							- Websocket 併發壓測工具 <br>
 							- 建置並推廣 ELK，收集分散式服務 log <br>
 							- Docekr 容器推廣，提供快速一致開發環境 <br>
-							- ITIL 基礎認證，拓展思維模式了解商業目與技術服務的配合，以證明 IT 組織對於企業的價值 <br>
+							- ITIL 基礎認證，拓展思維模式了解商業目與技術服務的配合，以證明 IT 組織對於企業的價值 <br> -->
+
+							<p class="info"> Game Engine Develope </p>
+							<p>致力於遊戲的邏輯與玩法實現，處裡 game server 狀態控制，解決併發的環境中的 data race 與 dead lock 窘境
+								，連線技術則應用 gin http server, grpc, websoket ，完成內部服務資料交換與前端遊戲互動實踐。</p>
+
+							<p class="info"> New Tool Promoter </p>
+							<p>架設並推廣 ELK log 蒐集監控工具，在團隊逐漸由 local server 轉移至 GCP Kubernetes 時，提供一個整合且便於查詢監控系統。協助打包
+								Docker image 與 yaml 提供給各環境部署，致力降低本機開發成本，提升項目交付效率。 </p>
+
 						</div>
 					</div>
 				</div> <!-- item end -->
@@ -286,10 +324,17 @@
 						<h3>中佑集團 - 平台整合組</h3>
 						<p class="info">後端工程師 <span>&bull;</span> <em class="date">2016 to 2017</em></p>
 						<div class="context">
-							遊戲平台維運，處裡整合各家遊戲商串接與功能調整 <br>
+							<!-- 遊戲平台維運，處裡整合各家遊戲商串接與功能調整 <br>
 							- 維運 PHP Laravel 框架系統 <br>
 							- 大型老舊專案重構計畫，整合多部門 API 至前端平台 <br>
-							- 推廣 Go語言取代原有主要開發語言 PHP <br>
+							- 推廣 Go語言取代原有主要開發語言 PHP <br> -->
+
+							<p class="info"> Legacy System Refactoring</p>
+							<p>參與老舊 PHP 專案重構計畫，將分散的代碼及缺乏統一性的寫法，整合為一致 module & formate，利用注入的方式減少程式間的耦合。</p>
+
+							<p class="info"> Golang Missionary </p>
+							<p>嘗試推廣 Go語言取代原有主要開發語言 PHP，基於併發優勢與好學習的特性，以效能提升向上層推廣，以簡潔易學做平行推薦。</p>
+
 						</div>
 					</div>
 				</div> <!-- item end -->
@@ -451,7 +496,8 @@
 				<div class="description-box">
 					<h4>Instant Web Server</h4>
 					<p>
-						這是一個基於 Gin Web Framework 建立的 web server架構，提供簡易的 http 與 websocket 路由。可透過 docker 容器啟動，若有動態擴展與自動部署需求可參照
+						這是一個基於 Gin Web Framework 建立的 web server架構，提供簡易的 http 與 websocket 路由。可透過 docker
+						容器啟動，若有動態擴展與自動部署需求可參照
 						cloudbuild.yaml 進行部署。
 					</p>
 					<span class="categories">
@@ -497,7 +543,8 @@
 					<h4>Simple Storage</h4>
 					<p>
 						分別以 redigo 與 gorm 建立簡易連線池，提供快速存取資料的方法而無需處理連線複用問題。
-						使用範例可參考 <a href="https://github.com/WeiWeiWesley/webserver/tree/example" target="_blank">Instant Web
+						使用範例可參考 <a href="https://github.com/WeiWeiWesley/webserver/tree/example" target="_blank">Instant
+							Web
 							Server</a>
 					</p>
 					<span class="categories">
@@ -615,10 +662,12 @@
 
 				<ul class="social-links">
 					<li><a href="https://github.com/WeiWeiWesley" target="_blank"><i class="fa fa-github"></i></a></li>
-					<li><a href="http://www.linkedin.com/in/weiweiwesley" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<li><a href="http://www.linkedin.com/in/weiweiwesley" target="_blank"><i
+								class="fa fa-linkedin"></i></a>
 					</li>
 					<li><a href="https://weiweiwesley.github.io" target="_blank"><i class="fa fa-globe"></i></a></li>
-					<li><a href="https://about.me/wesleysu/getstarted" target="_blank"><i class="fa fa-user"></i></a></li>
+					<li><a href="https://about.me/wesleysu/getstarted" target="_blank"><i class="fa fa-user"></i></a>
+					</li>
 				</ul>
 
 				<ul class="copyright">
